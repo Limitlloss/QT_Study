@@ -1,0 +1,25 @@
+<UI version="4.0" >
+ <class>_My_First_ButtonClass</class>
+ <widget class="QWidget" name="_My_First_ButtonClass" >
+  <property name="objectName" >
+   <string notr="true">_My_First_ButtonClass</string>
+  </property>
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>_My_First_Button</string>
+  </property>$centralwidget$
+ </widget>
+ <layoutDefault spacing="6" margin="11" />
+ <pixmapfunction></pixmapfunction>
+ <resources>
+   <include location="_My_First_Button.qrc"/>
+ </resources>
+ <connections/>
+</UI>
