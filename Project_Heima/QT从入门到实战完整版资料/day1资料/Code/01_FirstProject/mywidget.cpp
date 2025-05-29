@@ -1,4 +1,4 @@
-#include "mywidget.h"
+﻿#include "mywidget.h"
 #include <QPushButton> //按钮控件的头文件
 #include "mypushbutton.h"
 #include <QDebug>
@@ -65,8 +65,8 @@ myWidget::myWidget(QWidget* parent)
 
 	//需求  点击我的按钮 关闭窗口
 	//参数1  信号的发送者 参数2  发送的信号（函数的地址） 参数3  信号的接受者 参数4  处理的槽函数
-	//connect( myBtn, &MyPushButton::clicked, this, &myWidget::close  );
-	connect(myBtn, &QPushButton::clicked, this, &QWidget::close);
+	connect(myBtn, &MyPushButton::clicked, this, &myWidget::close);
+	//connect(myBtn, &QPushButton::clicked, this, &QWidget::close);
 }
 
 myWidget::~myWidget()

@@ -1,5 +1,5 @@
-﻿   Qt/MSBuild: 3.3.1.1
+﻿   Qt/MSBuild: 3.4.0.1
   Reading Qt configuration (D:/Software/QT/6.5.3/msvc2019_64/bin/qmake)
    Qt: 6.5.3
-  main.cpp
+  mywidget.cpp
   01_FirstProject.vcxproj -> D:\Project\Mygithub\QT_Study\Project_Heima\QT从入门到实战完整版资料\day1资料\Code\01_FirstProject\debug\01_FirstProject.exe

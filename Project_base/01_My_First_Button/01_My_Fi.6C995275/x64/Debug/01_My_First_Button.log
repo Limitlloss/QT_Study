@@ -1,11 +1,4 @@
-﻿   Qt/MSBuild: 3.3.1.1
+﻿   Qt/MSBuild: 3.4.0.1
    Qt: 6.5.3
-  源.cpp
   _My_First_Button.cpp
-D:\Project\Mygithub\QT_Study\Project_base\01_My_First_Button\_My_First_Button.cpp(1,1): warning C4828: 文件包含在偏移 0xc2 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
-D:\Project\Mygithub\QT_Study\Project_base\01_My_First_Button\_My_First_Button.cpp(1,1): warning C4828: 文件包含在偏移 0xc3 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
-D:\Project\Mygithub\QT_Study\Project_base\01_My_First_Button\_My_First_Button.cpp(1,1): warning C4828: 文件包含在偏移 0xc5 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
-D:\Project\Mygithub\QT_Study\Project_base\01_My_First_Button\_My_First_Button.cpp(1,1): warning C4828: 文件包含在偏移 0xc6 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
-D:\Project\Mygithub\QT_Study\Project_base\01_My_First_Button\_My_First_Button.cpp(1,1): warning C4828: 文件包含在偏移 0xc7 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
-D:\Project\Mygithub\QT_Study\Project_base\01_My_First_Button\_My_First_Button.cpp(1,1): warning C4828: 文件包含在偏移 0xcb 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
   01_My_First_Button.vcxproj -> D:\Project\Mygithub\QT_Study\Project_base\01_My_First_Button\x64\Debug\01_My_First_Button.exe
