@@ -1,0 +1,41 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+<Qt_DEFINES_>_WINDOWS;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;NDEBUG;QT_NO_DEBUG;QT_OPENGLWIDGETS_LIB;QT_MULTIMEDIAWIDGETS_LIB;QT_WIDGETS_LIB;QT_OPENGL_LIB;QT_MULTIMEDIA_LIB;QT_GUI_LIB;QT_NETWORK_LIB;QT_CORE_LIB</Qt_DEFINES_>
+<Qt_INCLUDEPATH_>D:\Software\QT\6.9.0\msvc2022_64\include;D:\Software\QT\6.9.0\msvc2022_64\include\QtOpenGLWidgets;D:\Software\QT\6.9.0\msvc2022_64\include\QtMultimediaWidgets;D:\Software\QT\6.9.0\msvc2022_64\include\QtWidgets;D:\Software\QT\6.9.0\msvc2022_64\include\QtOpenGL;D:\Software\QT\6.9.0\msvc2022_64\include\QtMultimedia;D:\Software\QT\6.9.0\msvc2022_64\include\QtGui;D:\Software\QT\6.9.0\msvc2022_64\include\QtNetwork;D:\Software\QT\6.9.0\msvc2022_64\include\QtCore;D:\Software\QT\6.9.0\msvc2022_64\mkspecs\win32-msvc</Qt_INCLUDEPATH_>
+<Qt_STDCPP_>stdcpp17</Qt_STDCPP_>
+<Qt_RUNTIME_>MultiThreadedDLL</Qt_RUNTIME_>
+<Qt_CL_OPTIONS_>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -permissive- -Zc:__cplusplus -Zc:externConstexpr -utf-8</Qt_CL_OPTIONS_>
+<Qt_LIBS_>D:\Software\QT\6.9.0\msvc2022_64\lib\Qt6OpenGLWidgets.lib;D:\Software\QT\6.9.0\msvc2022_64\lib\Qt6MultimediaWidgets.lib;D:\Software\QT\6.9.0\msvc2022_64\lib\Qt6Widgets.lib;D:\Software\QT\6.9.0\msvc2022_64\lib\Qt6OpenGL.lib;D:\Software\QT\6.9.0\msvc2022_64\lib\Qt6Multimedia.lib;D:\Software\QT\6.9.0\msvc2022_64\lib\Qt6Gui.lib;D:\Software\QT\6.9.0\msvc2022_64\lib\Qt6Network.lib;D:\Software\QT\6.9.0\msvc2022_64\lib\Qt6Core.lib;D:\Software\QT\6.9.0\msvc2022_64\lib\Qt6EntryPoint.lib;shell32.lib</Qt_LIBS_>
+<Qt_LINK_OPTIONS_>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'"</Qt_LINK_OPTIONS_>
+<QMake_QT_SYSROOT_></QMake_QT_SYSROOT_>
+<QMake_QT_INSTALL_PREFIX_>D:/Software/QT/6.9.0/msvc2022_64</QMake_QT_INSTALL_PREFIX_>
+<QMake_QT_INSTALL_ARCHDATA_>D:/Software/QT/6.9.0/msvc2022_64</QMake_QT_INSTALL_ARCHDATA_>
+<QMake_QT_INSTALL_DATA_>D:/Software/QT/6.9.0/msvc2022_64</QMake_QT_INSTALL_DATA_>
+<QMake_QT_INSTALL_DOCS_>D:/Software/QT/Docs/Qt-6.9.0</QMake_QT_INSTALL_DOCS_>
+<QMake_QT_INSTALL_HEADERS_>D:/Software/QT/6.9.0/msvc2022_64/include</QMake_QT_INSTALL_HEADERS_>
+<QMake_QT_INSTALL_LIBS_>D:/Software/QT/6.9.0/msvc2022_64/lib</QMake_QT_INSTALL_LIBS_>
+<QMake_QT_INSTALL_LIBEXECS_>D:/Software/QT/6.9.0/msvc2022_64/bin</QMake_QT_INSTALL_LIBEXECS_>
+<QMake_QT_INSTALL_BINS_>D:/Software/QT/6.9.0/msvc2022_64/bin</QMake_QT_INSTALL_BINS_>
+<QMake_QT_INSTALL_TESTS_>D:/Software/QT/6.9.0/msvc2022_64/tests</QMake_QT_INSTALL_TESTS_>
+<QMake_QT_INSTALL_PLUGINS_>D:/Software/QT/6.9.0/msvc2022_64/plugins</QMake_QT_INSTALL_PLUGINS_>
+<QMake_QT_INSTALL_QML_>D:/Software/QT/6.9.0/msvc2022_64/qml</QMake_QT_INSTALL_QML_>
+<QMake_QT_INSTALL_TRANSLATIONS_>D:/Software/QT/6.9.0/msvc2022_64/translations</QMake_QT_INSTALL_TRANSLATIONS_>
+<QMake_QT_INSTALL_CONFIGURATION_></QMake_QT_INSTALL_CONFIGURATION_>
+<QMake_QT_INSTALL_EXAMPLES_>D:/Software/QT/Examples/Qt-6.9.0</QMake_QT_INSTALL_EXAMPLES_>
+<QMake_QT_INSTALL_DEMOS_>D:/Software/QT/Examples/Qt-6.9.0</QMake_QT_INSTALL_DEMOS_>
+<QMake_QT_HOST_PREFIX_>D:/Software/QT/6.9.0/msvc2022_64</QMake_QT_HOST_PREFIX_>
+<QMake_QT_HOST_DATA_>D:/Software/QT/6.9.0/msvc2022_64</QMake_QT_HOST_DATA_>
+<QMake_QT_HOST_BINS_>D:/Software/QT/6.9.0/msvc2022_64/bin</QMake_QT_HOST_BINS_>
+<QMake_QT_HOST_LIBEXECS_>D:/Software/QT/6.9.0/msvc2022_64/bin</QMake_QT_HOST_LIBEXECS_>
+<QMake_QT_HOST_LIBS_>D:/Software/QT/6.9.0/msvc2022_64/lib</QMake_QT_HOST_LIBS_>
+<QMake_QMAKE_SPEC_>win32-msvc</QMake_QMAKE_SPEC_>
+<QMake_QMAKE_XSPEC_>win32-msvc</QMake_QMAKE_XSPEC_>
+<QMake_QMAKE_VERSION_>3.1</QMake_QMAKE_VERSION_>
+<QMake_QT_VERSION_>6.9.0</QMake_QT_VERSION_>
+<QtBkup_QtHash>jVHLisMwDPwVfUFTwlLooQfX0nq1lR/I8pZSlvz/X9QpCYG9bA7GRpoZacZPRkrG9ricDufDcYr1x4/HcZxOH+CzEoTGkMjuWW9wZwxkFXKhFGS51mJsYhwJ2cH2XJtXTjAfpE9OVC9D0fxN3gY2iu8iG+cUNLcyePE5FhbqKOpAT7Vm3VAVOHlpSMXZ114ph/ge4WQhI2tfICtThWroS9krJS6F5gJVcwmdImjrEUbay1/gwld1+gAvUy6z+92xbF4WInStf9jd9m3YiD08Sv3r/Wx/7u3b4Y/KOl5JyFX6fQE=</QtBkup_QtHash>
+    <QtVersion>6.9.0</QtVersion>
+    <QtVersionMajor>6</QtVersionMajor>
+    <QtVersionMinor>9</QtVersionMinor>
+    <QtVersionPatch>0</QtVersionPatch>
+  </PropertyGroup>
+</Project>

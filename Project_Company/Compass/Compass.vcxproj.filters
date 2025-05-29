@@ -1,0 +1,465 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="gutil\cu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="layer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="liveeditor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mainwindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mediapanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="opendlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="outputpanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="planpanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="progresspanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gutil\qaesencryption.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gutil\qcore.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gutil\qgui.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gutil\qjson.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gutil\qnetwork.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="gutil\cu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="layer.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="liveeditor.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="main.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="mainwindow.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="mediapanel.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="opendlg.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="outputpanel.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="planpanel.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="progresspanel.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="gutil\qaesencryption.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="gutil\qcore.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="gutil\qgui.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="gutil\qjson.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="gutil\qnetwork.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="moc_predefs.h.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\program\AClock.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\program\Add.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\program\AddPlan.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\AdvParam.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\AppSetting.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\AppSettingTip.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\program\ArrayBottom.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\program\ArrayHCenter.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\program\ArrayLeft.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\program\ArrayRight.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\program\ArrayTop.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\program\ArrayVCenter.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ArrowDropDown.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ArrowDropUp.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\program\Audio.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Calendar-gray.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Calendar.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\CheckBoxChecked.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\CheckBoxUnchecked.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\program\Clean.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\program\CleanPlan.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\program\ColorText.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\program\Copy.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\program\Cut.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\program\DClock.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\program\Delete.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\DeviceManager_s.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\DeviceManager_u.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\DeviceNum_All.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\DeviceSetting_s.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\DeviceSetting_u.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\FlashArrow.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\program\Gif.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\program\GoDown.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\program\GoUp.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\GuangYingPin_s.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\GuangYingPin_u.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Hdmi.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\program\LayerBottom.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\program\LayerDown.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\program\LayerTop.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\program\LayerUp.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Lock.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Logo-citta.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Logo-leyide.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Logo.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\program\Movie.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\program\Office.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\program\Photo.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ProgramManager_s.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ProgramManager_u.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\program\Rss.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\program\Save.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\program\SaveAs.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\program\ScaleDown.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\program\ScaleOrg.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\program\ScaleUp.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\program\Send.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\program\Setting.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\program\Temp.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\program\Text.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\program\TextAlignHC.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\program\TextAlignHL.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\program\TextAlignHR.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\program\TextAlignVB.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\program\TextAlignVC.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\program\TextAlignVT.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\program\TileFull.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\program\TileH.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\program\TileV.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\program\Timer.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\UnLock.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\program\Weather.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\program\Web.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\program\Window.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\WndClose.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\WndMaximize.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\WndMinimize.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\bnBrightnessAdjustMent_s.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\program\bnExport_s.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\program\bnExport_u.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\bnNetConfig_s.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\bnPowerControl_s.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\program\bnSearch.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\program\bnSend_s.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\program\bnSend_u.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\bnVerifyClock_s.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\program\demo-video.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\deviceReadbackPic.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\encrypt.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\groupbox-checked.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\groupbox-unchecked.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\info.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\loop.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\next.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\offline.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\online.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\program\preview.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\program\previewStop.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\previous.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\random.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\reddot.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <QtRcc Include="res.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <None Include="res\signal-0.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\signal-1.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\signal-2.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\signal-3.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\signal-4.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\signal-5.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\splash.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\test.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\video-pre.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\volume.png">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include=".\Compass_resource.rc" />
+  </ItemGroup>
+</Project>

@@ -1,4 +1,4 @@
 ﻿   Qt/MSBuild: 3.4.0.1
    Qt: 6.5.3
-  _My_First_Button.cpp
-  01_My_First_Button.vcxproj -> D:\Project\Mygithub\QT_Study\Project_base\01_My_First_Button\x64\Debug\01_My_First_Button.exe
+  uic _My_First_Button.ui
+C:\Users\TLH\AppData\Local\QtMsBuild\qt_work.targets(136,5): error : [QtRunWork] Error starting process /uic: 系统找不到指定的文件。

@@ -1,0 +1,13 @@
+﻿  Generate moc_predefs.h
+   Qt/MSBuild: 3.4.0.1
+  Reading Qt configuration (D:/Software/QT/6.9.0/msvc2022_64/bin/qmake)
+   Qt: 6.9.0
+  main.cpp
+  student.cpp
+  teacher.cpp
+  widget.cpp
+D:\Project\Mygithub\QT_Study\Project_Heima\QT从入门到实战完整版资料\day1资料\Code\02_SignalAndSlot\widget.cpp(56,21): warning C4189: “studentSlot2”: 局部变量已初始化但不引用
+  moc_student.cpp
+  moc_teacher.cpp
+  moc_widget.cpp
+  02_SignalAndSlot.vcxproj -> D:\Project\Mygithub\QT_Study\Project_Heima\QT从入门到实战完整版资料\day1资料\Code\02_SignalAndSlot\debug\02_SignalAndSlot.exe
