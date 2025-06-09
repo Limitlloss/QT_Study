@@ -1,4 +1,4 @@
-#include "qaesencryption.h"
+﻿#include "qaesencryption.h"
 
 #ifdef USE_INTEL_AES_IF_AVAILABLE
 #include "aesni/aesni-key-exp.h"
@@ -8,26 +8,26 @@
 #endif
 
 /*
- * Static Functions
+ * 静态函数
  * */
-QByteArray QAESEncryption::Crypt(QAESEncryption::Aes level, QAESEncryption::Mode mode, const QByteArray &rawText,
-                                 const QByteArray &key, const QByteArray &iv, QAESEncryption::Padding padding)
+QByteArray QAESEncryption::Crypt(QAESEncryption::Aes level, QAESEncryption::Mode mode, const QByteArray& rawText,
+    const QByteArray& key, const QByteArray& iv, QAESEncryption::Padding padding)
 {
     return QAESEncryption(level, mode, padding).encode(rawText, key, iv);
 }
 
-QByteArray QAESEncryption::Decrypt(QAESEncryption::Aes level, QAESEncryption::Mode mode, const QByteArray &rawText,
-                                   const QByteArray &key, const QByteArray &iv, QAESEncryption::Padding padding)
+QByteArray QAESEncryption::Decrypt(QAESEncryption::Aes level, QAESEncryption::Mode mode, const QByteArray& rawText,
+    const QByteArray& key, const QByteArray& iv, QAESEncryption::Padding padding)
 {
-     return QAESEncryption(level, mode, padding).decode(rawText, key, iv);
+    return QAESEncryption(level, mode, padding).decode(rawText, key, iv);
 }
 
-QByteArray QAESEncryption::ExpandKey(QAESEncryption::Aes level, QAESEncryption::Mode mode, const QByteArray &key, bool isEncryptionKey)
+QByteArray QAESEncryption::ExpandKey(QAESEncryption::Aes level, QAESEncryption::Mode mode, const QByteArray& key, bool isEncryptionKey)
 {
-     return QAESEncryption(level, mode).expandKey(key, isEncryptionKey);
+    return QAESEncryption(level, mode).expandKey(key, isEncryptionKey);
 }
 
-QByteArray QAESEncryption::RemovePadding(const QByteArray &rawText, QAESEncryption::Padding padding)
+QByteArray QAESEncryption::RemovePadding(const QByteArray& rawText, QAESEncryption::Padding padding)
 {
     if (rawText.isEmpty())
         return rawText;
@@ -37,8 +37,8 @@ QByteArray QAESEncryption::RemovePadding(const QByteArray &rawText, QAESEncrypti
     {
     case Padding::ZERO:
         //Works only if the last byte of the decoded array is not zero
-        while (ret.at(ret.length()-1) == 0x00)
-            ret.remove(ret.length()-1, 1);
+        while (ret.at(ret.length() - 1) == 0x00)
+            ret.remove(ret.length() - 1, 1);
         break;
     case Padding::PKCS7:
 #if QT_VERSION >= QT_VERSION_CHECK(5, 10, 0)
@@ -73,34 +73,34 @@ QByteArray QAESEncryption::RemovePadding(const QByteArray &rawText, QAESEncrypti
     return ret;
 }
 /*
- * End Static function declarations
+ * 结束静态函数声明
  * */
 
-/*
- * Local Functions
- * */
+ /*
+  * 局部函数
+  * */
 
 namespace {
 
-quint8 xTime(quint8 x)
-{
-    return ((x<<1) ^ (((x>>7) & 1) * 0x1b));
-}
+    quint8 xTime(quint8 x)
+    {
+        return ((x << 1) ^ (((x >> 7) & 1) * 0x1b));
+    }
 
-quint8 multiply(quint8 x, quint8 y)
-{
-    return (((y & 1) * x) ^ ((y>>1 & 1) * xTime(x)) ^ ((y>>2 & 1) * xTime(xTime(x))) ^ ((y>>3 & 1)
-            * xTime(xTime(xTime(x)))) ^ ((y>>4 & 1) * xTime(xTime(xTime(xTime(x))))));
-}
+    quint8 multiply(quint8 x, quint8 y)
+    {
+        return (((y & 1) * x) ^ ((y >> 1 & 1) * xTime(x)) ^ ((y >> 2 & 1) * xTime(xTime(x))) ^ ((y >> 3 & 1)
+            * xTime(xTime(xTime(x)))) ^ ((y >> 4 & 1) * xTime(xTime(xTime(xTime(x))))));
+    }
 
 }
 
 /*
- * End Local functions
+ * 结束局部函数
  * */
 
 QAESEncryption::QAESEncryption(Aes level, Mode mode,
-                               Padding padding)
+    Padding padding)
     : m_nb(4), m_blocklen(16), m_level(level), m_mode(mode), m_padding(padding)
     , m_aesNIAvailable(false), m_state(nullptr)
 {
@@ -116,39 +116,39 @@ QAESEncryption::QAESEncryption(Aes level, Mode mode,
         m_keyLen = aes.keylen;
         m_nr = aes.nr;
         m_expandedKey = aes.expandedKey;
-        }
-        break;
+    }
+                break;
     case AES_192: {
         AES192 aes;
         m_nk = aes.nk;
         m_keyLen = aes.keylen;
         m_nr = aes.nr;
         m_expandedKey = aes.expandedKey;
-        }
-        break;
+    }
+                break;
     case AES_256: {
         AES256 aes;
         m_nk = aes.nk;
         m_keyLen = aes.keylen;
         m_nr = aes.nr;
         m_expandedKey = aes.expandedKey;
-        }
-        break;
+    }
+                break;
     default: {
         AES128 aes;
         m_nk = aes.nk;
         m_keyLen = aes.keylen;
         m_nr = aes.nr;
         m_expandedKey = aes.expandedKey;
-        }
-        break;
+    }
+           break;
     }
 
 }
 QByteArray QAESEncryption::getPadding(int currSize, int alignment)
 {
     int size = (alignment - currSize % alignment) % alignment;
-    switch(m_padding)
+    switch (m_padding)
     {
     case Padding::ZERO:
         return QByteArray(size, 0x00);
@@ -160,7 +160,7 @@ QByteArray QAESEncryption::getPadding(int currSize, int alignment)
         break;
     case Padding::ISO:
         if (size > 0)
-            return QByteArray (size - 1, 0x00).prepend('\x80');
+            return QByteArray(size - 1, 0x00).prepend('\x80');
         break;
     default:
         return QByteArray(size, 0x00);
@@ -169,140 +169,142 @@ QByteArray QAESEncryption::getPadding(int currSize, int alignment)
     return QByteArray();
 }
 
-QByteArray QAESEncryption::expandKey(const QByteArray &key, bool isEncryptionKey)
+QByteArray QAESEncryption::expandKey(const QByteArray& key, bool isEncryptionKey)
 {
 
 #ifdef USE_INTEL_AES_IF_AVAILABLE
-    if (m_aesNIAvailable){
-          switch(m_level) {
-          case AES_128: {
-              AES128 aes128;
-              AES_KEY aesKey;
-              if(isEncryptionKey){
-                  AES_set_encrypt_key((unsigned char*) key.constData(), aes128.userKeySize, &aesKey);
-              }else{
-                  AES_set_decrypt_key((unsigned char*) key.constData(), aes128.userKeySize, &aesKey);
-              }
+    if (m_aesNIAvailable) {
+        switch (m_level) {
+        case AES_128: {
+            AES128 aes128;
+            AES_KEY aesKey;
+            if (isEncryptionKey) {
+                AES_set_encrypt_key((unsigned char*)key.constData(), aes128.userKeySize, &aesKey);
+            }
+            else {
+                AES_set_decrypt_key((unsigned char*)key.constData(), aes128.userKeySize, &aesKey);
+            }
 
-              QByteArray expKey;
-              expKey.resize(aes128.expandedKey);
-              memcpy(expKey.data(), (char*) aesKey.KEY, aes128.expandedKey);
-              memset(aesKey.KEY, 0, 240);
-              return expKey;
-          }
-              break;
-          case AES_192: {
-              AES192 aes192;
-              AES_KEY aesKey;
-              if(isEncryptionKey){
-                  AES_set_encrypt_key((unsigned char*) key.constData(), aes192.userKeySize, &aesKey);
-              }else{
-                  AES_set_decrypt_key((unsigned char*) key.constData(), aes192.userKeySize, &aesKey);
-              }
+            QByteArray expKey;
+            expKey.resize(aes128.expandedKey);
+            memcpy(expKey.data(), (char*)aesKey.KEY, aes128.expandedKey);
+            memset(aesKey.KEY, 0, 240);
+            return expKey;
+        }
+                    break;
+        case AES_192: {
+            AES192 aes192;
+            AES_KEY aesKey;
+            if (isEncryptionKey) {
+                AES_set_encrypt_key((unsigned char*)key.constData(), aes192.userKeySize, &aesKey);
+            }
+            else {
+                AES_set_decrypt_key((unsigned char*)key.constData(), aes192.userKeySize, &aesKey);
+            }
 
-              QByteArray expKey;
-              expKey.resize(aes192.expandedKey);
-              memcpy(expKey.data(), (char*) aesKey.KEY, aes192.expandedKey);
-              memset(aesKey.KEY, 0, 240);
-              return expKey;
-          }
-              break;
-          case AES_256: {
-              AES256 aes256;
-              AES_KEY aesKey;
-              if(isEncryptionKey){
-                  AES_set_encrypt_key((unsigned char*) key.constData(), aes256.userKeySize, &aesKey);
-              }else{
-                  AES_set_decrypt_key((unsigned char*) key.constData(), aes256.userKeySize, &aesKey);
-              }
+            QByteArray expKey;
+            expKey.resize(aes192.expandedKey);
+            memcpy(expKey.data(), (char*)aesKey.KEY, aes192.expandedKey);
+            memset(aesKey.KEY, 0, 240);
+            return expKey;
+        }
+                    break;
+        case AES_256: {
+            AES256 aes256;
+            AES_KEY aesKey;
+            if (isEncryptionKey) {
+                AES_set_encrypt_key((unsigned char*)key.constData(), aes256.userKeySize, &aesKey);
+            }
+            else {
+                AES_set_decrypt_key((unsigned char*)key.constData(), aes256.userKeySize, &aesKey);
+            }
 
-              QByteArray expKey;
-              expKey.resize(aes256.expandedKey);
-              memcpy(expKey.data(), (char*) aesKey.KEY, aes256.expandedKey);
-              memset(aesKey.KEY, 0, 240);
-              return expKey;
-          }
-              break;
-          default:
-              return QByteArray();
-              break;
-          }
-      } else
+            QByteArray expKey;
+            expKey.resize(aes256.expandedKey);
+            memcpy(expKey.data(), (char*)aesKey.KEY, aes256.expandedKey);
+            memset(aesKey.KEY, 0, 240);
+            return expKey;
+        }
+                    break;
+        default:
+            return QByteArray();
+            break;
+        }
+    }
+    else
 #endif
-  {
+    {
 
-      int i, k;
-      quint8 tempa[4]; // Used for the column/row operations
-      QByteArray roundKey(key); // The first round key is the key itself.
+        int i, k;
+        quint8 tempa[4]; // Used for the column/row operations
+        QByteArray roundKey(key); // The first round key is the key itself.
 
-      // All other round keys are found from the previous round keys.
-      //i == Nk
-      for(i = m_nk; i < m_nb * (m_nr + 1); i++)
-      {
-        tempa[0] = (quint8) roundKey.at((i-1) * 4 + 0);
-        tempa[1] = (quint8) roundKey.at((i-1) * 4 + 1);
-        tempa[2] = (quint8) roundKey.at((i-1) * 4 + 2);
-        tempa[3] = (quint8) roundKey.at((i-1) * 4 + 3);
-
-        if (i % m_nk == 0)
+        // All other round keys are found from the previous round keys.
+        //i == Nk
+        for (i = m_nk; i < m_nb * (m_nr + 1); i++)
         {
-            // This function shifts the 4 bytes in a word to the left once.
-            // [a0,a1,a2,a3] becomes [a1,a2,a3,a0]
+            tempa[0] = (quint8)roundKey.at((i - 1) * 4 + 0);
+            tempa[1] = (quint8)roundKey.at((i - 1) * 4 + 1);
+            tempa[2] = (quint8)roundKey.at((i - 1) * 4 + 2);
+            tempa[3] = (quint8)roundKey.at((i - 1) * 4 + 3);
 
-            // Function RotWord()
-            k = tempa[0];
-            tempa[0] = tempa[1];
-            tempa[1] = tempa[2];
-            tempa[2] = tempa[3];
-            tempa[3] = k;
+            if (i % m_nk == 0)
+            {
+                // This function shifts the 4 bytes in a word to the left once.
+                // [a0,a1,a2,a3] becomes [a1,a2,a3,a0]
 
-            // Function Subword()
-            tempa[0] = getSBoxValue(tempa[0]);
-            tempa[1] = getSBoxValue(tempa[1]);
-            tempa[2] = getSBoxValue(tempa[2]);
-            tempa[3] = getSBoxValue(tempa[3]);
+                // Function RotWord()
+                k = tempa[0];
+                tempa[0] = tempa[1];
+                tempa[1] = tempa[2];
+                tempa[2] = tempa[3];
+                tempa[3] = k;
 
-            tempa[0] =  tempa[0] ^ Rcon[i/m_nk];
+                // Function Subword()
+                tempa[0] = getSBoxValue(tempa[0]);
+                tempa[1] = getSBoxValue(tempa[1]);
+                tempa[2] = getSBoxValue(tempa[2]);
+                tempa[3] = getSBoxValue(tempa[3]);
+
+                tempa[0] = tempa[0] ^ Rcon[i / m_nk];
+            }
+
+            if (m_level == AES_256 && i % m_nk == 4)
+            {
+                // Function Subword()
+                tempa[0] = getSBoxValue(tempa[0]);
+                tempa[1] = getSBoxValue(tempa[1]);
+                tempa[2] = getSBoxValue(tempa[2]);
+                tempa[3] = getSBoxValue(tempa[3]);
+            }
+            roundKey.insert(i * 4 + 0, (quint8)roundKey.at((i - m_nk) * 4 + 0) ^ tempa[0]);
+            roundKey.insert(i * 4 + 1, (quint8)roundKey.at((i - m_nk) * 4 + 1) ^ tempa[1]);
+            roundKey.insert(i * 4 + 2, (quint8)roundKey.at((i - m_nk) * 4 + 2) ^ tempa[2]);
+            roundKey.insert(i * 4 + 3, (quint8)roundKey.at((i - m_nk) * 4 + 3) ^ tempa[3]);
         }
-
-        if (m_level == AES_256 && i % m_nk == 4)
-        {
-            // Function Subword()
-            tempa[0] = getSBoxValue(tempa[0]);
-            tempa[1] = getSBoxValue(tempa[1]);
-            tempa[2] = getSBoxValue(tempa[2]);
-            tempa[3] = getSBoxValue(tempa[3]);
-        }
-        roundKey.insert(i * 4 + 0, (quint8) roundKey.at((i - m_nk) * 4 + 0) ^ tempa[0]);
-        roundKey.insert(i * 4 + 1, (quint8) roundKey.at((i - m_nk) * 4 + 1) ^ tempa[1]);
-        roundKey.insert(i * 4 + 2, (quint8) roundKey.at((i - m_nk) * 4 + 2) ^ tempa[2]);
-        roundKey.insert(i * 4 + 3, (quint8) roundKey.at((i - m_nk) * 4 + 3) ^ tempa[3]);
-      }
-      return roundKey;
-  }
+        return roundKey;
+    }
 }
 
-// This function adds the round key to state.
-// The round key is added to the state by an XOR function.
-void QAESEncryption::addRoundKey(const quint8 round, const QByteArray &expKey)
+// 该函数将轮密钥添加到状态中。
+// 轮密钥通过异或操作添加到状态矩阵。
+void QAESEncryption::addRoundKey(const quint8 round, const QByteArray& expKey)
 {
-  QByteArray::iterator it = m_state->begin();
-  for(int i=0; i < 16; ++i)
-      it[i] = (quint8) it[i] ^ (quint8) expKey.at(round * m_nb * 4 + (i/4) * m_nb + (i%4));
+    QByteArray::iterator it = m_state->begin();
+    for (int i = 0; i < 16; ++i)
+        it[i] = (quint8)it[i] ^ (quint8)expKey.at(round * m_nb * 4 + (i / 4) * m_nb + (i % 4));
 }
 
-// The SubBytes Function Substitutes the values in the
-// state matrix with values in an S-box.
+// SubBytes函数将状态矩阵中的值替换为S盒中的值。
 void QAESEncryption::subBytes()
 {
-  QByteArray::iterator it = m_state->begin();
-  for(int i = 0; i < 16; i++)
-    it[i] = getSBoxValue((quint8) it[i]);
+    QByteArray::iterator it = m_state->begin();
+    for (int i = 0; i < 16; i++)
+        it[i] = getSBoxValue((quint8)it[i]);
 }
 
-// The ShiftRows() function shifts the rows in the state to the left.
-// Each row is shifted with different offset.
-// Offset = Row number. So the first row is not shifted.
+// ShiftRows函数将状态矩阵中的行向左循环移位。
+// 每个行的移位偏移量等于行号。
 void QAESEncryption::shiftRows()
 {
     QByteArray::iterator it = m_state->begin();
@@ -310,80 +312,78 @@ void QAESEncryption::shiftRows()
     //Keep in mind that QByteArray is column-driven!!
 
      //Shift 1 to left
-    temp   = (quint8)it[1];
-    it[1]  = (quint8)it[5];
-    it[5]  = (quint8)it[9];
-    it[9]  = (quint8)it[13];
+    temp = (quint8)it[1];
+    it[1] = (quint8)it[5];
+    it[5] = (quint8)it[9];
+    it[9] = (quint8)it[13];
     it[13] = (quint8)temp;
 
     //Shift 2 to left
-    temp   = (quint8)it[2];
-    it[2]  = (quint8)it[10];
+    temp = (quint8)it[2];
+    it[2] = (quint8)it[10];
     it[10] = (quint8)temp;
-    temp   = (quint8)it[6];
-    it[6]  = (quint8)it[14];
+    temp = (quint8)it[6];
+    it[6] = (quint8)it[14];
     it[14] = (quint8)temp;
 
     //Shift 3 to left
-    temp   = (quint8)it[3];
-    it[3]  = (quint8)it[15];
+    temp = (quint8)it[3];
+    it[3] = (quint8)it[15];
     it[15] = (quint8)it[11];
     it[11] = (quint8)it[7];
-    it[7]  = (quint8)temp;
+    it[7] = (quint8)temp;
 }
 
-// MixColumns function mixes the columns of the state matrix
-//optimized!!
+// MixColumns函数将状态矩阵中的列混淆。
+// 优化版
 void QAESEncryption::mixColumns()
 {
-  QByteArray::iterator it = m_state->begin();
-  quint8 tmp, tm, t;
+    QByteArray::iterator it = m_state->begin();
+    quint8 tmp, tm, t;
 
-  for(int i = 0; i < 16; i += 4){
-    t       = (quint8)it[i];
-    tmp     =  (quint8)it[i] ^ (quint8)it[i+1] ^ (quint8)it[i+2] ^ (quint8)it[i+3] ;
+    for (int i = 0; i < 16; i += 4) {
+        t = (quint8)it[i];
+        tmp = (quint8)it[i] ^ (quint8)it[i + 1] ^ (quint8)it[i + 2] ^ (quint8)it[i + 3];
 
-    tm      = xTime( (quint8)it[i] ^ (quint8)it[i+1] );
-    it[i]   = (quint8)it[i] ^ (quint8)tm ^ (quint8)tmp;
+        tm = xTime((quint8)it[i] ^ (quint8)it[i + 1]);
+        it[i] = (quint8)it[i] ^ (quint8)tm ^ (quint8)tmp;
 
-    tm      = xTime( (quint8)it[i+1] ^ (quint8)it[i+2]);
-    it[i+1] = (quint8)it[i+1] ^ (quint8)tm ^ (quint8)tmp;
+        tm = xTime((quint8)it[i + 1] ^ (quint8)it[i + 2]);
+        it[i + 1] = (quint8)it[i + 1] ^ (quint8)tm ^ (quint8)tmp;
 
-    tm      = xTime( (quint8)it[i+2] ^ (quint8)it[i+3]);
-    it[i+2] =(quint8)it[i+2] ^ (quint8)tm ^ (quint8)tmp;
+        tm = xTime((quint8)it[i + 2] ^ (quint8)it[i + 3]);
+        it[i + 2] = (quint8)it[i + 2] ^ (quint8)tm ^ (quint8)tmp;
 
-    tm      = xTime((quint8)it[i+3] ^ (quint8)t);
-    it[i+3] =(quint8)it[i+3] ^ (quint8)tm ^ (quint8)tmp;
-  }
+        tm = xTime((quint8)it[i + 3] ^ (quint8)t);
+        it[i + 3] = (quint8)it[i + 3] ^ (quint8)tm ^ (quint8)tmp;
+    }
 }
 
-// MixColumns function mixes the columns of the state matrix.
-// The method used to multiply may be difficult to understand for the inexperienced.
-// Please use the references to gain more information.
+// invMixColumns函数将状态矩阵中的列进行逆混淆。
+// 使用的乘法方法可能对不熟悉的人来说难以理解。
 void QAESEncryption::invMixColumns()
 {
-  QByteArray::iterator it = m_state->begin();
-  quint8 a,b,c,d;
-  for(int i = 0; i < 16; i+=4){
-    a = (quint8) it[i];
-    b = (quint8) it[i+1];
-    c = (quint8) it[i+2];
-    d = (quint8) it[i+3];
+    QByteArray::iterator it = m_state->begin();
+    quint8 a, b, c, d;
+    for (int i = 0; i < 16; i += 4) {
+        a = (quint8)it[i];
+        b = (quint8)it[i + 1];
+        c = (quint8)it[i + 2];
+        d = (quint8)it[i + 3];
 
-    it[i]   = (quint8) (multiply(a, 0x0e) ^ multiply(b, 0x0b) ^ multiply(c, 0x0d) ^ multiply(d, 0x09));
-    it[i+1] = (quint8) (multiply(a, 0x09) ^ multiply(b, 0x0e) ^ multiply(c, 0x0b) ^ multiply(d, 0x0d));
-    it[i+2] = (quint8) (multiply(a, 0x0d) ^ multiply(b, 0x09) ^ multiply(c, 0x0e) ^ multiply(d, 0x0b));
-    it[i+3] = (quint8) (multiply(a, 0x0b) ^ multiply(b, 0x0d) ^ multiply(c, 0x09) ^ multiply(d, 0x0e));
-  }
+        it[i] = (quint8)(multiply(a, 0x0e) ^ multiply(b, 0x0b) ^ multiply(c, 0x0d) ^ multiply(d, 0x09));
+        it[i + 1] = (quint8)(multiply(a, 0x09) ^ multiply(b, 0x0e) ^ multiply(c, 0x0b) ^ multiply(d, 0x0d));
+        it[i + 2] = (quint8)(multiply(a, 0x0d) ^ multiply(b, 0x09) ^ multiply(c, 0x0e) ^ multiply(d, 0x0b));
+        it[i + 3] = (quint8)(multiply(a, 0x0b) ^ multiply(b, 0x0d) ^ multiply(c, 0x09) ^ multiply(d, 0x0e));
+    }
 }
 
-// The SubBytes Function Substitutes the values in the
-// state matrix with values in an S-box.
+// invSubBytes函数将状态矩阵中的值替换为S盒的逆值。
 void QAESEncryption::invSubBytes()
 {
     QByteArray::iterator it = m_state->begin();
-    for(int i = 0; i < 16; ++i)
-        it[i] = getSBoxInvert((quint8) it[i]);
+    for (int i = 0; i < 16; ++i)
+        it[i] = getSBoxInvert((quint8)it[i]);
 }
 
 void QAESEncryption::invShiftRows()
@@ -394,92 +394,92 @@ void QAESEncryption::invShiftRows()
     //Keep in mind that QByteArray is column-driven!!
 
     //Shift 1 to right
-    temp   = (quint8)it[13];
+    temp = (quint8)it[13];
     it[13] = (quint8)it[9];
-    it[9]  = (quint8)it[5];
-    it[5]  = (quint8)it[1];
-    it[1]  = (quint8)temp;
+    it[9] = (quint8)it[5];
+    it[5] = (quint8)it[1];
+    it[1] = (quint8)temp;
 
     //Shift 2
-    temp   = (quint8)it[10];
+    temp = (quint8)it[10];
     it[10] = (quint8)it[2];
-    it[2]  = (quint8)temp;
-    temp   = (quint8)it[14];
+    it[2] = (quint8)temp;
+    temp = (quint8)it[14];
     it[14] = (quint8)it[6];
-    it[6]  = (quint8)temp;
+    it[6] = (quint8)temp;
 
     //Shift 3
-    temp   = (quint8)it[7];
-    it[7]  = (quint8)it[11];
+    temp = (quint8)it[7];
+    it[7] = (quint8)it[11];
     it[11] = (quint8)it[15];
     it[15] = (quint8)it[3];
-    it[3]  = (quint8)temp;
+    it[3] = (quint8)temp;
 }
 
-QByteArray QAESEncryption::byteXor(const QByteArray &a, const QByteArray &b)
+QByteArray QAESEncryption::byteXor(const QByteArray& a, const QByteArray& b)
 {
-  QByteArray::const_iterator it_a = a.begin();
-  QByteArray::const_iterator it_b = b.begin();
-  QByteArray ret;
+    QByteArray::const_iterator it_a = a.begin();
+    QByteArray::const_iterator it_b = b.begin();
+    QByteArray ret;
 
-  //for(int i = 0; i < m_blocklen; i++)
-  for(int i = 0; i < std::min(a.size(), b.size()); i++)
-      ret.insert(i,it_a[i] ^ it_b[i]);
+    //for(int i = 0; i < m_blocklen; i++)
+    for (int i = 0; i < std::min(a.size(), b.size()); i++)
+        ret.insert(i, it_a[i] ^ it_b[i]);
 
-  return ret;
+    return ret;
 }
 
-// Cipher is the main function that encrypts the PlainText.
-QByteArray QAESEncryption::cipher(const QByteArray &expKey, const QByteArray &in)
+// cipher是主要的加密函数，对明文进行加密。
+QByteArray QAESEncryption::cipher(const QByteArray& expKey, const QByteArray& in)
 {
 
-  //m_state is the input buffer...
-  QByteArray output(in);
-  m_state = &output;
-
-  // Add the First round key to the state before starting the rounds.
-  addRoundKey(0, expKey);
-
-  // There will be Nr rounds.
-  // The first Nr-1 rounds are identical.
-  // These Nr-1 rounds are executed in the loop below.
-  for(quint8 round = 1; round < m_nr; ++round){
-    subBytes();
-    shiftRows();
-    mixColumns();
-    addRoundKey(round, expKey);
-  }
-
-  // The last round is given below.
-  // The MixColumns function is not here in the last round.
-  subBytes();
-  shiftRows();
-  addRoundKey(m_nr, expKey);
-
-  return output;
-}
-
-QByteArray QAESEncryption::invCipher(const QByteArray &expKey, const QByteArray &in)
-{
-    //m_state is the input buffer.... handle it!
+    //m_state是输入缓冲区...
     QByteArray output(in);
     m_state = &output;
 
-    // Add the First round key to the state before starting the rounds.
+    // 在开始轮之前，向状态中添加第一轮轮密钥。
+    addRoundKey(0, expKey);
+
+    // 将进行Nr轮。
+    // 前Nr-1轮是相同的。
+    // 这些Nr-1轮在下面的循环中执行。
+    for (quint8 round = 1; round < m_nr; ++round) {
+        subBytes();
+        shiftRows();
+        mixColumns();
+        addRoundKey(round, expKey);
+    }
+
+    // 最后一轮如下所示。
+    // 最后一轮不包含MixColumns函数。
+    subBytes();
+    shiftRows();
     addRoundKey(m_nr, expKey);
 
-    // There will be Nr rounds.
-    // The first Nr-1 rounds are identical.
-    // These Nr-1 rounds are executed in the loop below.
-    for(quint8 round=m_nr-1; round>0 ; round--){
+    return output;
+}
+
+QByteArray QAESEncryption::invCipher(const QByteArray& expKey, const QByteArray& in)
+{
+    //m_state是输入缓冲.... 处理它!
+    QByteArray output(in);
+    m_state = &output;
+
+    // 在开始轮之前，向状态中添加最后一轮轮密钥。
+    addRoundKey(m_nr, expKey);
+
+    // 将进行Nr轮。
+    // 前Nr-1轮是相同的。
+    // 这些Nr-1轮在下面的循环中执行。
+    for (quint8 round = m_nr - 1; round > 0; round--) {
         invShiftRows();
         invSubBytes();
         addRoundKey(round, expKey);
         invMixColumns();
     }
 
-    // The last round is given below.
-    // The MixColumns function is not here in the last round.
+    // 最后一轮如下所示。
+    // 最后一轮不包含MixColumns函数。
     invShiftRows();
     invSubBytes();
     addRoundKey(0, expKey);
@@ -490,50 +490,50 @@ QByteArray QAESEncryption::invCipher(const QByteArray &expKey, const QByteArray 
 QByteArray QAESEncryption::printArray(uchar* arr, int size)
 {
     QByteArray print("");
-    for(int i=0; i<size; i++)
+    for (int i = 0; i < size; i++)
         print.append(arr[i]);
 
     return print.toHex();
 }
 
-QByteArray QAESEncryption::encode(const QByteArray &rawText, const QByteArray &key, const QByteArray &iv)
+QByteArray QAESEncryption::encode(const QByteArray& rawText, const QByteArray& key, const QByteArray& iv)
 {
     if ((m_mode >= CBC && (iv.isEmpty() || iv.size() != m_blocklen)) || key.size() != m_keyLen)
-           return QByteArray();
+        return QByteArray();
 
-        QByteArray expandedKey = expandKey(key, true);
-        QByteArray alignedText(rawText);
+    QByteArray expandedKey = expandKey(key, true);
+    QByteArray alignedText(rawText);
 
-        //Fill array with padding
-        alignedText.append(getPadding(rawText.size(), m_blocklen));
+    //填充数组以适应块大小
+    alignedText.append(getPadding(rawText.size(), m_blocklen));
 
-    switch(m_mode)
+    switch (m_mode)
     {
     case ECB: {
 #ifdef USE_INTEL_AES_IF_AVAILABLE
-        if (m_aesNIAvailable){
+        if (m_aesNIAvailable) {
             char expKey[expandedKey.size()];
             memcpy(expKey, expandedKey.data(), expandedKey.size());
 
             QByteArray outText;
             outText.resize(alignedText.size());
-            AES_ECB_encrypt((unsigned char*) alignedText.constData(),
-                            (unsigned char*) outText.data(),
-                            alignedText.size(),
-                            expKey,
-                            m_nr);
+            AES_ECB_encrypt((unsigned char*)alignedText.constData(),
+                (unsigned char*)outText.data(),
+                alignedText.size(),
+                expKey,
+                m_nr);
             return outText;
         }
 #endif
         QByteArray ret;
-        for(int i=0; i < alignedText.size(); i+= m_blocklen)
+        for (int i = 0; i < alignedText.size(); i += m_blocklen)
             ret.append(cipher(expandedKey, alignedText.mid(i, m_blocklen)));
         return ret;
     }
-    break;
+            break;
     case CBC: {
 #ifdef USE_INTEL_AES_IF_AVAILABLE
-        if (m_aesNIAvailable){
+        if (m_aesNIAvailable) {
             quint8 ivec[iv.size()];
             memcpy(ivec, iv.data(), iv.size());
             char expKey[expandedKey.size()];
@@ -541,140 +541,141 @@ QByteArray QAESEncryption::encode(const QByteArray &rawText, const QByteArray &k
 
             QByteArray outText;
             outText.resize(alignedText.size());
-            AES_CBC_encrypt((unsigned char*) alignedText.constData(),
-                            (unsigned char*) outText.data(),
-                            ivec,
-                            alignedText.size(),
-                            expKey,
-                            m_nr);
+            AES_CBC_encrypt((unsigned char*)alignedText.constData(),
+                (unsigned char*)outText.data(),
+                ivec,
+                alignedText.size(),
+                expKey,
+                m_nr);
             return outText;
         }
 #endif
         QByteArray ret;
         QByteArray ivTemp(iv);
-        for(int i=0; i < alignedText.size(); i+= m_blocklen) {
-            alignedText.replace(i, m_blocklen, byteXor(alignedText.mid(i, m_blocklen),ivTemp));
+        for (int i = 0; i < alignedText.size(); i += m_blocklen) {
+            alignedText.replace(i, m_blocklen, byteXor(alignedText.mid(i, m_blocklen), ivTemp));
             ret.append(cipher(expandedKey, alignedText.mid(i, m_blocklen)));
             ivTemp = ret.mid(i, m_blocklen);
         }
         return ret;
     }
-    break;
+            break;
     case CFB: {
         QByteArray ret;
         ret.append(byteXor(alignedText.left(m_blocklen), cipher(expandedKey, iv)));
-        for(int i=0; i < alignedText.size(); i+= m_blocklen) {
-            if (i+m_blocklen < alignedText.size())
-                ret.append(byteXor(alignedText.mid(i+m_blocklen, m_blocklen),
-                                   cipher(expandedKey, ret.mid(i, m_blocklen))));
+        for (int i = 0; i < alignedText.size(); i += m_blocklen) {
+            if (i + m_blocklen < alignedText.size())
+                ret.append(byteXor(alignedText.mid(i + m_blocklen, m_blocklen),
+                    cipher(expandedKey, ret.mid(i, m_blocklen))));
         }
         return ret;
     }
-    break;
+            break;
     case OFB: {
-    QByteArray ret;
+        QByteArray ret;
         QByteArray ofbTemp;
         ofbTemp.append(cipher(expandedKey, iv));
-        for (int i=m_blocklen; i < alignedText.size(); i += m_blocklen){
+        for (int i = m_blocklen; i < alignedText.size(); i += m_blocklen) {
             ofbTemp.append(cipher(expandedKey, ofbTemp.right(m_blocklen)));
         }
         ret.append(byteXor(alignedText, ofbTemp));
         return ret;
     }
-    break;
+            break;
     default: break;
     }
     return QByteArray();
 }
 
-QByteArray QAESEncryption::decode(const QByteArray &rawText, const QByteArray &key, const QByteArray &iv)
+QByteArray QAESEncryption::decode(const QByteArray& rawText, const QByteArray& key, const QByteArray& iv)
 {
     if ((m_mode >= CBC && (iv.isEmpty() || iv.size() != m_blocklen)) || key.size() != m_keyLen)
-           return QByteArray();
+        return QByteArray();
 
-        QByteArray ret;
-        QByteArray expandedKey;
+    QByteArray ret;
+    QByteArray expandedKey;
 
-    #ifdef USE_INTEL_AES_IF_AVAILABLE
-        if(m_aesNIAvailable && m_mode <= CBC){
-            expandedKey = expandKey(key, false);
-        }else{
-            expandedKey = expandKey(key, true);
-        }
-    #else
+#ifdef USE_INTEL_AES_IF_AVAILABLE
+    if (m_aesNIAvailable && m_mode <= CBC) {
+        expandedKey = expandKey(key, false);
+    }
+    else {
         expandedKey = expandKey(key, true);
-    #endif
-        //false or true here is very important
-        //the expandedKeys aren't the same for !aes-ni! ENcryption and DEcryption (only CBC and EBC)
-        //but if you are !NOT! using aes-ni then the expandedKeys for encryption and decryption are the SAME!!!
+    }
+#else
+    expandedKey = expandKey(key, true);
+#endif
+    //false or true这里非常重要
+    //如果使用aes-ni，CBC和ECB模式的加密和解密扩展密钥不同。
+    //但如果不用aes-ni，则加密和解密的扩展密钥相同。
 
 
-    switch(m_mode)
+    switch (m_mode)
     {
     case ECB:
 #ifdef USE_INTEL_AES_IF_AVAILABLE
-        if (m_aesNIAvailable){
+        if (m_aesNIAvailable) {
             char expKey[expandedKey.size()];                                //expandedKey
             memcpy(expKey, expandedKey.data(), expandedKey.size());
             ret.resize(rawText.size());
 
-            AES_ECB_decrypt((unsigned char*) rawText.constData(),
-                            (unsigned char*) ret.data(),
-                            rawText.size(),
-                            expKey,
-                            m_nr);
+            AES_ECB_decrypt((unsigned char*)rawText.constData(),
+                (unsigned char*)ret.data(),
+                rawText.size(),
+                expKey,
+                m_nr);
             break;
         }
 #endif
-        for(int i=0; i < rawText.size(); i+= m_blocklen)
+        for (int i = 0; i < rawText.size(); i += m_blocklen)
             ret.append(invCipher(expandedKey, rawText.mid(i, m_blocklen)));
         break;
     case CBC:
 #ifdef USE_INTEL_AES_IF_AVAILABLE
-        if (m_aesNIAvailable){
+        if (m_aesNIAvailable) {
             quint8 ivec[iv.size()];                                         //IV
             memcpy(ivec, iv.constData(), iv.size());
             char expKey[expandedKey.size()];                                //expandedKey
             memcpy(expKey, expandedKey.data(), expandedKey.size());
             ret.resize(rawText.size());
 
-            AES_CBC_decrypt((unsigned char*) rawText.constData(),
-                            (unsigned char*) ret.data(),
-                            ivec,
-                            rawText.size(),
-                            expKey,
-                            m_nr);
+            AES_CBC_decrypt((unsigned char*)rawText.constData(),
+                (unsigned char*)ret.data(),
+                ivec,
+                rawText.size(),
+                expKey,
+                m_nr);
             break;
         }
 #endif
         {
             QByteArray ivTemp(iv);
-            for(int i=0; i < rawText.size(); i+= m_blocklen){
+            for (int i = 0; i < rawText.size(); i += m_blocklen) {
                 ret.append(invCipher(expandedKey, rawText.mid(i, m_blocklen)));
-                ret.replace(i, m_blocklen, byteXor(ret.mid(i, m_blocklen),ivTemp));
+                ret.replace(i, m_blocklen, byteXor(ret.mid(i, m_blocklen), ivTemp));
                 ivTemp = rawText.mid(i, m_blocklen);
             }
         }
         break;
     case CFB: {
-            ret.append(byteXor(rawText.mid(0, m_blocklen), cipher(expandedKey, iv)));
-            for(int i=0; i < rawText.size(); i+= m_blocklen){
-                if (i+m_blocklen < rawText.size()) {
-                    ret.append(byteXor(rawText.mid(i+m_blocklen, m_blocklen),
-                                       cipher(expandedKey, rawText.mid(i, m_blocklen))));
-                }
+        ret.append(byteXor(rawText.mid(0, m_blocklen), cipher(expandedKey, iv)));
+        for (int i = 0; i < rawText.size(); i += m_blocklen) {
+            if (i + m_blocklen < rawText.size()) {
+                ret.append(byteXor(rawText.mid(i + m_blocklen, m_blocklen),
+                    cipher(expandedKey, rawText.mid(i, m_blocklen))));
             }
         }
-        break;
+    }
+            break;
     case OFB: {
         QByteArray ofbTemp;
         ofbTemp.append(cipher(expandedKey, iv));
-        for (int i=m_blocklen; i < rawText.size(); i += m_blocklen){
+        for (int i = m_blocklen; i < rawText.size(); i += m_blocklen) {
             ofbTemp.append(cipher(expandedKey, ofbTemp.right(m_blocklen)));
         }
         ret.append(byteXor(rawText, ofbTemp));
     }
-        break;
+            break;
     default:
         //do nothing
         break;
@@ -682,7 +683,7 @@ QByteArray QAESEncryption::decode(const QByteArray &rawText, const QByteArray &k
     return ret;
 }
 
-QByteArray QAESEncryption::removePadding(const QByteArray &rawText)
+QByteArray QAESEncryption::removePadding(const QByteArray& rawText)
 {
-    return RemovePadding(rawText, (Padding) m_padding);
+    return RemovePadding(rawText, (Padding)m_padding);
 }

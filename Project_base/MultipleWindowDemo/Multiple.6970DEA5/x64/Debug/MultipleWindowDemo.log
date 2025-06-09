@@ -1,0 +1,11 @@
+﻿   Qt/MSBuild: 3.4.0.1
+   Qt: 6.9.0
+  moc SubWindow.h
+  SubWindow.cpp
+  MainWindow.cpp
+  main.cpp
+  qrc_MultipleWindowDemo.cpp
+  moc_MultipleWindowDemo.cpp
+  moc_MainWindow.cpp
+  moc_SubWindow.cpp
+  MultipleWindowDemo.vcxproj -> D:\Project\Mygithub\QT_Study\Project_base\MultipleWindowDemo\x64\Debug\MultipleWindowDemo.exe

@@ -1,4 +1,4 @@
-#ifndef QAESENCRYPTION_H
+﻿#ifndef QAESENCRYPTION_H
 #define QAESENCRYPTION_H
 
 #ifdef QtAES_EXPORTS
@@ -16,16 +16,19 @@
 #endif
 #endif
 
+// QAESEncryption 类提供AES加密和解密功能
 class QTAESSHARED_EXPORT QAESEncryption : public QObject
 {
     Q_OBJECT
 public:
+    // 定义AES密钥长度的枚举类型
     enum Aes {
         AES_128,
         AES_192,
         AES_256
     };
 
+    // 定义AES工作模式的枚举类型
     enum Mode {
         ECB,
         CBC,
@@ -33,100 +36,51 @@ public:
         OFB
     };
 
+    // 定义AES填充方式的枚举类型
     enum Padding {
-      ZERO,
-      PKCS7,
-      ISO
+        ZERO,
+        PKCS7,
+        ISO
     };
 
-    /*!
-     * \brief static method call to encrypt data given by rawText
-     * \param level:    AES::Aes level
-     * \param mode:     AES::Mode mode
-     * \param rawText:  input text
-     * \param key:      user-key (key.size either 128, 192, 256 bits depending on AES::Aes)
-     * \param iv:       initialisation-vector (iv.size is 128 bits (16 Bytes))
-     * \param padding:  AES::Padding standard
-     * \return encrypted cipher
-     */
-    static QByteArray Crypt(QAESEncryption::Aes level, QAESEncryption::Mode mode, const QByteArray &rawText, const QByteArray &key,
-                            const QByteArray &iv = QByteArray(), QAESEncryption::Padding padding = QAESEncryption::ISO);
-    /*!
-     * \brief static method call to decrypt data given by rawText
-     * \param level:    AES::Aes level
-     * \param mode:     AES::Mode mode
-     * \param rawText:  input text
-     * \param key:      user-key (key.size either 128, 192, 256 bits depending on AES::Aes)
-     * \param iv:       initialisation-vector (iv.size is 128 bits (16 Bytes))
-     * \param padding:  AES::Padding standard
-     * \return decrypted cipher with padding
-     */
-    static QByteArray Decrypt(QAESEncryption::Aes level, QAESEncryption::Mode mode, const QByteArray &rawText, const QByteArray &key,
-                              const QByteArray &iv = QByteArray(), QAESEncryption::Padding padding = QAESEncryption::ISO);
-    /*!
-     * \brief static method call to expand the user key to fit the encrypting/decrypting algorithm
-     * \param level:            AES::Aes level
-     * \param mode:             AES::Mode mode
-     * \param key:              user-key (key.size either 128, 192, 256 bits depending on AES::Aes)
-     * \param expKey:           output expanded key
-     * \param isEncryptionKey:    always 'true' || only 'false' when DECRYPTING in CBC or EBC mode with aesni (check if supported)
-     * \return AES-ready key
-     */
-    static QByteArray ExpandKey(QAESEncryption::Aes level, QAESEncryption::Mode mode, const QByteArray &key, bool isEncryptionKey);
+    // 静态方法，用于加密数据
+    static QByteArray Crypt(QAESEncryption::Aes level, QAESEncryption::Mode mode, const QByteArray& rawText, const QByteArray& key,
+        const QByteArray& iv = QByteArray(), QAESEncryption::Padding padding = QAESEncryption::ISO);
 
-    /*!
-     * \brief static method call to remove padding from decrypted cipher given by rawText
-     * \param rawText:  inputText
-     * \param padding:  AES::Padding standard
-     * \return decrypted cipher with padding removed
-     */
-    static QByteArray RemovePadding(const QByteArray &rawText, QAESEncryption::Padding padding = QAESEncryption::ISO);
+    // 静态方法，用于解密数据
+    static QByteArray Decrypt(QAESEncryption::Aes level, QAESEncryption::Mode mode, const QByteArray& rawText, const QByteArray& key,
+        const QByteArray& iv = QByteArray(), QAESEncryption::Padding padding = QAESEncryption::ISO);
 
+    // 静态方法，用于扩展用户密钥以符合加密/解密算法
+    static QByteArray ExpandKey(QAESEncryption::Aes level, QAESEncryption::Mode mode, const QByteArray& key, bool isEncryptionKey);
+
+    // 静态方法，用于从解密后的数据中移除填充
+    static QByteArray RemovePadding(const QByteArray& rawText, QAESEncryption::Padding padding = QAESEncryption::ISO);
+
+    // 构造函数，初始化AES加密/解密参数
     QAESEncryption(QAESEncryption::Aes level, QAESEncryption::Mode mode,
-                   QAESEncryption::Padding padding = QAESEncryption::ISO);
+        QAESEncryption::Padding padding = QAESEncryption::ISO);
 
+    // 对象方法，用于加密数据
+    QByteArray encode(const QByteArray& rawText, const QByteArray& key, const QByteArray& iv = QByteArray());
 
+    // 对象方法，用于解密数据
+    QByteArray decode(const QByteArray& rawText, const QByteArray& key, const QByteArray& iv = QByteArray());
 
-    /*!
-     * \brief object method call to encrypt data given by rawText
-     * \param rawText:  input text
-     * \param key:      user-key (key.size either 128, 192, 256 bits depending on AES::Aes)
-     * \param iv:       initialisation-vector (iv.size is 128 bits (16 Bytes))
-     * \return encrypted cipher
-     */
-    QByteArray encode(const QByteArray &rawText, const QByteArray &key, const QByteArray &iv = QByteArray());
+    // 对象方法，用于扩展用户密钥以符合加密/解密算法
+    QByteArray expandKey(const QByteArray& key, bool isEncryptionKey);
 
-    /*!
-     * \brief object method call to decrypt data given by rawText
-     * \param rawText:  input text
-     * \param key:      user-key (key.size either 128, 192, 256 bits depending on AES::Aes)
-     * \param iv:       initialisation-vector (iv.size is 128 bits (16 Bytes))
-     * \param padding:  AES::Padding standard
-     * \return decrypted cipher with padding
-     */
-    QByteArray decode(const QByteArray &rawText, const QByteArray &key, const QByteArray &iv = QByteArray());
+    // 对象方法，用于从解密后的数据中移除填充
+    QByteArray removePadding(const QByteArray& rawText);
 
-    /*!
-     * \brief object method call to expand the user key to fit the encrypting/decrypting algorithm
-     * \param key:              user-key (key.size either 128, 192, 256 bits depending on AES::Aes)
-     * \param isEncryptionKey:    always 'true' || only 'false' when DECRYPTING in CBC or EBC mode with aesni (check if supported)
-     * \return AES-ready key
-     */
-    QByteArray expandKey(const QByteArray &key, bool isEncryptionKey);
-
-    /*!
-     * \brief object method call to remove padding from decrypted cipher given by rawText
-     * \param rawText:  inputText
-     * \return decrypted cipher with padding removed
-     */
-    QByteArray removePadding(const QByteArray &rawText);
-
-    QByteArray printArray(uchar *arr, int size);
+    // 辅助方法，用于打印字节数组
+    QByteArray printArray(uchar* arr, int size);
 Q_SIGNALS:
 
 public Q_SLOTS:
 
 private:
+    // AES加密/解密所需的内部参数
     int m_nb;
     int m_blocklen;
     int m_level;
@@ -139,7 +93,8 @@ private:
     bool m_aesNIAvailable;
     QByteArray* m_state;
 
-    struct AES256{
+    // 定义AES-256的相关参数结构
+    struct AES256 {
         int nk = 8;
         int keylen = 32;
         int nr = 14;
@@ -147,7 +102,8 @@ private:
         int userKeySize = 256;
     };
 
-    struct AES192{
+    // 定义AES-192的相关参数结构
+    struct AES192 {
         int nk = 6;
         int keylen = 24;
         int nr = 12;
@@ -155,7 +111,8 @@ private:
         int userKeySize = 192;
     };
 
-    struct AES128{
+    // 定义AES-128的相关参数结构
+    struct AES128 {
         int nk = 4;
         int keylen = 16;
         int nr = 10;
@@ -163,23 +120,47 @@ private:
         int userKeySize = 128;
     };
 
-    quint8 getSBoxValue(quint8 num){return sbox[num];}
-    quint8 getSBoxInvert(quint8 num){return rsbox[num];}
+    // 获取S盒中的值
+    quint8 getSBoxValue(quint8 num) { return sbox[num]; }
 
-    void addRoundKey(const quint8 round, const QByteArray &expKey);
+    // 获取S盒中逆向的值
+    quint8 getSBoxInvert(quint8 num) { return rsbox[num]; }
+
+    // AES算法中的AddRoundKey步骤
+    void addRoundKey(const quint8 round, const QByteArray& expKey);
+
+    // AES算法中的SubBytes步骤
     void subBytes();
-    void shiftRows();
-    void mixColumns();
-    void invMixColumns();
-    void invSubBytes();
-    void invShiftRows();
-    QByteArray getPadding(int currSize, int alignment);
-    QByteArray cipher(const QByteArray &expKey, const QByteArray &in);
-    QByteArray invCipher(const QByteArray &expKey, const QByteArray &in);
-    QByteArray byteXor(const QByteArray &a, const QByteArray &b);
 
+    // AES算法中的ShiftRows步骤
+    void shiftRows();
+
+    // AES算法中的MixColumns步骤
+    void mixColumns();
+
+    // AES算法中的逆向MixColumns步骤
+    void invMixColumns();
+
+    // AES算法中的逆向SubBytes步骤
+    void invSubBytes();
+
+    // AES算法中的逆向ShiftRows步骤
+    void invShiftRows();
+
+    // 生成填充数据
+    QByteArray getPadding(int currSize, int alignment);
+
+    // AES加密函数
+    QByteArray cipher(const QByteArray& expKey, const QByteArray& in);
+
+    // AES解密函数
+    QByteArray invCipher(const QByteArray& expKey, const QByteArray& in);
+
+    // 字节数组异或操作
+    QByteArray byteXor(const QByteArray& a, const QByteArray& b);
+
+    // S盒表
     const quint8 sbox[256] = {
-      //0     1    2      3     4    5     6     7      8    9     A      B    C     D     E     F
       0x63, 0x7c, 0x77, 0x7b, 0xf2, 0x6b, 0x6f, 0xc5, 0x30, 0x01, 0x67, 0x2b, 0xfe, 0xd7, 0xab, 0x76,
       0xca, 0x82, 0xc9, 0x7d, 0xfa, 0x59, 0x47, 0xf0, 0xad, 0xd4, 0xa2, 0xaf, 0x9c, 0xa4, 0x72, 0xc0,
       0xb7, 0xfd, 0x93, 0x26, 0x36, 0x3f, 0xf7, 0xcc, 0x34, 0xa5, 0xe5, 0xf1, 0x71, 0xd8, 0x31, 0x15,
@@ -197,6 +178,7 @@ private:
       0xe1, 0xf8, 0x98, 0x11, 0x69, 0xd9, 0x8e, 0x94, 0x9b, 0x1e, 0x87, 0xe9, 0xce, 0x55, 0x28, 0xdf,
       0x8c, 0xa1, 0x89, 0x0d, 0xbf, 0xe6, 0x42, 0x68, 0x41, 0x99, 0x2d, 0x0f, 0xb0, 0x54, 0xbb, 0x16 };
 
+    // 逆向S盒表
     const quint8 rsbox[256] = {
       0x52, 0x09, 0x6a, 0xd5, 0x30, 0x36, 0xa5, 0x38, 0xbf, 0x40, 0xa3, 0x9e, 0x81, 0xf3, 0xd7, 0xfb,
       0x7c, 0xe3, 0x39, 0x82, 0x9b, 0x2f, 0xff, 0x87, 0x34, 0x8e, 0x43, 0x44, 0xc4, 0xde, 0xe9, 0xcb,
@@ -215,11 +197,9 @@ private:
       0xa0, 0xe0, 0x3b, 0x4d, 0xae, 0x2a, 0xf5, 0xb0, 0xc8, 0xeb, 0xbb, 0x3c, 0x83, 0x53, 0x99, 0x61,
       0x17, 0x2b, 0x04, 0x7e, 0xba, 0x77, 0xd6, 0x26, 0xe1, 0x69, 0x14, 0x63, 0x55, 0x21, 0x0c, 0x7d };
 
-    // The round constant word array, Rcon[i], contains the values given by
-    // x to th e power (i-1) being powers of x (x is denoted as {02}) in the field GF(2^8)
-    // Only the first 14 elements are needed
+    // 轮常量数组
     const quint8 Rcon[14] = {
-        0x8d, 0x01, 0x02, 0x04, 0x08, 0x10, 0x20, 0x40, 0x80, 0x1b, 0x36, 0x6c, 0xd8, 0xab};
+        0x8d, 0x01, 0x02, 0x04, 0x08, 0x10, 0x20, 0x40, 0x80, 0x1b, 0x36, 0x6c, 0xd8, 0xab };
 };
 
 #endif // QAESENCRYPTION_H

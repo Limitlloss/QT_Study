@@ -1,4 +1,4 @@
-#ifndef QJSON_H
+﻿#ifndef QJSON_H
 #define QJSON_H
 
 #include "cpp.h"

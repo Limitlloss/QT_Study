@@ -1,10 +1,15 @@
 /****************************************************************************
 ** Resource object code
 **
-** Created by: The Resource Compiler for Qt version 6.5.3
+** Created by: The Resource Compiler for Qt version 6.9.0
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
+
+#ifdef _MSC_VER
+// disable informational message "function ... selected for automatic inline expansion"
+#pragma warning (disable: 4711)
+#endif
 
 #ifdef QT_NAMESPACE
 #  define QT_RCC_PREPEND_NAMESPACE(name) ::QT_NAMESPACE::name
@@ -18,7 +23,9 @@
 #   define QT_RCC_MANGLE_NAMESPACE(name) name
 #endif
 
-#ifdef QT_NAMESPACE
+#if defined(QT_INLINE_NAMESPACE)
+inline namespace QT_NAMESPACE {
+#elif defined(QT_NAMESPACE)
 namespace QT_NAMESPACE {
 #endif
 

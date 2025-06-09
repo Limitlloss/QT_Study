@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/UI_Learn">
+        <file>ProjectResourceFile/Luffy.jpg</file>
+    </qresource>
+</RCC>

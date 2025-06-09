@@ -73,9 +73,6 @@
     <QtMoc Include="layer.h">
       <Filter>Header Files</Filter>
     </QtMoc>
-    <QtMoc Include="liveeditor.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
     <ClInclude Include="main.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -461,5 +458,10 @@
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include=".\Compass_resource.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="liveeditor.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
 </Project>

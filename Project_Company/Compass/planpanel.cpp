@@ -1,4 +1,4 @@
-#include "planpanel.h"
+﻿#include "planpanel.h"
 #include "mediapanel.h"
 #include "main.h"
 #include "layer.h"
@@ -12,9 +12,10 @@
 #include <QButtonGroup>
 #include <QPainter>
 
-PlanPanel::PlanPanel(QWidget *parent) : QWidget{parent} {
+// PlanPanel 类的构造函数，初始化计划面板
+PlanPanel::PlanPanel(QWidget* parent) : QWidget{ parent } {
     auto grid = new Grid(this);
-    grid->setContentsMargins(0,0,0,0);
+    grid->setContentsMargins(0, 0, 0, 0);
     grid->setHorizontalSpacing(0);
     grid->setVerticalSpacing(0);
     auto btnAddRow = new QPushButton("+");
@@ -33,16 +34,16 @@ PlanPanel::PlanPanel(QWidget *parent) : QWidget{parent} {
     gTableH->setDropIndicatorShown(true);
     gTableH->setEditTriggers(QAbstractItemView::NoEditTriggers);
     auto grp = new QButtonGroup(this);
-    for(int c=0; c<gTableH->columnCount(); ++c) {
+    for (int c = 0; c < gTableH->columnCount(); ++c) {
         auto wgt = new QWidget;
         auto hBox = new HBox(wgt);
-        hBox->setContentsMargins(0,0,0,0);
+        hBox->setContentsMargins(0, 0, 0, 0);
         hBox->setSpacing(0);
         auto btn = new QPushButton("⏵");
         btn->setMaximumWidth(24);
         grp->addButton(btn);
         hBox->addWidget(btn);
-        hBox->addLabel(QString("P%1").arg(c+1));
+        hBox->addLabel(QString("P%1").arg(c + 1));
         gTableH->setCellWidget(0, c, wgt);
     }
     connect(grp, &QButtonGroup::buttonClicked, this, &PlanPanel::play);
@@ -82,33 +83,34 @@ PlanPanel::PlanPanel(QWidget *parent) : QWidget{parent} {
     connect(gTable->verticalScrollBar(), &QScrollBar::valueChanged, gTableV->verticalScrollBar(), &QScrollBar::setValue);
 }
 
+// 添加新行到表格中
 void PlanPanel::addRow() {
     gTableV->appendRow();
     gTable->appendRow();
     int r = gTable->rowCount() - 1;
     auto wgt = new QWidget;
     auto vBox = new VBox(wgt);
-    vBox->setContentsMargins(0,0,0,0);
+    vBox->setContentsMargins(0, 0, 0, 0);
     vBox->setSpacing(0);
-    auto lb = vBox->addLabel(QString("Layer %1").arg(r+1));
+    auto lb = vBox->addLabel(QString("Layer %1").arg(r + 1));
     lb->setFixedHeight(CellHeight - TitleHeight);
     lb->setAlignment(Qt::AlignCenter);
     lb = vBox->addLabel();
     lb->setFixedHeight(TitleHeight);
     gTableV->setCellWidget(r, 0, wgt);
 
-    auto layer = new Layer(r+1, "Layer", gEditView);
+    auto layer = new Layer(r + 1, "Layer", gEditView);
     gEditView->layers.push_back(layer);
     layer->updateGeo();
     layer->show();
-    gTableV->setData(r, 0, (quint64) layer);
+    gTableV->setData(r, 0, (quint64)layer);
 
     auto ft = gTable->font();
     ft.setPixelSize(10);
-    for(int c=0; c<gTable->columnCount(); ++c) {
+    for (int c = 0; c < gTable->columnCount(); ++c) {
         auto wgt = new QWidget;
         auto vBox = new VBox(wgt);
-        vBox->setContentsMargins(0,0,0,0);
+        vBox->setContentsMargins(0, 0, 0, 0);
         vBox->setSpacing(0);
         auto lb = vBox->addLabel();
         lb->setFixedHeight(CellHeight - TitleHeight);
@@ -120,61 +122,67 @@ void PlanPanel::addRow() {
     }
 }
 
-void PlanPanel::play(QAbstractButton *btn) {
+// 播放指定列的媒体内容
+void PlanPanel::play(QAbstractButton* btn) {
     auto wgt = btn->parentWidget();
     gPlayinC = 0;
-    for(; gPlayinC<gTableH->columnCount(); ++gPlayinC) if(gTableH->cellWidget(0, gPlayinC)==wgt) break;
+    for (; gPlayinC < gTableH->columnCount(); ++gPlayinC) if (gTableH->cellWidget(0, gPlayinC) == wgt) break;
     auto items = gScene->items();
-    for(auto item : items) gScene->removeItem(item);
-    Cell *cell;
-    for(int r=0; r<gTable->rowCount(); ++r) if((cell = (Cell*) gTable->data(r, gPlayinC).toULongLong())) {
-        auto layer = (Layer*) gTableV->data(r, 0).toULongLong();
+    for (auto item : items) gScene->removeItem(item);
+    Cell* cell;
+    for (int r = 0; r < gTable->rowCount(); ++r) if ((cell = (Cell*)gTable->data(r, gPlayinC).toULongLong())) {
+        auto layer = (Layer*)gTableV->data(r, 0).toULongLong();
         cell->wgt->setPos(layer->sPos);
-        if(cell->type=='V') {
-            ((QGraphicsVideoItem*) cell->wgt)->setSize(layer->sSize);
+        if (cell->type == 'V') {
+            ((QGraphicsVideoItem*)cell->wgt)->setSize(layer->sSize);
             cell->player->play();
-        } else if(cell->type=='I') {
-            ((ImgItem*) cell->wgt)->size = layer->sSize;
+        }
+        else if (cell->type == 'I') {
+            ((ImgItem*)cell->wgt)->size = layer->sSize;
         }
         gScene->addItem(cell->wgt);
     }
 }
 
-void ImgItem::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) {
+// 绘制图像项
+void ImgItem::paint(QPainter* painter, const QStyleOptionGraphicsItem* option, QWidget* widget) {
     painter->drawPixmap(boundingRect(), img, QRectF(0, 0, img.width(), img.height()));
 }
 
-void PlanTable::dragEnterEvent(QDragEnterEvent *event) {
-    if(event->source()==this || event->source()==gMediaTree) QTableWidget::dragEnterEvent(event);
+// 处理拖动进入事件
+void PlanTable::dragEnterEvent(QDragEnterEvent* event) {
+    if (event->source() == this || event->source() == gMediaTree) QTableWidget::dragEnterEvent(event);
 }
-void PlanTable::dropEvent(QDropEvent *event) {
-    if(event->source()==this) {
+// 处理拖动放置事件
+void PlanTable::dropEvent(QDropEvent* event) {
+    if (event->source() == this) {
         auto idxFrom = currentIndex();
         auto cell = data(idxFrom.row(), idxFrom.column());
-        if(cell==0) goto end;
+        if (cell == 0) goto end;
         auto idx = indexAt(event->position().toPoint());
         auto wgtFrom = cellWidget(idxFrom.row(), idxFrom.column());
         auto wgt = cellWidget(idx.row(), idx.column());
-        auto lb1 = (QLabel*) wgtFrom->children().at(1);
-        auto lb2 = (QLabel*) wgtFrom->children().at(2);
-        ((QLabel*) wgt->children().at(1))->setPixmap(lb1->pixmap());
-        ((QLabel*) wgt->children().at(2))->setText(lb2->text());
+        auto lb1 = (QLabel*)wgtFrom->children().at(1);
+        auto lb2 = (QLabel*)wgtFrom->children().at(2);
+        ((QLabel*)wgt->children().at(1))->setPixmap(lb1->pixmap());
+        ((QLabel*)wgt->children().at(2))->setText(lb2->text());
         lb1->clear();
         lb2->clear();
         auto cellOld = data(idxFrom.row(), idxFrom.column());
-        if(cellOld.isValid() && cellOld!=cell) delete (Cell*) cellOld.toULongLong();
+        if (cellOld.isValid() && cellOld != cell) delete (Cell*)cellOld.toULongLong();
         setData(idx.row(), idx.column(), cell);
         event->accept();
-    } else if(event->source()==gMediaTree) {
+    }
+    else if (event->source() == gMediaTree) {
         auto idx = indexAt(event->position().toPoint());
         auto wgt = cellWidget(idx.row(), idx.column());
-        auto item = (MediaItem*) gMediaTree->currentItem();
-        auto lb = (QLabel*) wgt->children().at(2);
-        lb->setText(item->text("name"**gMediaTree));
-        lb = (QLabel*) wgt->children().at(1);
+        auto item = (MediaItem*)gMediaTree->currentItem();
+        auto lb = (QLabel*)wgt->children().at(2);
+        lb->setText(item->text("name" * *gMediaTree));
+        lb = (QLabel*)wgt->children().at(1);
         lb->setPixmap(QPixmap::fromImage(item->profile));
-        auto type = item->text("type"**gMediaTree);
-        if(type=="Video") {
+        auto type = item->text("type" * *gMediaTree);
+        if (type == "Video") {
             auto wgt = new QGraphicsVideoItem;
             wgt->setAspectRatioMode(Qt::IgnoreAspectRatio);
             auto player = new QMediaPlayer;
@@ -182,15 +190,16 @@ void PlanTable::dropEvent(QDropEvent *event) {
             player->setVideoOutput(wgt);
             player->setAudioOutput(new QAudioOutput);
             connect(wgt, &QGraphicsVideoItem::parentChanged, player, [=]() {
-                if(wgt->parent()!=gScene) player->stop();
-            });
+                if (wgt->parent() != gScene) player->stop();
+                });
             setData(idx.row(), idx.column(), (quint64) new Cell('V', wgt, player));
-        } else if(type=="Image") {
+        }
+        else if (type == "Image") {
             QImageReader reader(item->file);
             reader.setAutoTransform(true);
             auto img = reader.read();
-            if(img.isNull()) {
-                QMessageBox::critical(this, "Image Read Error", QString::number(reader.error())+" "+reader.errorString());
+            if (img.isNull()) {
+                QMessageBox::critical(this, "Image Read Error", QString::number(reader.error()) + " " + reader.errorString());
                 return;
             }
             auto wgt = new ImgItem;
@@ -199,13 +208,15 @@ void PlanTable::dropEvent(QDropEvent *event) {
         }
         event->accept();
     }
-    end: QTableWidget::dropEvent(event);
+end: QTableWidget::dropEvent(event);
 }
-void PlanTableH::dropEvent(QDropEvent *event) {
 
+// 处理拖动放置事件
+void PlanTableH::dropEvent(QDropEvent* event) {
     QTableWidget::dropEvent(event);
 }
-void PlanTableV::dropEvent(QDropEvent *event) {
 
+// 处理拖动放置事件
+void PlanTableV::dropEvent(QDropEvent* event) {
     QTableWidget::dropEvent(event);
 }

@@ -1,90 +1,66 @@
-﻿  Generate moc_predefs.h
-   Qt/MSBuild: 3.4.0.1
+﻿   Qt/MSBuild: 3.4.0.1
    Qt: 6.9.0
-  cu.cpp
+  qjson.cpp
+  qnetwork.cpp
   layer.cpp
   liveeditor.cpp
+D:\Project\Mygithub\QT_Study\Project_Company\Compass\liveeditor.h(24,34): warning C4100: 'event': 未引用的参数
+  (编译源文件“liveeditor.cpp”)
+  
   main.cpp
-  mainwindow.cpp
-D:\Project\Mygithub\QT_Study\Project_Company\Compass\liveeditor.h(21,34): warning C4100: 'event': 未引用的参数
-  (编译源文件“mainwindow.cpp”)
-  
-D:\Project\Mygithub\QT_Study\Project_Company\Compass\liveeditor.h(21,34): warning C4100: 'event': 未引用的参数
-  (编译源文件“liveeditor.cpp”)
-  
-D:\Project\Mygithub\QT_Study\Project_Company\Compass\liveeditor.h(21,34): warning C4100: 'event': 未引用的参数
-  (编译源文件“layer.cpp”)
-  
-D:\Project\Mygithub\QT_Study\Project_Company\Compass\liveeditor.h(21,34): warning C4100: 'event': 未引用的参数
-  (编译源文件“main.cpp”)
-  
-D:\Project\Mygithub\QT_Study\Project_Company\Compass\layer.h(31,36): warning C4100: 'event': 未引用的参数
-  (编译源文件“liveeditor.cpp”)
-  
-D:\Project\Mygithub\QT_Study\Project_Company\Compass\layer.h(31,36): warning C4100: 'event': 未引用的参数
+D:\Project\Mygithub\QT_Study\Project_Company\Compass\liveeditor.h(24,34): warning C4100: 'event': 未引用的参数
   (编译源文件“layer.cpp”)
   
   mediapanel.cpp
+D:\Project\Mygithub\QT_Study\Project_Company\Compass\layer.h(47,36): warning C4100: 'event': 未引用的参数
+  (编译源文件“liveeditor.cpp”)
+  
+D:\Project\Mygithub\QT_Study\Project_Company\Compass\layer.h(47,36): warning C4100: 'event': 未引用的参数
+  (编译源文件“layer.cpp”)
+  
   opendlg.cpp
   outputpanel.cpp
-  planpanel.cpp
-D:\Project\Mygithub\QT_Study\Project_Company\Compass\liveeditor.h(21,34): warning C4100: 'event': 未引用的参数
+D:\Project\Mygithub\QT_Study\Project_Company\Compass\liveeditor.h(24,34): warning C4100: 'event': 未引用的参数
+  (编译源文件“main.cpp”)
+  
+D:\Project\Mygithub\QT_Study\Project_Company\Compass\liveeditor.h(24,34): warning C4100: 'event': 未引用的参数
   (编译源文件“mediapanel.cpp”)
   
-D:\Project\Mygithub\QT_Study\Project_Company\Compass\liveeditor.h(21,34): warning C4100: 'event': 未引用的参数
+D:\Project\Mygithub\QT_Study\Project_Company\Compass\mediapanel.cpp(112,72): warning C4100: 'text': 未引用的参数
+  planpanel.cpp
+D:\Project\Mygithub\QT_Study\Project_Company\Compass\liveeditor.h(24,34): warning C4100: 'event': 未引用的参数
   (编译源文件“opendlg.cpp”)
   
-D:\Project\Mygithub\QT_Study\Project_Company\Compass\liveeditor.h(21,34): warning C4100: 'event': 未引用的参数
+D:\Project\Mygithub\QT_Study\Project_Company\Compass\liveeditor.h(24,34): warning C4100: 'event': 未引用的参数
   (编译源文件“outputpanel.cpp”)
   
-D:\Project\Mygithub\QT_Study\Project_Company\Compass\layer.h(31,36): warning C4100: 'event': 未引用的参数
-  (编译源文件“outputpanel.cpp”)
-  
-D:\Project\Mygithub\QT_Study\Project_Company\Compass\liveeditor.h(21,34): warning C4100: 'event': 未引用的参数
-  (编译源文件“planpanel.cpp”)
-  
-D:\Project\Mygithub\QT_Study\Project_Company\Compass\opendlg.cpp(45,65): warning C4100: 'pageDir': 未引用的参数
-D:\Project\Mygithub\QT_Study\Project_Company\Compass\opendlg.cpp(45,44): warning C4100: 'attr': 未引用的参数
-D:\Project\Mygithub\QT_Study\Project_Company\Compass\layer.h(31,36): warning C4100: 'event': 未引用的参数
-  (编译源文件“planpanel.cpp”)
-  
-D:\Project\Mygithub\QT_Study\Project_Company\Compass\planpanel.cpp(143,89): warning C4100: 'widget': 未引用的参数
-D:\Project\Mygithub\QT_Study\Project_Company\Compass\planpanel.cpp(143,72): warning C4100: 'option': 未引用的参数
+D:\Project\Mygithub\QT_Study\Project_Company\Compass\opendlg.cpp(47,65): warning C4100: 'pageDir': 未引用的参数
+D:\Project\Mygithub\QT_Study\Project_Company\Compass\opendlg.cpp(47,44): warning C4100: 'attr': 未引用的参数
   progresspanel.cpp
-  qaesencryption.cpp
-  qcore.cpp
-  qgui.cpp
-D:\Project\Mygithub\QT_Study\Project_Company\Compass\gutil\qaesencryption.cpp(172,66): warning C4100: 'isEncryptionKey': 未引用的参数
-  qjson.cpp
-  qnetwork.cpp
-D:\Project\Mygithub\QT_Study\Project_Company\Compass\liveeditor.h(21,34): warning C4100: 'event': 未引用的参数
+D:\Project\Mygithub\QT_Study\Project_Company\Compass\layer.h(47,36): warning C4100: 'event': 未引用的参数
+  (编译源文件“outputpanel.cpp”)
+  
+D:\Project\Mygithub\QT_Study\Project_Company\Compass\liveeditor.h(24,34): warning C4100: 'event': 未引用的参数
+  (编译源文件“planpanel.cpp”)
+  
+D:\Project\Mygithub\QT_Study\Project_Company\Compass\layer.h(47,36): warning C4100: 'event': 未引用的参数
+  (编译源文件“planpanel.cpp”)
+  
+D:\Project\Mygithub\QT_Study\Project_Company\Compass\planpanel.cpp(148,89): warning C4100: 'widget': 未引用的参数
+D:\Project\Mygithub\QT_Study\Project_Company\Compass\planpanel.cpp(148,72): warning C4100: 'option': 未引用的参数
+D:\Project\Mygithub\QT_Study\Project_Company\Compass\liveeditor.h(24,34): warning C4100: 'event': 未引用的参数
   (编译源文件“progresspanel.cpp”)
   
-D:\Project\Mygithub\QT_Study\Project_Company\Compass\layer.h(31,36): warning C4100: 'event': 未引用的参数
+D:\Project\Mygithub\QT_Study\Project_Company\Compass\layer.h(47,36): warning C4100: 'event': 未引用的参数
   (编译源文件“progresspanel.cpp”)
   
-  qrc_res.cpp
   moc_layer.cpp
-  moc_liveeditor.cpp
-  moc_mainwindow.cpp
-  moc_mediapanel.cpp
-D:\Project\Mygithub\QT_Study\Project_Company\Compass\liveeditor.h(21,34): warning C4100: 'event': 未引用的参数
-  (编译源文件“moc_liveeditor.cpp”)
-  
-D:\Project\Mygithub\QT_Study\Project_Company\Compass\liveeditor.h(21,34): warning C4100: 'event': 未引用的参数
-  (编译源文件“moc_mainwindow.cpp”)
-  
   moc_opendlg.cpp
-D:\Project\Mygithub\QT_Study\Project_Company\Compass\liveeditor.h(21,34): warning C4100: 'event': 未引用的参数
-  (编译源文件“moc_layer.cpp”)
-  
-D:\Project\Mygithub\QT_Study\Project_Company\Compass\layer.h(31,36): warning C4100: 'event': 未引用的参数
-  (编译源文件“moc_layer.cpp”)
-  
-  moc_outputpanel.cpp
-  moc_planpanel.cpp
-  moc_progresspanel.cpp
-  moc_qaesencryption.cpp
-  moc_qgui.cpp
   moc_qnetwork.cpp
+D:\Project\Mygithub\QT_Study\Project_Company\Compass\liveeditor.h(24,34): warning C4100: 'event': 未引用的参数
+  (编译源文件“moc_layer.cpp”)
+  
+D:\Project\Mygithub\QT_Study\Project_Company\Compass\layer.h(47,36): warning C4100: 'event': 未引用的参数
+  (编译源文件“moc_layer.cpp”)
+  
   Compass.vcxproj -> D:\Project\Mygithub\QT_Study\Project_Company\Compass\Compass.exe

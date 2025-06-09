@@ -1,4 +1,4 @@
-#include "mainwindow.h"
+﻿#include "mainwindow.h"
 #include "mediapanel.h"
 #include "outputpanel.h"
 #include "planpanel.h"
@@ -18,6 +18,7 @@
 #include <QScrollArea>
 #include <QTimer>
 
+// 主窗口类的构造函数，初始化窗口及其组件
 MainWindow::MainWindow() {
     resize(1400, 840);
     setWindowTitle("Compass");
@@ -78,5 +79,5 @@ MainWindow::MainWindow() {
 
     QTimer::singleShot(68, [=] {
         dockProgress->setMaximumHeight(200);
-    });
+        });
 }

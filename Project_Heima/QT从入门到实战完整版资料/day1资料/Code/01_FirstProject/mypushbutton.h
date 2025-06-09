@@ -1,15 +1,15 @@
-#ifndef MYPUSHBUTTON_H
+﻿#ifndef MYPUSHBUTTON_H
 #define MYPUSHBUTTON_H
 
 #include <QPushButton>
 
 class MyPushButton : public QPushButton
 {
-    Q_OBJECT
+	Q_OBJECT
 public:
-    explicit MyPushButton(QWidget *parent = 0);
+	explicit MyPushButton(QWidget* parent = 0);
 
-    ~MyPushButton();
+	~MyPushButton();
 
 signals:
 

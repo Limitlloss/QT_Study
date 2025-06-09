@@ -1,4 +1,4 @@
-#ifndef TEACHER_H
+﻿#ifndef TEACHER_H
 #define TEACHER_H
 
 #include <QObject>

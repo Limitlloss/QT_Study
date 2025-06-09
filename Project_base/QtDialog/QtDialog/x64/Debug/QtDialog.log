@@ -1,0 +1,7 @@
+﻿   Qt/MSBuild: 3.4.0.1
+   Qt: 6.9.0
+  uic QtDialog.ui
+  QtDialog.cpp
+  main.cpp
+  moc_QtDialog.cpp
+  QtDialog.vcxproj -> D:\Project\Mygithub\QT_Study\Project_base\QtDialog\x64\Debug\QtDialog.exe

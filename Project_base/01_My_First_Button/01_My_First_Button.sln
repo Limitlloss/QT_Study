@@ -5,8 +5,6 @@ VisualStudioVersion = 17.14.36121.58
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "01_My_First_Button", "01_My_First_Button.vcxproj", "{6C995275-884B-4788-A109-0397402555BF}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "02_SignalAndSlot", "..\..\Project_Heima\QT从入门到实战完整版资料\day1资料\Code\02_SignalAndSlot\02_SignalAndSlot.vcxproj", "{521A6531-2706-3418-A9C6-CB1B378FE86E}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -17,10 +15,6 @@ Global
 		{6C995275-884B-4788-A109-0397402555BF}.Debug|x64.Build.0 = Debug|x64
 		{6C995275-884B-4788-A109-0397402555BF}.Release|x64.ActiveCfg = Release|x64
 		{6C995275-884B-4788-A109-0397402555BF}.Release|x64.Build.0 = Release|x64
-		{521A6531-2706-3418-A9C6-CB1B378FE86E}.Debug|x64.ActiveCfg = Debug|x64
-		{521A6531-2706-3418-A9C6-CB1B378FE86E}.Debug|x64.Build.0 = Debug|x64
-		{521A6531-2706-3418-A9C6-CB1B378FE86E}.Release|x64.ActiveCfg = Release|x64
-		{521A6531-2706-3418-A9C6-CB1B378FE86E}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

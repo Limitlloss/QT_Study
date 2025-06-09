@@ -1,4 +1,4 @@
-#include "qjson.h"
+﻿#include "qjson.h"
 #include "qdebug.h"
 
 QDebug operator<<(QDebug debug, const JValue &val) {

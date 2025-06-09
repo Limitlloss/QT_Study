@@ -7,7 +7,8 @@
 #include <QPushButton>
 #include <QCheckBox>
 
-OutputPanel::OutputPanel(QWidget *parent) : QWidget(parent) {
+// 输出面板类，继承自QWidget，用于管理输出层的操作
+OutputPanel::OutputPanel(QWidget* parent) : QWidget(parent) {
     gOutPanel = this;
     auto vBox = new VBox(this);
     vBox->setContentsMargins(0, 0, 0, 0);
@@ -20,11 +21,11 @@ OutputPanel::OutputPanel(QWidget *parent) : QWidget(parent) {
     connect(bnAdd, &QPushButton::clicked, this, [=] {
         QString name;
         auto cnt = tree->topLevelItemCount();
-        for(int i=1;;i++) {
+        for (int i = 1;; i++) {
             name = QString("Output %1").arg(i);
-            for(int r=0; r<cnt; ++r) if(tree->topLevelItem(r)->text("name"**tree)==name) goto conti;
+            for (int r = 0; r < cnt; ++r) if (tree->topLevelItem(r)->text("name" * *tree) == name) goto conti;
             break;
-            conti:;
+        conti:;
         }
         auto out = new Layer(0, name, gEditView);
         gEditView->layers.push_back(out);
@@ -33,12 +34,12 @@ OutputPanel::OutputPanel(QWidget *parent) : QWidget(parent) {
         out->item = new OutputItem(tree);
         out->item->setText("name", out->name);
         out->item->setText("size", QString("%1×%2").arg(out->sSize.width()).arg(out->sSize.height()));
-        out->item->setData(0, (quint64) out);
+        out->item->setData(0, (quint64)out);
         tree->setCurrentItem(out->item);
         out->view = new OutputView;
-        out->view->setGeometry({QPoint(), out->sSize});
-        out->view->setSceneRect({out->sPos, out->sSize});
-    });
+        out->view->setGeometry({ QPoint(), out->sSize });
+        out->view->setSceneRect({ out->sPos, out->sSize });
+        });
 
     auto bnDelet = new QPushButton("🗑");
     bnDelet->setMaximumWidth(50);
@@ -49,7 +50,7 @@ OutputPanel::OutputPanel(QWidget *parent) : QWidget(parent) {
         //     item->del();
         //     delete item;
         // }
-    });
+        });
 
     hBox->addStretch();
 
@@ -59,9 +60,9 @@ OutputPanel::OutputPanel(QWidget *parent) : QWidget(parent) {
     tree->addCol("size", "", 120);
     tree->setDefs()->setHeaderAlignC();
     tree->minRowHeight = 26;
-    connect(tree, &TreeWidget::currentItemChanged, this, [=](QTreeWidgetItem *current, QTreeWidgetItem *) {
-        if(enCurChanged) gEditView->select((Layer*) current->data(0, Qt::UserRole).toULongLong());
-    });
+    connect(tree, &TreeWidget::currentItemChanged, this, [=](QTreeWidgetItem* current, QTreeWidgetItem*) {
+        if (enCurChanged) gEditView->select((Layer*)current->data(0, Qt::UserRole).toULongLong());
+        });
     vBox->addWidget(tree);
 
     vBox->addSpacing(8);
@@ -85,12 +86,12 @@ OutputPanel::OutputPanel(QWidget *parent) : QWidget(parent) {
     edX->setRange(-99999, 999999);
     connect(edX, &QSpinBox::valueChanged, this, [=](int value) {
         auto layer = gEditView->selected;
-        if(! layer) return;
+        if (!layer) return;
         layer->sPos.rx() = value;
         layer->view->move(layer->sPos);
         layer->updateGeo();
         layer->update();
-    });
+        });
     hBox->addWidget(edX);
 
     hBox->addSpacing(10);
@@ -101,12 +102,12 @@ OutputPanel::OutputPanel(QWidget *parent) : QWidget(parent) {
     edY->setValue(y());
     connect(edY, &QSpinBox::valueChanged, this, [=](int value) {
         auto layer = gEditView->selected;
-        if(! layer) return;
+        if (!layer) return;
         layer->sPos.ry() = value;
         layer->view->move(layer->sPos);
         layer->updateGeo();
         layer->update();
-    });
+        });
     hBox->addWidget(edY);
     hBox->addStretch();
     grid->addLayout(hBox, r, 1);
@@ -120,13 +121,13 @@ OutputPanel::OutputPanel(QWidget *parent) : QWidget(parent) {
     edW->setRange(10, 999999);
     connect(edW, &QSpinBox::valueChanged, this, [=](int value) {
         auto layer = gEditView->selected;
-        if(! layer || ! layer->item) return;
+        if (!layer || !layer->item) return;
         layer->sSize.rwidth() = value;
         layer->view->resize(layer->sSize);
         layer->updateGeo();
         layer->update();
-        layer->item->setText("size"**tree, QString("%1×%2").arg(layer->sSize.rwidth()).arg(layer->sSize.rheight()));
-    });
+        layer->item->setText("size" * *tree, QString("%1×%2").arg(layer->sSize.rwidth()).arg(layer->sSize.rheight()));
+        });
     hBox->addWidget(edW);
 
     hBox->addSpacing(10);
@@ -135,13 +136,13 @@ OutputPanel::OutputPanel(QWidget *parent) : QWidget(parent) {
     edH->setRange(10, 999999);
     connect(edH, &QSpinBox::valueChanged, this, [=](int value) {
         auto layer = gEditView->selected;
-        if(! layer || ! layer->item) return;
+        if (!layer || !layer->item) return;
         layer->sSize.rheight() = value;
         layer->view->resize(layer->sSize);
         layer->updateGeo();
         layer->update();
-        layer->item->setText("size"**tree, QString("%1×%2").arg(layer->sSize.rwidth()).arg(layer->sSize.rheight()));
-    });
+        layer->item->setText("size" * *tree, QString("%1×%2").arg(layer->sSize.rwidth()).arg(layer->sSize.rheight()));
+        });
     hBox->addWidget(edH);
     hBox->addStretch();
     grid->addLayout(hBox, r, 1);
@@ -150,32 +151,39 @@ OutputPanel::OutputPanel(QWidget *parent) : QWidget(parent) {
     auto edShow = new QCheckBox("Open");
     connect(edShow, &QCheckBox::checkStateChanged, this, [=](Qt::CheckState checkState) {
         auto area = gEditView->selected;
-        if(! area || ! area->view) return;
-        area->view->setVisible(checkState==Qt::Checked);
-    });
+        if (!area || !area->view) return;
+        area->view->setVisible(checkState == Qt::Checked);
+        });
     grid->addWidget(edShow, r, 1);
     r++;
 
     transUi();
 }
 
-void OutputPanel::showEvent(QShowEvent *event) {
+// 显示事件处理函数，当输出面板显示时调用
+void OutputPanel::showEvent(QShowEvent* event) {
     QWidget::showEvent(event);
-    for(auto layer : gEditView->layers) if(layer->item) layer->raise();
+    for (auto layer : gEditView->layers) if (layer->item) layer->raise();
     auto item = tree->curItem();
-    if(item) gEditView->select((Layer*) item->data(0).toULongLong());
-    qDebug()<<"showEvent";
+    if (item) gEditView->select((Layer*)item->data(0).toULongLong());
+    qDebug() << "showEvent";
 }
-void OutputPanel::hideEvent(QHideEvent *event) {
+
+// 隐藏事件处理函数，当输出面板隐藏时调用
+void OutputPanel::hideEvent(QHideEvent* event) {
     QWidget::hideEvent(event);
-    for(auto layer : gEditView->layers) if(layer->item) layer->stackUnder(gEditView->originWgt);
-    qDebug()<<"hideEvent";
+    for (auto layer : gEditView->layers) if (layer->item) layer->stackUnder(gEditView->originWgt);
+    qDebug() << "hideEvent";
 }
-void OutputPanel::changeEvent(QEvent *event) {
+
+// 事件更改处理函数，当事件类型更改时调用
+void OutputPanel::changeEvent(QEvent* event) {
     QWidget::changeEvent(event);
-    if(event->type() == QEvent::LanguageChange) transUi();
+    if (event->type() == QEvent::LanguageChange) transUi();
 }
+
+// 翻译UI函数，用于更新UI中的文本以适应语言更改
 void OutputPanel::transUi() {
-    tree->headerItem()->setText("name"**tree, tr("Name"));
-    tree->headerItem()->setText("size"**tree, tr("Size"));
+    tree->headerItem()->setText("name" * *tree, tr("Name"));
+    tree->headerItem()->setText("size" * *tree, tr("Size"));
 }

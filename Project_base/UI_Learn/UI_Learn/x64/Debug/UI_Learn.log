@@ -1,0 +1,8 @@
+﻿   Qt/MSBuild: 3.4.0.1
+   Qt: 6.9.0
+  rcc UI_Learn.qrc
+  UI_Learn.cpp
+  main.cpp
+  moc_UI_Learn.cpp
+  qrc_UI_Learn.cpp
+  UI_Learn.vcxproj -> D:\Project\Mygithub\QT_Study\Project_base\UI_Learn\x64\Debug\UI_Learn.exe

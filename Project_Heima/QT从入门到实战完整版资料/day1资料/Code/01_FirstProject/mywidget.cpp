@@ -39,7 +39,7 @@ myWidget::myWidget(QWidget* parent)
 	btn2->move(100, 100);
 
 	//按钮可不可以 重新制定大小 可以！
-	btn2->resize(50, 50);
+	//btn2->resize(50, 50);
 
 	//重置窗口大小
 	resize(600, 400);
