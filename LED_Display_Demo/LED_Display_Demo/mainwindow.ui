@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>727</width>
+    <height>408</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <widget class="QWidget" name="widget_2" native="true">
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QTabWidget" name="tabWidget">
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="tab">
+          <attribute name="title">
+           <string>颜色</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout">
+           <item>
+            <widget class="QGroupBox" name="groupBox_2">
+             <property name="title">
+              <string>颜色选择</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout">
+              <item row="0" column="6">
+               <widget class="QRadioButton" name="radioButton_blue">
+                <property name="styleSheet">
+                 <string notr="true">QRadioButton {
+    background-color: #0000ff;
+    color: white;
+    border: 2px solid #000088;
+    border-radius: 6px;
+    padding: 8px;
+    font-weight: bold;
+}
+QRadioButton:checked {
+    border: 4px solid black;
+}
+QRadioButton::indicator {
+    width: 0;
+    height: 0;
+}
+</string>
+                </property>
+                <property name="text">
+                 <string>蓝</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="4">
+               <widget class="QRadioButton" name="radioButton_green">
+                <property name="styleSheet">
+                 <string notr="true">QRadioButton {
+    background-color: #00cc00;
+    color: white;
+    border: 2px solid #006600;
+    border-radius: 6px;
+    padding: 8px;
+    font-weight: bold;
+}
+QRadioButton:checked {
+    border: 4px solid black;
+}
+QRadioButton::indicator {
+    width: 0;
+    height: 0;
+}
+</string>
+                </property>
+                <property name="text">
+                 <string>绿</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="5">
+               <widget class="QRadioButton" name="radioButton_light_blue">
+                <property name="styleSheet">
+                 <string notr="true">QRadioButton {
+    background-color: #00ffff;
+    color: black;
+    border: 2px solid #009999;
+    border-radius: 6px;
+    padding: 8px;
+    font-weight: bold;
+}
+QRadioButton:checked {
+    border: 4px solid black;
+}
+QRadioButton::indicator {
+    width: 0;
+    height: 0;
+}
+</string>
+                </property>
+                <property name="text">
+                 <string>青</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="7">
+               <widget class="QRadioButton" name="radioButton_purple">
+                <property name="styleSheet">
+                 <string notr="true">QRadioButton {
+    background-color: #800080;
+    color: white;
+    border: 2px solid #550077;
+    border-radius: 6px;
+    padding: 8px;
+    font-weight: bold;
+}
+QRadioButton:checked {
+    border: 4px solid black;
+}
+QRadioButton::indicator {
+    width: 0;
+    height: 0;
+}
+</string>
+                </property>
+                <property name="text">
+                 <string>紫</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QRadioButton" name="radioButton_orange">
+                <property name="styleSheet">
+                 <string notr="true">QRadioButton {
+    background-color: #ff7f00;
+    color: white;
+    border: 2px solid #aa5500;
+    border-radius: 6px;
+    padding: 8px;
+    font-weight: bold;
+}
+QRadioButton:checked {
+    border: 4px solid black;
+}
+QRadioButton::indicator {
+    width: 0;
+    height: 0;
+}
+</string>
+                </property>
+                <property name="text">
+                 <string>橙</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="3">
+               <widget class="QRadioButton" name="radioButton_yellow">
+                <property name="styleSheet">
+                 <string notr="true">QRadioButton {
+    background-color: #ffff00;
+    color: black;
+    border: 2px solid #aaaa00;
+    border-radius: 6px;
+    padding: 8px;
+    font-weight: bold;
+}
+QRadioButton:checked {
+    border: 4px solid black;
+}
+QRadioButton::indicator {
+    width: 0;
+    height: 0;
+}
+</string>
+                </property>
+                <property name="text">
+                 <string>黄</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0">
+               <widget class="QRadioButton" name="radioButton_red">
+                <property name="styleSheet">
+                 <string notr="true">QRadioButton {
+    background-color: #ff0000;
+    color: white;
+    border: 2px solid #880000;
+    border-radius: 6px;
+    padding: 8px;
+    font-weight: bold;
+}
+QRadioButton:checked {
+    border: 4px solid black;
+}
+QRadioButton::indicator {
+    width: 0;
+    height: 0;
+}
+</string>
+                </property>
+                <property name="text">
+                 <string>红</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="widget_4" native="true">
+             <layout class="QGridLayout" name="gridLayout_4">
+              <item row="3" column="0">
+               <widget class="QLabel" name="label_6">
+                <property name="text">
+                 <string>灰度</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="label_5">
+                <property name="text">
+                 <string>速度</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QSlider" name="horizontalSlider">
+                <property name="orientation">
+                 <enum>Qt::Orientation::Horizontal</enum>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="1">
+               <widget class="QSlider" name="horizontalSlider_2">
+                <property name="orientation">
+                 <enum>Qt::Orientation::Horizontal</enum>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="tab_2">
+          <attribute name="title">
+           <string>渐变</string>
+          </attribute>
+         </widget>
+         <widget class="QWidget" name="tab_3">
+          <attribute name="title">
+           <string>老化</string>
+          </attribute>
+         </widget>
+         <widget class="QWidget" name="tab_4">
+          <attribute name="title">
+           <string>定位</string>
+          </attribute>
+         </widget>
+         <widget class="QWidget" name="tab_5">
+          <attribute name="title">
+           <string>扫描</string>
+          </attribute>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="widget" native="true">
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="1" column="0">
+        <widget class="QGroupBox" name="groupBox">
+         <property name="title">
+          <string/>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_3">
+          <item row="0" column="4">
+           <widget class="QCheckBox" name="checkBox">
+            <property name="text">
+             <string>锁定</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="1">
+           <widget class="QSpinBox" name="spinBox_2"/>
+          </item>
+          <item row="0" column="5">
+           <widget class="QCheckBox" name="checkBox_2">
+            <property name="text">
+             <string>隐藏</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="4">
+           <widget class="QCheckBox" name="checkBox_4">
+            <property name="text">
+             <string>窗口置顶</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="3">
+           <widget class="QSpinBox" name="spinBox_3"/>
+          </item>
+          <item row="6" column="5">
+           <widget class="QCheckBox" name="checkBox_3">
+            <property name="text">
+             <string>双击第二屏</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QLabel" name="label_4">
+            <property name="text">
+             <string>宽度</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0">
+           <widget class="QLabel" name="label_2">
+            <property name="text">
+             <string>Y</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="3">
+           <widget class="QSpinBox" name="spinBox_4"/>
+          </item>
+          <item row="6" column="2">
+           <widget class="QLabel" name="label_3">
+            <property name="text">
+             <string>高度</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QSpinBox" name="spinBox"/>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>X</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="widget_3" native="true">
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QPushButton" name="pushButton">
+         <property name="text">
+          <string>语言</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_2">
+         <property name="text">
+          <string>隐藏窗口参数</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_3">
+         <property name="text">
+          <string>运行</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>727</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuLED_Display_Demo">
+    <property name="title">
+     <string>LED_Display_Demo</string>
+    </property>
+   </widget>
+   <addaction name="menuLED_Display_Demo"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
