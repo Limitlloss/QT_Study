@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>727</width>
-    <height>408</height>
+    <width>851</width>
+    <height>677</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -29,7 +29,7 @@
           </attribute>
           <layout class="QVBoxLayout" name="verticalLayout">
            <item>
-            <widget class="QGroupBox" name="groupBox_2">
+            <widget class="QGroupBox" name="groupBox_Color_Selector">
              <property name="title">
               <string>颜色选择</string>
              </property>
@@ -215,28 +215,54 @@ QRadioButton::indicator {
            <item>
             <widget class="QWidget" name="widget_4" native="true">
              <layout class="QGridLayout" name="gridLayout_4">
-              <item row="3" column="0">
+              <item row="3" column="1">
                <widget class="QLabel" name="label_6">
                 <property name="text">
                  <string>灰度</string>
                 </property>
                </widget>
               </item>
+              <item row="1" column="3">
+               <spacer name="horizontalSpacer_7">
+                <property name="orientation">
+                 <enum>Qt::Orientation::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
               <item row="1" column="0">
+               <spacer name="horizontalSpacer_6">
+                <property name="orientation">
+                 <enum>Qt::Orientation::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="1" column="1">
                <widget class="QLabel" name="label_5">
                 <property name="text">
                  <string>速度</string>
                 </property>
                </widget>
               </item>
-              <item row="1" column="1">
+              <item row="1" column="2">
                <widget class="QSlider" name="horizontalSlider">
                 <property name="orientation">
                  <enum>Qt::Orientation::Horizontal</enum>
                 </property>
                </widget>
               </item>
-              <item row="3" column="1">
+              <item row="3" column="2">
                <widget class="QSlider" name="horizontalSlider_2">
                 <property name="orientation">
                  <enum>Qt::Orientation::Horizontal</enum>
@@ -276,79 +302,144 @@ QRadioButton::indicator {
     <item>
      <widget class="QWidget" name="widget" native="true">
       <layout class="QGridLayout" name="gridLayout_2">
-       <item row="1" column="0">
+       <item row="1" column="1">
         <widget class="QGroupBox" name="groupBox">
          <property name="title">
           <string/>
          </property>
          <layout class="QGridLayout" name="gridLayout_3">
-          <item row="0" column="4">
-           <widget class="QCheckBox" name="checkBox">
-            <property name="text">
-             <string>锁定</string>
-            </property>
-           </widget>
-          </item>
-          <item row="6" column="1">
-           <widget class="QSpinBox" name="spinBox_2"/>
-          </item>
-          <item row="0" column="5">
-           <widget class="QCheckBox" name="checkBox_2">
-            <property name="text">
-             <string>隐藏</string>
-            </property>
-           </widget>
-          </item>
-          <item row="6" column="4">
-           <widget class="QCheckBox" name="checkBox_4">
-            <property name="text">
-             <string>窗口置顶</string>
-            </property>
-           </widget>
-          </item>
           <item row="0" column="3">
-           <widget class="QSpinBox" name="spinBox_3"/>
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
           </item>
           <item row="6" column="5">
-           <widget class="QCheckBox" name="checkBox_3">
-            <property name="text">
-             <string>双击第二屏</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="2">
-           <widget class="QLabel" name="label_4">
-            <property name="text">
-             <string>宽度</string>
-            </property>
-           </widget>
-          </item>
-          <item row="6" column="0">
-           <widget class="QLabel" name="label_2">
-            <property name="text">
-             <string>Y</string>
-            </property>
-           </widget>
-          </item>
-          <item row="6" column="3">
            <widget class="QSpinBox" name="spinBox_4"/>
           </item>
-          <item row="6" column="2">
+          <item row="6" column="4">
            <widget class="QLabel" name="label_3">
             <property name="text">
              <string>高度</string>
             </property>
            </widget>
           </item>
-          <item row="0" column="1">
-           <widget class="QSpinBox" name="spinBox"/>
+          <item row="6" column="2">
+           <widget class="QSpinBox" name="spinBox_2"/>
+          </item>
+          <item row="6" column="1">
+           <widget class="QLabel" name="label_2">
+            <property name="text">
+             <string>Y</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="9">
+           <spacer name="horizontalSpacer_4">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
           </item>
           <item row="0" column="0">
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="0" column="5">
+           <widget class="QSpinBox" name="spinBox_3"/>
+          </item>
+          <item row="0" column="8">
+           <widget class="QCheckBox" name="checkBox">
+            <property name="text">
+             <string>锁定</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="8">
+           <widget class="QCheckBox" name="checkBox_4">
+            <property name="text">
+             <string>窗口置顶</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="4">
+           <widget class="QLabel" name="label_4">
+            <property name="text">
+             <string>宽度</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QSpinBox" name="spinBox"/>
+          </item>
+          <item row="6" column="10">
+           <widget class="QCheckBox" name="checkBox_3">
+            <property name="text">
+             <string>双击第二屏</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
            <widget class="QLabel" name="label">
             <property name="text">
              <string>X</string>
             </property>
            </widget>
+          </item>
+          <item row="0" column="10">
+           <widget class="QCheckBox" name="checkBox_2">
+            <property name="text">
+             <string>隐藏</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="6">
+           <spacer name="horizontalSpacer_3">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="0" column="11">
+           <spacer name="horizontalSpacer_5">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
           </item>
          </layout>
         </widget>
@@ -390,8 +481,8 @@ QRadioButton::indicator {
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>727</width>
-     <height>18</height>
+     <width>851</width>
+     <height>25</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuLED_Display_Demo">
