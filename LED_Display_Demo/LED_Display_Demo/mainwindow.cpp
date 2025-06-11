@@ -6,37 +6,56 @@ MainWindow::MainWindow(QWidget* parent)
 {
 	ui->setupUi(this);
 
-	displayWindow = new DisplayWindow(this);
-	ledManager = new LedEffectManager(this);
+	{
+		displayWindow = new DisplayWindow(this);
+		ledManager = new LedEffectManager(this);
+		displayWindow->setWindowFlags(Qt::Window | Qt::WindowStaysOnTopHint);
+		displayWindow->show();
 
-	displayWindow->setWindowFlags(Qt::Window | Qt::WindowStaysOnTopHint);
-	displayWindow->show();
+		displayWindow->setEnableDoubleClickFullScreen(ui->checkBox_double_fullScreen->isChecked());
+		displayWindow->setTopMost(ui->checkBox_windowTopMost->isChecked());
+		displayWindow->setLockGeometry(ui->checkBox_lock->isChecked());
 
-	displayWindow->setEnableDoubleClickFullScreen(ui->checkBox_double_fullScreen->isChecked());
-	displayWindow->setTopMost(ui->checkBox_windowTopMost->isChecked());
-	displayWindow->setLockGeometry(ui->checkBox_lock->isChecked());
+		ui->horizontalSlider_speed->setValue(50);     // 初始速度为50ms
+		ui->spinBox_speed->setValue(50);
+		ui->horizontalSlider_speed->setRange(10, 500); // 间隔1~500ms
+		ui->spinBox_speed->setRange(10, 500);
+		mainTimer = new QTimer(this);
+		mainTimer->setInterval(10);
+
+		autoBrightnessFeature = new AutoBrightnessFeature(
+			ui->horizontalSlider_brightness,
+			ui->spinBox_brightness,
+			this
+		);
+		featureModules.push_back(autoBrightnessFeature);
+	}
 
 	connect(displayWindow, &DisplayWindow::visibilityChangedExternally,
 		this, &MainWindow::handleDisplayVisibilityChanged);
 
-	mainTimer = new QTimer(this);
-	mainTimer->setInterval(100);
 	connect(mainTimer, &QTimer::timeout, this, &MainWindow::onMainTimerTick);
 
-	autoRunTimer = new QTimer(this);
-	autoRunTimer->setInterval(50);
-	connect(autoRunTimer, &QTimer::timeout, this, [=]() {
-		if (!autoColorChangeEnabled) return;
-		currentBrightness = (currentBrightness + 1) % 256;
-		ui->horizontalSlider_brightness->setValue(currentBrightness);
-		});
+
 
 	connect(ledManager, &LedEffectManager::colorChanged, displayWindow, &DisplayWindow::setBackgroundColor);
 
 	setupUiLogic();
 	setupColorButtons();
+
 	syncSpinBoxesWithDisplayWindow();
 	onBrightnessChanged(ui->horizontalSlider_brightness->value());
+	connect(ui->pushButton_color_change_auto, &QPushButton::clicked, this, [=]() {
+		autoBrightnessFeature->setEnabled(true);
+		ui->pushButton_color_change_fix->setChecked(false);
+		ui->pushButton_color_change_auto->setChecked(true);
+		});
+
+	connect(ui->pushButton_color_change_fix, &QPushButton::clicked, this, [=]() {
+		autoBrightnessFeature->setEnabled(false);
+		ui->pushButton_color_change_fix->setChecked(true);
+		ui->pushButton_color_change_auto->setChecked(false);
+		});
 
 }
 
@@ -53,15 +72,16 @@ void MainWindow::showEvent(QShowEvent* event) {
 void MainWindow::setupUiLogic() {
 	connect(ui->pushButton_run_space, &QPushButton::clicked, this, &MainWindow::toggleRunState);
 
-	connect(ui->pushButton_color_change_auto, &QPushButton::clicked, this, [=]() {
-		autoColorChangeEnabled = true;
-		autoRunTimer->start();
+
+	connect(ui->horizontalSlider_speed, &QSlider::valueChanged, this, [=](int val) {
+		if (autoBrightnessFeature)
+			autoBrightnessFeature->setSpeedInterval(val);
+		});
+	connect(ui->spinBox_speed, QOverload<int>::of(&QSpinBox::valueChanged), this, [=](int val) {
+		if (autoBrightnessFeature)
+			autoBrightnessFeature->setSpeedInterval(val);
 		});
 
-	connect(ui->pushButton_color_change_fix, &QPushButton::clicked, this, [=]() {
-		autoColorChangeEnabled = false;
-		autoRunTimer->stop();
-		});
 
 	connect(ui->checkBox_hide, &QCheckBox::stateChanged, this, &MainWindow::on_checkBox_hide_stateChanged);
 
@@ -72,6 +92,13 @@ void MainWindow::setupUiLogic() {
 		ui->spinBox_width->setEnabled(!locked);
 		ui->spinBox_hight->setEnabled(!locked);
 		});
+
+	// 在 setupUiLogic 或构造函数中添加：
+	connect(ui->horizontalSlider_speed, &QSlider::valueChanged,
+		ui->spinBox_speed, &QSpinBox::setValue);
+
+	connect(ui->spinBox_speed, QOverload<int>::of(&QSpinBox::valueChanged),
+		ui->horizontalSlider_speed, &QSlider::setValue);
 
 	connect(ui->checkBox_double_fullScreen, &QCheckBox::toggled, displayWindow, &DisplayWindow::setEnableDoubleClickFullScreen);
 	connect(ui->checkBox_windowTopMost, &QCheckBox::toggled, displayWindow, &DisplayWindow::setTopMost);
@@ -184,6 +211,10 @@ void MainWindow::toggleRunState() {
 }
 
 void MainWindow::onMainTimerTick() {
+	for (auto* feature : featureModules) {
+		if (feature->isEnabled())
+			feature->tick();
+	}
 	qDebug() << "Tick ON...";
 }
 

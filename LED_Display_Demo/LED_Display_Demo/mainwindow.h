@@ -5,7 +5,9 @@
 #include <QTimer>
 #include "DisplayWindow.h"
 #include "LedEffectManager.h"
-
+#include "ILedFeature.h"
+#include <vector>
+#include "autoBrightnessFeature.h"
 QT_BEGIN_NAMESPACE
 namespace Ui {
     class MainWindow;
@@ -22,12 +24,13 @@ public:
 
 private:
     Ui::MainWindow* ui;
-
     DisplayWindow* displayWindow = nullptr;
     LedEffectManager* ledManager = nullptr;
 
     QTimer* mainTimer = nullptr;
     QTimer* autoRunTimer = nullptr;
+    std::vector<ILedFeature*> featureModules;
+    AutoBrightnessFeature* autoBrightnessFeature = nullptr;
     bool autoColorChangeEnabled = false;
     bool isRunning = false;
     QColor baseColor = Qt::red;
