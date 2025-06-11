@@ -6,10 +6,11 @@ MainWindow::MainWindow(QWidget* parent)
 {
     ui->setupUi(this);
 
-    displayWindow = new DisplayWindow();
+    displayWindow = new DisplayWindow(this);
     ledManager = new LedEffectManager(this);
 
     displayWindow->move(this->pos().x() + this->width() + 20, this->pos().y());
+    displayWindow->setWindowFlags(Qt::Window);
     displayWindow->show();
 
     displayWindow->setEnableDoubleClickFullScreen(ui->checkBox_double_fullScreen->isChecked());
