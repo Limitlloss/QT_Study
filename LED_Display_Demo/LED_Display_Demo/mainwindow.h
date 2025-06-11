@@ -38,7 +38,7 @@ private:
     void setupColorButtons();
     void syncSpinBoxesWithDisplayWindow();
     void updateDisplayColor();
-
+    void showEvent(QShowEvent* event);
 private slots:
     void toggleRunState();
     void onMainTimerTick();
