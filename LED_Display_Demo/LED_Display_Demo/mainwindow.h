@@ -16,18 +16,21 @@ class MainWindow : public QMainWindow
 public:
 	MainWindow(QWidget* parent = nullptr);
 	~MainWindow();
+	void updateDisplayColor();
 	void closeEvent(QCloseEvent* event);
 	void on_radioButton_red_clicked();
 	void on_radioButton_blue_clicked();
 	void on_radioButton_green_clicked();
 	void on_radioButton_yellow_clicked();
-	void on_radioButton_light_blue_clicked();
-	void on_radioButton_orange_clicked();
+	void on_radioButton_cyan_clicked();
+	void on_radioButton_white_clicked();
 	void on_radioButton_purple_clicked();
     void onBrightnessChanged(int value);
-    QColor getBaseColor() const;
+    //QColor getBaseColor() const;
 
 private:
+	QColor baseColor = Qt::red;
+	int brightnessValue = 255;
 	Ui::MainWindow* ui;
 	DisplayWindow* displayWindow = nullptr;
 };

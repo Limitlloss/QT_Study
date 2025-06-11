@@ -20,7 +20,7 @@ public:
     void setLineColor(const QColor &color);
     void enableAutoScan(bool enable);
     void contextMenuEvent(QContextMenuEvent *event);
-
+    QColor getBaseColor() const;
 
 protected:
     void mousePressEvent(QMouseEvent *event) override;
@@ -31,9 +31,10 @@ protected:
 private:
     bool dragging = false;
     QPoint dragPosition;
-
+    QColor baseColor = Qt::black;
     QColor bgColor = Qt::black;
     QColor lineColor = Qt::white;
+    int brightnessValue = 255;
     bool showRgbText = true;
     bool showHLine = false, showVLine = false, showDLine = false;
     QTimer scanTimer;

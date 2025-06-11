@@ -3,13 +3,4 @@
    Qt: 6.9.0
   Uic'ing mainwindow.ui...
   mainwindow.cpp
-D:\Project\Mygithub\QT_Study\LED_Display_Demo\LED_Display_Demo\mainwindow.cpp(32,23): error C2039: "getBaseColor": 不是 "DisplayWindow" 的成员
-      D:\Project\Mygithub\QT_Study\LED_Display_Demo\LED_Display_Demo\displayWindow.h(8,7):
-      参见“DisplayWindow”的声明
-  
-D:\Project\Mygithub\QT_Study\LED_Display_Demo\LED_Display_Demo\mainwindow.cpp(32,23): error C2270: “getBaseColor”: 非成员函数上不允许修饰符
-D:\Project\Mygithub\QT_Study\LED_Display_Demo\LED_Display_Demo\mainwindow.cpp(33,12): error C2065: “bgColor”: 未声明的标识符
-D:\Project\Mygithub\QT_Study\LED_Display_Demo\LED_Display_Demo\mainwindow.cpp(43,39): error C2039: "getBaseColor": 不是 "DisplayWindow" 的成员
-      D:\Project\Mygithub\QT_Study\LED_Display_Demo\LED_Display_Demo\displayWindow.h(8,7):
-      参见“DisplayWindow”的声明
-  
+  LED_Display_Demo.vcxproj -> D:\Project\Mygithub\QT_Study\LED_Display_Demo\LED_Display_Demo\debug\LED_Display_Demo.exe

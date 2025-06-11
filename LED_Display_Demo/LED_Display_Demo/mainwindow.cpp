@@ -5,9 +5,7 @@ MainWindow::MainWindow(QWidget* parent)
 	: QMainWindow(parent)
 	, ui(new Ui::MainWindow)
 {
-    ui->setupUi(this);
-    ui->horizontalSlider_brightness->setRange(10, 200);  // 默认100为原色，200更亮，10更暗
-    ui->horizontalSlider_brightness->setValue(100);
+	ui->setupUi(this);
 
 	if (!displayWindow) {
 		displayWindow = new DisplayWindow();  // 创建显示窗口
@@ -18,76 +16,84 @@ MainWindow::MainWindow(QWidget* parent)
 	}
 	displayWindow->setWindowTitle("LED 显示窗口");
 	displayWindow->show();                // 弹出显示窗口（独立）
+	ui->horizontalSlider_brightness->setRange(0, 255);
+	ui->spinBox_brightness->setRange(0, 255);
+
+	connect(ui->horizontalSlider_brightness, &QSlider::valueChanged,
+		ui->spinBox_brightness, &QSpinBox::setValue);
+
+	connect(ui->spinBox_brightness, QOverload<int>::of(&QSpinBox::valueChanged),
+		ui->horizontalSlider_brightness, &QSlider::setValue);
+
 	connect(ui->radioButton_red, &QRadioButton::clicked, this, &MainWindow::on_radioButton_red_clicked);
 	connect(ui->radioButton_blue, &QRadioButton::clicked, this, &MainWindow::on_radioButton_blue_clicked);
 	connect(ui->radioButton_green, &QRadioButton::clicked, this, &MainWindow::on_radioButton_green_clicked);
-	connect(ui->radioButton_light_blue, &QRadioButton::clicked, this, &MainWindow::on_radioButton_light_blue_clicked);
+	connect(ui->radioButton_cyan, &QRadioButton::clicked, this, &MainWindow::on_radioButton_cyan_clicked);
 	connect(ui->radioButton_purple, &QRadioButton::clicked, this, &MainWindow::on_radioButton_purple_clicked);
 	connect(ui->radioButton_yellow, &QRadioButton::clicked, this, &MainWindow::on_radioButton_yellow_clicked);
-	connect(ui->radioButton_orange, &QRadioButton::clicked, this, &MainWindow::on_radioButton_orange_clicked);
-    connect(ui->horizontalSlider_brightness, &QSlider::valueChanged, this, &MainWindow::onBrightnessChanged);
+	connect(ui->radioButton_white, &QRadioButton::clicked, this, &MainWindow::on_radioButton_white_clicked);
+	connect(ui->horizontalSlider_brightness, &QSlider::valueChanged, this, &MainWindow::onBrightnessChanged);
 
 
 }
-// QColor DisplayWindow::getBaseColor() const {
-//     return bgColor;  // 如果你有专门的原色记录变量，可以返回那个
-// }
+
 void MainWindow::closeEvent(QCloseEvent* event) {
 	if (displayWindow)
 		displayWindow->close();
 	QMainWindow::closeEvent(event);
 }
 void MainWindow::onBrightnessChanged(int value) {
-    if (!displayWindow) return;
-
-    // QColor baseColor = displayWindow->getBaseColor();  // 你需要添加 getter 来获取原始颜色
-    // QColor adjustedColor = baseColor;
-
-    if (value > 100) {
-        // adjustedColor = baseColor.lighter(value);  // >100：变亮
-    } else {
-        // adjustedColor = baseColor.darker(200 - value);  // <100：变暗
-    }
-
-    // displayWindow->setBackgroundColor(adjustedColor);
+	brightnessValue = value;
+	updateDisplayColor();
 }
+
+void MainWindow::updateDisplayColor() {
+	int r = baseColor.red() == 255 ? brightnessValue : 0;
+	int g = baseColor.green() == 255 ? brightnessValue : 0;
+	int b = baseColor.blue() == 255 ? brightnessValue : 0;
+
+	displayWindow->setBackgroundColor(QColor(r, g, b));
+}
+
 
 MainWindow::~MainWindow()
 {
 	delete ui;
 }
+
 void MainWindow::on_radioButton_red_clicked() {
-	if (displayWindow)
-		displayWindow->setBackgroundColor(Qt::red);
+	baseColor = QColor(255, 0, 0); // 红
+	updateDisplayColor();
 }
 
 void MainWindow::on_radioButton_blue_clicked() {
-	if (displayWindow)
-		displayWindow->setBackgroundColor(Qt::blue);
+	baseColor = QColor(0, 0, 255); // 蓝
+	updateDisplayColor();
 }
 
 void MainWindow::on_radioButton_green_clicked() {
-	if (displayWindow)
-		displayWindow->setBackgroundColor(Qt::green);
+	baseColor = QColor(0, 255, 0); // 绿
+	updateDisplayColor();
 }
 
 void MainWindow::on_radioButton_yellow_clicked() {
-	if (displayWindow)
-		displayWindow->setBackgroundColor(Qt::yellow);
+	baseColor = QColor(255, 255, 0); // 黄
+	updateDisplayColor();
 }
 
-void MainWindow::on_radioButton_light_blue_clicked() {
-	if (displayWindow)
-		displayWindow->setBackgroundColor(Qt::cyan); // 浅蓝色
-}
-
-void MainWindow::on_radioButton_orange_clicked() {
-	if (displayWindow)
-		displayWindow->setBackgroundColor(QColor(255, 127, 0)); // 自定义橙色
+void MainWindow::on_radioButton_cyan_clicked() {
+	baseColor = QColor(0, 255, 255); // 青（浅蓝）
+	updateDisplayColor();
 }
 
 void MainWindow::on_radioButton_purple_clicked() {
-	if (displayWindow)
-		displayWindow->setBackgroundColor(QColor(128, 0, 128)); // 自定义紫色
+	baseColor = QColor(255, 0, 255); // 紫（品红）
+	updateDisplayColor();
 }
+
+void MainWindow::on_radioButton_white_clicked() {
+	baseColor = QColor(255, 255, 255); // 橙
+	updateDisplayColor();
+}
+
 

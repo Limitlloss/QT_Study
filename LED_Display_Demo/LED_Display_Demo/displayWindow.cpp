@@ -24,6 +24,10 @@ void DisplayWindow::setBackgroundColor(const QColor& color) {
 	update();
 }
 
+//QColor DisplayWindow::getBaseColor() const {
+//	return baseColor;
+//}
+
 void DisplayWindow::mousePressEvent(QMouseEvent* event) {
 	if (event->button() == Qt::LeftButton) {
 		dragging = true;

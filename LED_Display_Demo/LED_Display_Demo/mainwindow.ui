@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>685</width>
-    <height>500</height>
+    <width>490</width>
+    <height>442</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -34,13 +34,13 @@
               <string>颜色选择</string>
              </property>
              <layout class="QGridLayout" name="gridLayout">
-              <item row="0" column="6">
-               <widget class="QRadioButton" name="radioButton_blue">
+              <item row="0" column="0">
+               <widget class="QRadioButton" name="radioButton_red">
                 <property name="styleSheet">
                  <string notr="true">QRadioButton {
-    background-color: #0000ff;
+    background-color: #ff0000;
     color: white;
-    border: 2px solid #000088;
+    border: 2px solid #880000;
     border-radius: 6px;
     padding: 8px;
     font-weight: bold;
@@ -55,65 +55,18 @@ QRadioButton::indicator {
 </string>
                 </property>
                 <property name="text">
-                 <string>蓝</string>
+                 <string>红</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
                 </property>
                </widget>
               </item>
-              <item row="0" column="4">
-               <widget class="QRadioButton" name="radioButton_green">
-                <property name="styleSheet">
-                 <string notr="true">QRadioButton {
-    background-color: #00cc00;
-    color: white;
-    border: 2px solid #006600;
-    border-radius: 6px;
-    padding: 8px;
-    font-weight: bold;
-}
-QRadioButton:checked {
-    border: 4px solid black;
-}
-QRadioButton::indicator {
-    width: 0;
-    height: 0;
-}
-</string>
-                </property>
-                <property name="text">
-                 <string>绿</string>
-                </property>
-               </widget>
-              </item>
-              <item row="0" column="5">
-               <widget class="QRadioButton" name="radioButton_light_blue">
-                <property name="styleSheet">
-                 <string notr="true">QRadioButton {
-    background-color: #00ffff;
-    color: black;
-    border: 2px solid #009999;
-    border-radius: 6px;
-    padding: 8px;
-    font-weight: bold;
-}
-QRadioButton:checked {
-    border: 4px solid black;
-}
-QRadioButton::indicator {
-    width: 0;
-    height: 0;
-}
-</string>
-                </property>
-                <property name="text">
-                 <string>青</string>
-                </property>
-               </widget>
-              </item>
-              <item row="0" column="7">
+              <item row="0" column="9">
                <widget class="QRadioButton" name="radioButton_purple">
                 <property name="styleSheet">
                  <string notr="true">QRadioButton {
-    background-color: #800080;
+    background-color: #ff00ff;
     color: white;
     border: 2px solid #550077;
     border-radius: 6px;
@@ -134,32 +87,7 @@ QRadioButton::indicator {
                 </property>
                </widget>
               </item>
-              <item row="0" column="1">
-               <widget class="QRadioButton" name="radioButton_orange">
-                <property name="styleSheet">
-                 <string notr="true">QRadioButton {
-    background-color: #ff7f00;
-    color: white;
-    border: 2px solid #aa5500;
-    border-radius: 6px;
-    padding: 8px;
-    font-weight: bold;
-}
-QRadioButton:checked {
-    border: 4px solid black;
-}
-QRadioButton::indicator {
-    width: 0;
-    height: 0;
-}
-</string>
-                </property>
-                <property name="text">
-                 <string>橙</string>
-                </property>
-               </widget>
-              </item>
-              <item row="0" column="3">
+              <item row="0" column="5">
                <widget class="QRadioButton" name="radioButton_yellow">
                 <property name="styleSheet">
                  <string notr="true">QRadioButton {
@@ -184,13 +112,13 @@ QRadioButton::indicator {
                 </property>
                </widget>
               </item>
-              <item row="0" column="0">
-               <widget class="QRadioButton" name="radioButton_red">
+              <item row="0" column="3">
+               <widget class="QRadioButton" name="radioButton_white">
                 <property name="styleSheet">
                  <string notr="true">QRadioButton {
-    background-color: #ff0000;
-    color: white;
-    border: 2px solid #880000;
+    background-color: #ffffff;
+    color: black;
+    border: 2px solid #aa5500;
     border-radius: 6px;
     padding: 8px;
     font-weight: bold;
@@ -205,7 +133,82 @@ QRadioButton::indicator {
 </string>
                 </property>
                 <property name="text">
-                 <string>红</string>
+                 <string>白</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QRadioButton" name="radioButton_green">
+                <property name="styleSheet">
+                 <string notr="true">QRadioButton {
+    background-color: #00ff00;
+    color: white;
+    border: 2px solid #006600;
+    border-radius: 6px;
+    padding: 8px;
+    font-weight: bold;
+}
+QRadioButton:checked {
+    border: 4px solid black;
+}
+QRadioButton::indicator {
+    width: 0;
+    height: 0;
+}
+</string>
+                </property>
+                <property name="text">
+                 <string>绿</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="7">
+               <widget class="QRadioButton" name="radioButton_cyan">
+                <property name="styleSheet">
+                 <string notr="true">QRadioButton {
+    background-color: #00ffff;
+    color: black;
+    border: 2px solid #009999;
+    border-radius: 6px;
+    padding: 8px;
+    font-weight: bold;
+}
+QRadioButton:checked {
+    border: 4px solid black;
+}
+QRadioButton::indicator {
+    width: 0;
+    height: 0;
+}
+</string>
+                </property>
+                <property name="text">
+                 <string>青</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <widget class="QRadioButton" name="radioButton_blue">
+                <property name="styleSheet">
+                 <string notr="true">QRadioButton {
+    background-color: #0000ff;
+    color: white;
+    border: 2px solid #000088;
+    border-radius: 6px;
+    padding: 8px;
+    font-weight: bold;
+}
+QRadioButton:checked {
+    border: 4px solid black;
+}
+QRadioButton::indicator {
+    width: 0;
+    height: 0;
+}
+</string>
+                </property>
+                <property name="text">
+                 <string>蓝</string>
                 </property>
                </widget>
               </item>
@@ -215,59 +218,66 @@ QRadioButton::indicator {
            <item>
             <widget class="QWidget" name="widget_4" native="true">
              <layout class="QGridLayout" name="gridLayout_4">
-              <item row="3" column="1">
-               <widget class="QLabel" name="label_6">
+              <item row="3" column="3">
+               <widget class="QPushButton" name="pushButton_color_change_fix">
                 <property name="text">
-                 <string>灰度</string>
+                 <string>手动</string>
                 </property>
                </widget>
               </item>
               <item row="1" column="3">
-               <spacer name="horizontalSpacer_7">
-                <property name="orientation">
-                 <enum>Qt::Orientation::Horizontal</enum>
+               <widget class="QPushButton" name="pushButton_color_change_auto">
+                <property name="text">
+                 <string>自动</string>
                 </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>40</width>
-                  <height>20</height>
-                 </size>
-                </property>
-               </spacer>
+               </widget>
               </item>
               <item row="1" column="0">
-               <spacer name="horizontalSpacer_6">
-                <property name="orientation">
-                 <enum>Qt::Orientation::Horizontal</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>40</width>
-                  <height>20</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
-              <item row="1" column="1">
                <widget class="QLabel" name="label_5">
                 <property name="text">
                  <string>速度</string>
                 </property>
                </widget>
               </item>
-              <item row="1" column="2">
-               <widget class="QSlider" name="horizontalSlider_brightness_2">
+              <item row="1" column="1">
+               <widget class="QSlider" name="horizontalSlider_speed">
+                <property name="orientation">
+                 <enum>Qt::Orientation::Horizontal</enum>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="0">
+               <widget class="QLabel" name="label_6">
+                <property name="text">
+                 <string>灰度</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="1">
+               <widget class="QSlider" name="horizontalSlider_brightness">
+                <property name="maximum">
+                 <number>255</number>
+                </property>
+                <property name="value">
+                 <number>0</number>
+                </property>
                 <property name="orientation">
                  <enum>Qt::Orientation::Horizontal</enum>
                 </property>
                </widget>
               </item>
               <item row="3" column="2">
-               <widget class="QSlider" name="horizontalSlider_brightness">
-                <property name="orientation">
-                 <enum>Qt::Orientation::Horizontal</enum>
+               <widget class="QSpinBox" name="spinBox_brightness">
+                <property name="maximum">
+                 <number>255</number>
+                </property>
+                <property name="value">
+                 <number>0</number>
                 </property>
                </widget>
+              </item>
+              <item row="1" column="2">
+               <widget class="QSpinBox" name="spinBox_speed"/>
               </item>
              </layout>
             </widget>
@@ -322,20 +332,20 @@ QRadioButton::indicator {
            </spacer>
           </item>
           <item row="6" column="5">
-           <widget class="QSpinBox" name="spinBox_4"/>
+           <widget class="QSpinBox" name="spinBox_hight"/>
           </item>
           <item row="6" column="4">
-           <widget class="QLabel" name="label_3">
+           <widget class="QLabel" name="label_hight">
             <property name="text">
              <string>高度</string>
             </property>
            </widget>
           </item>
           <item row="6" column="2">
-           <widget class="QSpinBox" name="spinBox_2"/>
+           <widget class="QSpinBox" name="spinBox_y_value"/>
           </item>
           <item row="6" column="1">
-           <widget class="QLabel" name="label_2">
+           <widget class="QLabel" name="label_window_pos_y">
             <property name="text">
              <string>Y</string>
             </property>
@@ -368,48 +378,48 @@ QRadioButton::indicator {
            </spacer>
           </item>
           <item row="0" column="5">
-           <widget class="QSpinBox" name="spinBox_3"/>
+           <widget class="QSpinBox" name="spinBox_width"/>
           </item>
           <item row="0" column="8">
-           <widget class="QCheckBox" name="checkBox">
+           <widget class="QCheckBox" name="checkBox_lock">
             <property name="text">
              <string>锁定</string>
             </property>
            </widget>
           </item>
           <item row="6" column="8">
-           <widget class="QCheckBox" name="checkBox_4">
+           <widget class="QCheckBox" name="checkBox_windowTopMost">
             <property name="text">
              <string>窗口置顶</string>
             </property>
            </widget>
           </item>
           <item row="0" column="4">
-           <widget class="QLabel" name="label_4">
+           <widget class="QLabel" name="label_width">
             <property name="text">
              <string>宽度</string>
             </property>
            </widget>
           </item>
           <item row="0" column="2">
-           <widget class="QSpinBox" name="spinBox"/>
+           <widget class="QSpinBox" name="spinBox_x_value"/>
           </item>
           <item row="6" column="10">
-           <widget class="QCheckBox" name="checkBox_3">
+           <widget class="QCheckBox" name="checkBox_double_fullScreen">
             <property name="text">
              <string>双击第二屏</string>
             </property>
            </widget>
           </item>
           <item row="0" column="1">
-           <widget class="QLabel" name="label">
+           <widget class="QLabel" name="label_window_pos_x">
             <property name="text">
              <string>X</string>
             </property>
            </widget>
           </item>
           <item row="0" column="10">
-           <widget class="QCheckBox" name="checkBox_2">
+           <widget class="QCheckBox" name="checkBox_hide">
             <property name="text">
              <string>隐藏</string>
             </property>
@@ -451,21 +461,21 @@ QRadioButton::indicator {
      <widget class="QWidget" name="widget_3" native="true">
       <layout class="QHBoxLayout" name="horizontalLayout_2">
        <item>
-        <widget class="QPushButton" name="pushButton">
+        <widget class="QPushButton" name="pushButton_language">
          <property name="text">
           <string>语言</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_2">
+        <widget class="QPushButton" name="pushButton_hide_config">
          <property name="text">
           <string>隐藏窗口参数</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_3">
+        <widget class="QPushButton" name="pushButton_run_space">
          <property name="text">
           <string>运行</string>
          </property>
@@ -481,7 +491,7 @@ QRadioButton::indicator {
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>685</width>
+     <width>490</width>
      <height>21</height>
     </rect>
    </property>
