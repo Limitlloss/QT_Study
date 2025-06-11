@@ -1,4 +1,4 @@
-#ifndef DISPLAYWINDOW_H
+﻿#ifndef DISPLAYWINDOW_H
 #define DISPLAYWINDOW_H
 
 #include <QWidget>
@@ -7,8 +7,12 @@
 
 class DisplayWindow : public QWidget {
     Q_OBJECT
+
+
 public:
     explicit DisplayWindow(QWidget *parent = nullptr);
+
+
     void closeEvent(QCloseEvent *event);
     void setBackgroundColor(const QColor &color);
     void setShowRGB(bool show);
@@ -16,6 +20,8 @@ public:
     void setLineColor(const QColor &color);
     void enableAutoScan(bool enable);
     void contextMenuEvent(QContextMenuEvent *event);
+
+
 protected:
     void mousePressEvent(QMouseEvent *event) override;
     void mouseMoveEvent(QMouseEvent *event) override;
