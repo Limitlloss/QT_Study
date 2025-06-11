@@ -1,6 +1,7 @@
 ﻿   Qt/MSBuild: 3.4.0.1
   Reading Qt configuration (D:/Software/QT/6.9.0/msvc2022_64/bin/qmake)
    Qt: 6.9.0
-  Uic'ing mainwindow.ui...
   mainwindow.cpp
+D:\Project\Mygithub\QT_Study\LED_Display_Demo\LED_Display_Demo\mainwindow.cpp(70,28): warning C4996: 'QCheckBox::stateChanged': Use checkStateChanged() instead
+D:\Project\Mygithub\QT_Study\LED_Display_Demo\LED_Display_Demo\mainwindow.cpp(125,29): warning C4996: 'QCheckBox::stateChanged': Use checkStateChanged() instead
   LED_Display_Demo.vcxproj -> D:\Project\Mygithub\QT_Study\LED_Display_Demo\LED_Display_Demo\debug\LED_Display_Demo.exe

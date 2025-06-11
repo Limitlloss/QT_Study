@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>490</width>
-    <height>442</height>
+    <width>439</width>
+    <height>450</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -51,14 +51,16 @@ QRadioButton:checked {
 QRadioButton::indicator {
     width: 0;
     height: 0;
-}
-</string>
+}</string>
                 </property>
                 <property name="text">
                  <string>红</string>
                 </property>
-                <property name="checked">
+                <property name="checkable">
                  <bool>true</bool>
+                </property>
+                <property name="checked">
+                 <bool>false</bool>
                 </property>
                </widget>
               </item>
@@ -259,7 +261,7 @@ QRadioButton::indicator {
                  <number>255</number>
                 </property>
                 <property name="value">
-                 <number>0</number>
+                 <number>255</number>
                 </property>
                 <property name="orientation">
                  <enum>Qt::Orientation::Horizontal</enum>
@@ -272,7 +274,7 @@ QRadioButton::indicator {
                  <number>255</number>
                 </property>
                 <property name="value">
-                 <number>0</number>
+                 <number>255</number>
                 </property>
                </widget>
               </item>
@@ -332,7 +334,11 @@ QRadioButton::indicator {
            </spacer>
           </item>
           <item row="6" column="5">
-           <widget class="QSpinBox" name="spinBox_hight"/>
+           <widget class="QSpinBox" name="spinBox_hight">
+            <property name="maximum">
+             <number>2160</number>
+            </property>
+           </widget>
           </item>
           <item row="6" column="4">
            <widget class="QLabel" name="label_hight">
@@ -342,7 +348,14 @@ QRadioButton::indicator {
            </widget>
           </item>
           <item row="6" column="2">
-           <widget class="QSpinBox" name="spinBox_y_value"/>
+           <widget class="QSpinBox" name="spinBox_y_value">
+            <property name="minimum">
+             <number>-1440</number>
+            </property>
+            <property name="maximum">
+             <number>1440</number>
+            </property>
+           </widget>
           </item>
           <item row="6" column="1">
            <widget class="QLabel" name="label_window_pos_y">
@@ -378,7 +391,11 @@ QRadioButton::indicator {
            </spacer>
           </item>
           <item row="0" column="5">
-           <widget class="QSpinBox" name="spinBox_width"/>
+           <widget class="QSpinBox" name="spinBox_width">
+            <property name="maximum">
+             <number>1440</number>
+            </property>
+           </widget>
           </item>
           <item row="0" column="8">
            <widget class="QCheckBox" name="checkBox_lock">
@@ -402,7 +419,14 @@ QRadioButton::indicator {
            </widget>
           </item>
           <item row="0" column="2">
-           <widget class="QSpinBox" name="spinBox_x_value"/>
+           <widget class="QSpinBox" name="spinBox_x_value">
+            <property name="minimum">
+             <number>-2160</number>
+            </property>
+            <property name="maximum">
+             <number>2160</number>
+            </property>
+           </widget>
           </item>
           <item row="6" column="10">
            <widget class="QCheckBox" name="checkBox_double_fullScreen">
@@ -491,7 +515,7 @@ QRadioButton::indicator {
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>490</width>
+     <width>439</width>
      <height>21</height>
     </rect>
    </property>

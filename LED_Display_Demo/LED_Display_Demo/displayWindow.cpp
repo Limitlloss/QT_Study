@@ -18,6 +18,46 @@ DisplayWindow::DisplayWindow(QWidget* parent) : QWidget(parent) {
 		update();
 		});
 }
+void DisplayWindow::setLockGeometry(bool locked) {
+	lockGeometry = locked;
+}
+
+bool DisplayWindow::isGeometryLocked() const {
+	return lockGeometry;
+}
+
+// 修改 mouseMoveEvent
+void DisplayWindow::mouseMoveEvent(QMouseEvent* event) {
+	if (!lockGeometry && dragging && (event->buttons() & Qt::LeftButton)) {
+		move(event->globalPos() - dragPosition);
+		emit geometryChanged(geometry());
+		event->accept();
+	}
+}
+
+// 可选：如果你允许窗口拉伸改变大小，也需要重写 resizeEvent、mousePressEvent 等加判断
+
+void DisplayWindow::setTopMost(bool enable) {
+	setWindowFlag(Qt::WindowStaysOnTopHint, enable);
+	show();  // 必须调用 show() 使新 flag 生效
+}
+void DisplayWindow::setEnableDoubleClickFullScreen(bool enable) {
+	enableDoubleClickFullScreen = enable;
+}
+
+void DisplayWindow::mouseDoubleClickEvent(QMouseEvent* event) {
+	if (!enableDoubleClickFullScreen) return;
+	if (lockGeometry) return;  // 锁定时不允许切换
+	if (isFullScreenMode) {
+		showNormal();
+		isFullScreenMode = false;
+	}
+	else {
+		showFullScreen();
+		isFullScreenMode = true;
+	}
+	QWidget::mouseDoubleClickEvent(event);
+}
 
 void DisplayWindow::setBackgroundColor(const QColor& color) {
 	bgColor = color;
@@ -36,12 +76,7 @@ void DisplayWindow::mousePressEvent(QMouseEvent* event) {
 	}
 }
 
-void DisplayWindow::mouseMoveEvent(QMouseEvent* event) {
-	if (dragging && (event->buttons() & Qt::LeftButton)) {
-		move(event->globalPos() - dragPosition);
-		event->accept();
-	}
-}
+
 
 void DisplayWindow::mouseReleaseEvent(QMouseEvent* event) {
 	if (event->button() == Qt::LeftButton) {
@@ -72,22 +107,27 @@ void DisplayWindow::closeEvent(QCloseEvent* event) {
 void DisplayWindow::contextMenuEvent(QContextMenuEvent* event) {
 	QMenu menu(this);
 
-	QAction* closeAction = menu.addAction("关闭");
-	QAction* result = menu.exec(event->globalPos());
-
-	if (result == closeAction) {
-		// 关闭本窗口
-		this->close();
-
-		// 如果 MainWindow 也需要关闭
-		QWidgetList topLevels = QApplication::topLevelWidgets();
-		for (QWidget* w : topLevels) {
-			if (auto* mainWin = qobject_cast<QMainWindow*>(w)) {
-				mainWin->close();
-			}
-		}
+	if (!hideAction) {
+		hideAction = new QAction("隐藏显示窗口", this);
+		hideAction->setCheckable(true);
+		connect(hideAction, &QAction::triggered, this, [=](bool checked) {
+			this->setVisible(!checked);
+			emit visibilityChangedExternally(!checked);
+			});
 	}
+
+	// 每次打开菜单前更新状态
+	hideAction->setChecked(!this->isVisible());
+
+	menu.addAction(hideAction);
+	menu.addSeparator();
+	menu.addAction("关闭", this, &DisplayWindow::close);
+
+	menu.exec(event->globalPos());
 }
+
+
+
 
 void DisplayWindow::setLineStyle(bool h, bool v, bool d) {
 	showHLine = h;
@@ -100,12 +140,18 @@ void DisplayWindow::setLineColor(const QColor& color) {
 	lineColor = color;
 	update();
 }
-
+void DisplayWindow::moveEvent(QMoveEvent* event) {
+	emit geometryChanged(this->geometry());
+	QWidget::moveEvent(event);
+}
 void DisplayWindow::enableAutoScan(bool enable) {
 	if (enable) scanTimer.start(50);
 	else scanTimer.stop();
 }
-
+void DisplayWindow::resizeEvent(QResizeEvent* event) {
+	emit geometryChanged(this->geometry());
+	QWidget::resizeEvent(event);
+}
 void DisplayWindow::paintEvent(QPaintEvent*) {
 	QPainter painter(this);
 	painter.fillRect(rect(), bgColor);
