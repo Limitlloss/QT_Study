@@ -2,30 +2,52 @@
 
 AgingFeature::AgingFeature(DisplayWindow* display, QObject* parent)
     : QObject(parent), displayWindow(display) {
-    // 默认的颜色轮换
-    colorFrames = {
+    buildDefaultSequence();
+}
+
+void AgingFeature::buildDefaultSequence() {
+    // 纯色阶段
+    QVector<QColor> colors = {
         Qt::red, Qt::green, Qt::blue,
         Qt::yellow, Qt::cyan, Qt::magenta,
         Qt::white, Qt::black
     };
 
-    // 默认线条样式
-    lineFrames = {
-        {true, false, false, false},   // Horizontal
-        {false, true, false, false},   // Vertical
-        {false, false, true, false},   // Diagonal /
-        {false, false, false, true},   // Diagonal \
-                {true, true, false, false},    // Cross
+    for (const QColor& c : colors) {
+        AgingFrame f;
+        f.type = COLOR;
+        f.color = c;
+        frames.push_back(f);
+    }
+
+    // 滚动线阶段（黑色背景 + 线条）
+    QVector<QVector<bool>> patterns = {
+        {true, false, false, false},   // 横线
+        {false, true, false, false},   // 竖线
+        {false, false, true, false},   // /
+        {false, false, false, true},   // \
+                {true, true, false, false},    // 十字
                 {false, false, true, true},    // X
-                {true, true, true, true},      // All
+                {true, true, true, true}       // 所有
     };
+
+    for (const auto& p : patterns) {
+        AgingFrame f;
+        f.type = LINE_SCROLL;
+        f.color = Qt::black;
+        f.linePattern = p;
+        frames.push_back(f);
+    }
 }
 
 void AgingFeature::setEnabled(bool en) {
     enabled = en;
-    if (en) {
-        displayWindow->setUseCurrentColor(true);
-        displayWindow->setLineRendererEnabled(true);
+    tickCounter = 0;
+    frameIndex = 0;
+
+    if (displayWindow) {
+        displayWindow->setUseCurrentColor(false);
+        displayWindow->setLineRendererEnabled(false);
     }
 }
 
@@ -38,31 +60,33 @@ void AgingFeature::tick() {
 
     tickCounter++;
     if (tickCounter < tickInterval) return;
-    QColor color = colorFrames[frameIndex % colorFrames.size()];
-    displayWindow->setCurrentColor(color);  //  添加
-
     tickCounter = 0;
 
+    if (frames.isEmpty()) return;
+    const AgingFrame& frame = frames[frameIndex % frames.size()];
 
-
-    // 线条模式
-    QVector<bool> pattern = lineFrames[frameIndex % lineFrames.size()];
-    displayWindow->setLinePattern(pattern[0], pattern[1], pattern[2], pattern[3]);
+    if (frame.type == COLOR) {
+        displayWindow->setLineRendererEnabled(false);
+        displayWindow->setUseCurrentColor(false);
+        displayWindow->setBackgroundColor(frame.color);
+    }
+    else if (frame.type == LINE_SCROLL) {
+        displayWindow->setUseCurrentColor(false);
+        displayWindow->setBackgroundColor(frame.color);
+        displayWindow->setLinePattern(
+            frame.linePattern[0],
+            frame.linePattern[1],
+            frame.linePattern[2],
+            frame.linePattern[3]
+        );
+        displayWindow->setLineRendererEnabled(true);
+    }
 
     displayWindow->update();
-
     frameIndex++;
 }
 
 void AgingFeature::setInterval(int ms) {
     tickInterval = ms / baseTickMs;
     if (tickInterval < 1) tickInterval = 1;
-}
-
-void AgingFeature::setColorSequence(const QVector<QColor>& sequence) {
-    colorFrames = sequence;
-}
-
-void AgingFeature::setLinePatterns(const QVector<QVector<bool>>& sequence) {
-    lineFrames = sequence;
 }

@@ -10,6 +10,7 @@ class DisplayWindow : public QWidget {
 
 public:
     explicit DisplayWindow(QWidget* parent = nullptr);
+    void setLineRendererSpacing(int px);
     void setCurrentColor(QColor &color);
     void setLinePattern(bool h, bool v, bool d1, bool d2);
     void setLockGeometry(bool locked);

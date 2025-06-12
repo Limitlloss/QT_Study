@@ -15,15 +15,17 @@ DisplayWindow::DisplayWindow(QWidget* parent) : QWidget(parent) {
     show();
 
     connect(&scanTimer, &QTimer::timeout, this, [this]() {
-        offset += 5;
+        offset += 2;
         if (offset > width()) offset = 0;
         update();
         });
 }
+
 void DisplayWindow::setCurrentColor(QColor& color) {
     currentColor = color;
     update();
 }
+
 void DisplayWindow::setLinePattern(bool h, bool v, bool d1, bool d2) {
     lineRenderer.setLineOptions(h, v, d1, d2);
     update(); // 触发重绘
@@ -72,7 +74,10 @@ void DisplayWindow::enableAutoScan(bool enable) {
         scanTimer.stop();
     }
 }
-
+void DisplayWindow::setLineRendererSpacing(int px) {
+    lineRenderer.setLineSpacing(px);
+    update();
+}
 void DisplayWindow::mouseDoubleClickEvent(QMouseEvent* event) {
     if (!enableDoubleClickFullScreen || lockGeometry) return;
     isFullScreenMode ? showNormal() : showFullScreen();
@@ -162,17 +167,11 @@ void DisplayWindow::paintEvent(QPaintEvent* event) {
         painter.drawText(rect(), Qt::AlignCenter, text);
     }
 
-    // 画线
-    painter.setPen(lineColor);
-    if (showHLine)
-        painter.drawLine(0, height() / 2 + offset % height(), width(), height() / 2 + offset % height());
-    if (showVLine)
-        painter.drawLine(width() / 2 + offset % width(), 0, width() / 2 + offset % width(), height());
-    if (showDLine)
-        painter.drawLine(offset % width(), 0, 0, offset % height());
+
 
     // 如果有扩展线条类（如 agingFeature/lineRenderer）
-    if (lineRendererEnabled)
-        lineRenderer.renderLines(painter, size());
+    if (lineRendererEnabled) {
+        lineRenderer.renderLines(painter, size(), offset);
+    }
 }
 

@@ -3,8 +3,8 @@
 #define AGINGFEATURE_H
 
 #include <QObject>
-#include <QColor>
 #include <QVector>
+#include <QColor>
 #include "ILedFeature.h"
 #include "DisplayWindow.h"
 
@@ -19,20 +19,29 @@ public:
     bool isEnabled() const override;
 
     void setInterval(int ms);
-    void setColorSequence(const QVector<QColor>& sequence);
-    void setLinePatterns(const QVector<QVector<bool>>& linePatternSequence);  // 每一帧的线条配置
 
 private:
+    enum FrameType {
+        COLOR,
+        LINE_SCROLL
+    };
+
+    struct AgingFrame {
+        FrameType type;
+        QColor color;
+        QVector<bool> linePattern; // {H, V, D1, D2}
+    };
+
     DisplayWindow* displayWindow;
     bool enabled = false;
     int tickCounter = 0;
-    int tickInterval = 20;  // tick周期：20 * 10ms = 200ms
+    int tickInterval = 20;
+    const int baseTickMs = 10;
 
     int frameIndex = 0;
-    QVector<QColor> colorFrames;
-    QVector<QVector<bool>> lineFrames;  // 每帧线条 [horizontal, vertical, d1, d2]
+    QVector<AgingFrame> frames;
 
-    const int baseTickMs = 10;
+    void buildDefaultSequence();
 };
 
 #endif // AGINGFEATURE_H

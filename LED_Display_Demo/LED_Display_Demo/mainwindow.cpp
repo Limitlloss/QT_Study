@@ -18,7 +18,7 @@ MainWindow::MainWindow(QWidget* parent)
 		displayWindow->setLockGeometry(ui->checkBox_lock->isChecked());
 		displayWindow->setUseCurrentColor(true);
 		displayWindow->setLineRendererEnabled(true);
-
+		displayWindow->setLineRendererSpacing(35);
 		ui->horizontalSlider_speed->setValue(50);     // 初始速度为50ms
 		ui->spinBox_speed->setValue(50);
 		ui->horizontalSlider_speed->setRange(10, 500); // 间隔1~500ms
