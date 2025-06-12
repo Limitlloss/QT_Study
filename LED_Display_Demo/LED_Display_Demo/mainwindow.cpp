@@ -19,6 +19,7 @@ MainWindow::MainWindow(QWidget* parent)
 		displayWindow->setUseCurrentColor(true);
 		displayWindow->setLineRendererEnabled(true);
 		displayWindow->setLineRendererSpacing(35);
+
 		ui->horizontalSlider_speed->setValue(50);     // 初始速度为50ms
 		ui->spinBox_speed->setValue(50);
 		ui->horizontalSlider_speed->setRange(10, 500); // 间隔1~500ms
@@ -42,6 +43,10 @@ MainWindow::MainWindow(QWidget* parent)
 		featureModules.push_back(autoBrightnessFeature);
 		featureModules.push_back(agingFeature);
 		//featureModules.push_back(lineRenderer);
+		playlistTimer = new QTimer(this);
+		connect(playlistTimer, &QTimer::timeout, this, &MainWindow::playNextStep);
+		buildProgramPlaylist();
+		playlistTimer->start(ui->spinBox_interval->value());
 	}
 
 	connect(displayWindow, &DisplayWindow::visibilityChangedExternally,
@@ -74,39 +79,138 @@ MainWindow::MainWindow(QWidget* parent)
 		ui->pushButton_color_change_fix->setChecked(true);
 		ui->pushButton_color_change_auto->setChecked(false);
 		});
+	connect(ui->spinBox_interval, QOverload<int>::of(&QSpinBox::valueChanged), this, [=](int ms) {
+		playlistTimer->setInterval(ms);
+		});
+	connect(ui->checkBox_aging_red, &QCheckBox::toggled, this, [=](bool) { buildProgramPlaylist(); });
+	connect(ui->checkBox_aging_green, &QCheckBox::toggled, this, [=](bool) { buildProgramPlaylist(); });
+	connect(ui->checkBox_aging_blue, &QCheckBox::toggled, this, [=](bool) { buildProgramPlaylist(); });
+	connect(ui->checkBox_yellow, &QCheckBox::toggled, this, [=](bool) { buildProgramPlaylist(); });
+	connect(ui->checkBox_cyan, &QCheckBox::toggled, this, [=](bool) { buildProgramPlaylist(); });
+	connect(ui->checkBox_purple, &QCheckBox::toggled, this, [=](bool) { buildProgramPlaylist(); });
+	connect(ui->checkBox_white, &QCheckBox::toggled, this, [=](bool) { buildProgramPlaylist(); });
+	//connect(ui->checkBox_black, &QCheckBox::toggled, this, [=](bool) { buildProgramPlaylist(); });
+	connect(ui->checkBox_HorizontalLine, &QCheckBox::toggled, this, [=](bool) { buildProgramPlaylist(); });
+	connect(ui->checkBox_VerticalLine, &QCheckBox::toggled, this, [=](bool) { buildProgramPlaylist(); });
+	connect(ui->checkBox_DiagonalLeftLine, &QCheckBox::toggled, this, [=](bool) { buildProgramPlaylist(); });
+	connect(ui->checkBox_DiagonalRightLine, &QCheckBox::toggled, this, [=](bool) { buildProgramPlaylist(); });
 
 }
 
 MainWindow::~MainWindow() {
 	delete ui;
 }
+void MainWindow::buildProgramPlaylist() {
+	playlist.clear();
 
+	// 加入颜色项
+	if (ui->checkBox_aging_red->isChecked())     playlist.append(ProgramStep(Qt::red));
+	if (ui->checkBox_aging_green->isChecked())   playlist.append(ProgramStep(Qt::green));
+	if (ui->checkBox_aging_blue->isChecked())    playlist.append(ProgramStep(Qt::blue));
+	if (ui->checkBox_yellow->isChecked())        playlist.append(ProgramStep(Qt::yellow));
+	if (ui->checkBox_cyan->isChecked())          playlist.append(ProgramStep(Qt::cyan));
+	if (ui->checkBox_purple->isChecked())        playlist.append(ProgramStep(Qt::magenta));
+	if (ui->checkBox_white->isChecked())         playlist.append(ProgramStep(Qt::white));
 
-void MainWindow::onTabSwitched(int index) {
-	// 通用关闭所有 Feature 模块
-	for (auto* f : featureModules) {
-		f->setEnabled(false);
+	// 加入线条组合项
+	if (ui->checkBox_HorizontalLine->isChecked())
+		playlist.append(ProgramStep(true, false, false, false));
+	if (ui->checkBox_VerticalLine->isChecked())
+		playlist.append(ProgramStep(false, true, false, false));
+	if (ui->checkBox_DiagonalLeftLine->isChecked())
+		playlist.append(ProgramStep(false, false, true, false));
+	if (ui->checkBox_DiagonalRightLine->isChecked())
+		playlist.append(ProgramStep(false, false, false, true));
+
+	playlistIndex = 0;
+}
+
+void MainWindow::playNextStep() {
+	if (playlist.isEmpty()) return;
+
+	const ProgramStep& step = playlist[playlistIndex % playlist.size()];
+
+	if (step.type == ProgramStep::COLOR) {
+		displayWindow->setUseCurrentColor(false);
+		displayWindow->setBackgroundColor(step.color);
+		displayWindow->setLinePattern(false, false, false, false);
+	}
+	else {
+		displayWindow->setUseCurrentColor(false);
+		displayWindow->setBackgroundColor(Qt::black);
+		displayWindow->setLinePattern(
+			step.linePattern[0],
+			step.linePattern[1],
+			step.linePattern[2],
+			step.linePattern[3]);
+			displayWindow->setLineRendererEnabled(true);
 	}
 
-	// 清除状态
+	displayWindow->update();
+	playlistIndex++;
+}
+void MainWindow::onTabSwitched(int index) {
+	// 关闭所有 Feature
+	for (auto* f : featureModules)
+		f->setEnabled(false);
+
 	displayWindow->setUseCurrentColor(false);
 	displayWindow->setLineRendererEnabled(false);
-	ledManager->stop();  // 渐变模块
+	ledManager->stop();
 
-	// 根据当前 tab 激活功能
+	// 停止老化播放列表
+	playlistTimer->stop();   // ✅ 必须添加这一句！
+
 	switch (index) {
-	case 0: // 颜色固定
-		displayWindow->setUseCurrentColor(false); // 使用 bgColor
+	case 0: // 固定颜色
+		displayWindow->setUseCurrentColor(false);
 		updateDisplayColor();
 		break;
-
-	case 1: // 渐变（LedEffectManager）
+	case 1: // 渐变
 		ledManager->start();
 		break;
+	case 2: // 老化测试
+		emit ui->checkBox_HorizontalLine->toggled(ui->checkBox_HorizontalLine->isChecked());
+		emit ui->checkBox_VerticalLine->toggled(ui->checkBox_VerticalLine->isChecked());
+		emit ui->checkBox_DiagonalLeftLine->toggled(ui->checkBox_DiagonalLeftLine->isChecked());
+		emit ui->checkBox_DiagonalRightLine->toggled(ui->checkBox_DiagonalRightLine->isChecked());
 
-	case 2: // 老化（AgingFeature）
-		if (agingFeature)
-			agingFeature->setEnabled(true);
+		emit ui->checkBox_aging_red->toggled(ui->checkBox_aging_red->isChecked());
+		emit ui->checkBox_aging_green->toggled(ui->checkBox_aging_green->isChecked());
+		emit ui->checkBox_aging_blue->toggled(ui->checkBox_aging_blue->isChecked());
+		emit ui->checkBox_yellow->toggled(ui->checkBox_yellow->isChecked());
+		emit ui->checkBox_cyan->toggled(ui->checkBox_cyan->isChecked());
+		emit ui->checkBox_purple->toggled(ui->checkBox_purple->isChecked());
+		emit ui->checkBox_white->toggled(ui->checkBox_white->isChecked());
+		buildProgramPlaylist();
+		currentProgramIndex = 0;
+		programPlaylist = playlist;  // 添加这一行以更新播放列表
+		if (!playlistTimer->isActive())
+			playlistTimer->start(ui->spinBox_interval->value());  // 用你的时间间隔控件
+
+		// 立刻手动执行一次显示更新（否则等下一轮才显示）
+		if (!programPlaylist.isEmpty()) {
+			const ProgramStep& step = programPlaylist[currentProgramIndex];
+
+			if (step.type == ProgramStep::COLOR) {
+				displayWindow->setUseCurrentColor(false);
+				displayWindow->setBackgroundColor(step.color);
+				displayWindow->setLineRendererEnabled(false);
+			}
+			else {
+				displayWindow->setUseCurrentColor(false);
+				displayWindow->setBackgroundColor(Qt::black);
+				displayWindow->setLinePattern(
+					step.linePattern[0],
+					step.linePattern[1],
+					step.linePattern[2],
+					step.linePattern[3]
+				);
+				displayWindow->setLineRendererEnabled(true);
+			}
+
+			displayWindow->update();
+		}
 		break;
 
 	default:
@@ -117,6 +221,7 @@ void MainWindow::onTabSwitched(int index) {
 }
 
 
+
 void MainWindow::showEvent(QShowEvent* event) {
 	QMainWindow::showEvent(event);
 	if (displayWindow) {
@@ -125,8 +230,51 @@ void MainWindow::showEvent(QShowEvent* event) {
 }
 
 void MainWindow::setupUiLogic() {
+	connect(ui->spinBox_interval, QOverload<int>::of(&QSpinBox::valueChanged), this, [=](int val) {
+		ui->horizontalSlider_aging_speed->blockSignals(true);
+		ui->horizontalSlider_aging_speed->setValue(val);
+		ui->horizontalSlider_aging_speed->blockSignals(false);
+
+		playlistTimer->setInterval(val);  // ✅ 更新轮播间隔
+		});
+
+	connect(ui->horizontalSlider_aging_speed, &QSlider::valueChanged, this, [=](int val) {
+		ui->spinBox_interval->blockSignals(true);
+		ui->spinBox_interval->setValue(val);
+		ui->spinBox_interval->blockSignals(false);
+
+		playlistTimer->setInterval(val);  // ✅ 关键：补上这一句
+		});
+
+	connect(ui->spinBox_interval, QOverload<int>::of(&QSpinBox::valueChanged), this, [=](int val) {
+		ui->horizontalSlider_aging_speed->blockSignals(true);
+		ui->horizontalSlider_aging_speed->setValue(val);
+		ui->horizontalSlider_aging_speed->blockSignals(false);
+		});
+
+	connect(ui->horizontalSlider_aging_speed, &QSlider::valueChanged, this, [=](int val) {
+		ui->spinBox_interval->blockSignals(true);
+		ui->spinBox_interval->setValue(val);
+		ui->spinBox_interval->blockSignals(false);
+		});
+
 	connect(ui->pushButton_run_space, &QPushButton::clicked, this, &MainWindow::toggleRunState);
 
+	connect(ui->checkBox_HorizontalLine, &QCheckBox::toggled, this, [=](bool) {
+		buildProgramPlaylist();
+		});
+
+	connect(ui->checkBox_VerticalLine, &QCheckBox::toggled, this, [=](bool) {
+		buildProgramPlaylist();
+		});
+
+	connect(ui->checkBox_DiagonalLeftLine, &QCheckBox::toggled, this, [=](bool) {
+		buildProgramPlaylist();
+		});
+
+	connect(ui->checkBox_DiagonalRightLine, &QCheckBox::toggled, this, [=](bool) {
+		buildProgramPlaylist();
+		});
 
 	connect(ui->horizontalSlider_speed, &QSlider::valueChanged, this, [=](int val) {
 		if (autoBrightnessFeature)
@@ -254,15 +402,7 @@ void MainWindow::onBrightnessChanged(int value) {
 }
 
 void MainWindow::toggleRunState() {
-	isRunning = !isRunning;
-	if (isRunning) {
-		mainTimer->start();
-		ui->pushButton_run_space->setText("暂停");
-	}
-	else {
-		mainTimer->stop();
-		ui->pushButton_run_space->setText("运行");
-	}
+	setAllFeatureRunning(!isRunning);
 }
 
 void MainWindow::onMainTimerTick() {
@@ -279,6 +419,21 @@ void MainWindow::on_checkBox_hide_stateChanged(int state) {
 	}
 }
 
+void MainWindow::setAllFeatureRunning(bool enable) {
+	isRunning = enable;
+
+	if (enable) {
+		mainTimer->start();
+		if (ui->tabWidget->currentIndex() == 2)
+			playlistTimer->start(ui->spinBox_interval->value());
+	}
+	else {
+		mainTimer->stop();
+		playlistTimer->stop();
+	}
+
+	ui->pushButton_run_space->setText(enable ? "暂停" : "运行");
+}
 void MainWindow::handleDisplayVisibilityChanged(bool isVisible) {
 	ui->checkBox_hide->blockSignals(true);
 	ui->checkBox_hide->setChecked(!isVisible);

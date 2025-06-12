@@ -10,6 +10,7 @@
 #include "ILedFeature.h"
 #include <vector>
 #include "autoBrightnessFeature.h"
+#include "ProgramStep.h"
 QT_BEGIN_NAMESPACE
 namespace Ui {
     class MainWindow;
@@ -23,11 +24,17 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget* parent = nullptr);
     ~MainWindow();
-
+    void setAllFeatureRunning(bool enable);
 private:
 
     Ui::MainWindow* ui;
-
+    QVector<ProgramStep> playlist;
+    int playlistIndex = 0;
+    QTimer* playlistTimer = nullptr;
+    QVector<ProgramStep> programPlaylist;  // 播放列表
+    int currentProgramIndex = 0;      // 当前播放位置
+    void buildProgramPlaylist();
+    void playNextStep();
     AutoBrightnessFeature* autoBrightnessFeature = nullptr;
     AgingFeature* agingFeature = nullptr;
     LedEffectManager* ledManager = nullptr;

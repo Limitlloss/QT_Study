@@ -39,7 +39,7 @@ void LinePatternRenderer::renderLines(QPainter& painter, const QSize& size, int 
         // 反斜线 ↗
         for (int i = 0; i < size.width() + size.height(); i += lineSpacing) {
             int x1 = i - (offset % lineSpacing);
-            painter.drawLine(x1, size.height(), x1 - size.height(), 0);
+            painter.drawLine(x1, 0, x1 - size.height(), size.height());
         }
     }
 }
