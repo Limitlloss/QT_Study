@@ -22,7 +22,7 @@ void AutoBrightnessFeature::setEnabled(bool en) {
     enabled = en;
 }
 
-void AutoBrightnessFeature::setSpeedInterval(int ms) {
+void AutoBrightnessFeature::setSpeedInterval(int ms) { 
     tickInterval = ms / baseTickMs;
     if (tickInterval < 1) tickInterval = 1;
 }

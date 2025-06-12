@@ -20,6 +20,14 @@ DisplayWindow::DisplayWindow(QWidget* parent) : QWidget(parent) {
         update();
         });
 }
+void DisplayWindow::setCurrentColor(QColor& color) {
+    currentColor = color;
+    update();
+}
+void DisplayWindow::setLinePattern(bool h, bool v, bool d1, bool d2) {
+    lineRenderer.setLineOptions(h, v, d1, d2);
+    update(); // 触发重绘
+}
 
 void DisplayWindow::setLockGeometry(bool locked) {
     lockGeometry = locked;
@@ -133,24 +141,28 @@ void DisplayWindow::contextMenuEvent(QContextMenuEvent* event) {
     menu.addAction("关闭", this, &DisplayWindow::close);
     menu.exec(event->globalPos());
 }
-
-void DisplayWindow::paintEvent(QPaintEvent*) {
+void DisplayWindow::paintEvent(QPaintEvent* event) {
     QPainter painter(this);
-    painter.fillRect(rect(), bgColor);
 
+    // 正确选择背景色
+    QColor colorToUse = useCurrentColor ? currentColor : bgColor;
+    painter.fillRect(rect(), colorToUse);
+
+    // 显示 RGB 数值
     if (showRgbText) {
         QString text = QString("R=%1 G=%2 B=%3")
-            .arg(bgColor.red())
-            .arg(bgColor.green())
-            .arg(bgColor.blue());
+            .arg(colorToUse.red())
+            .arg(colorToUse.green())
+            .arg(colorToUse.blue());
 
-        int brightness = (bgColor.red() * 299 + bgColor.green() * 587 + bgColor.blue() * 114) / 1000;
+        int brightness = (colorToUse.red() * 299 + colorToUse.green() * 587 + colorToUse.blue() * 114) / 1000;
         QColor textColor = (brightness > 128) ? Qt::black : Qt::white;
 
         painter.setPen(textColor);
         painter.drawText(rect(), Qt::AlignCenter, text);
     }
 
+    // 画线
     painter.setPen(lineColor);
     if (showHLine)
         painter.drawLine(0, height() / 2 + offset % height(), width(), height() / 2 + offset % height());
@@ -158,4 +170,9 @@ void DisplayWindow::paintEvent(QPaintEvent*) {
         painter.drawLine(width() / 2 + offset % width(), 0, width() / 2 + offset % width(), height());
     if (showDLine)
         painter.drawLine(offset % width(), 0, 0, offset % height());
+
+    // 如果有扩展线条类（如 agingFeature/lineRenderer）
+    if (lineRendererEnabled)
+        lineRenderer.renderLines(painter, size());
 }
+

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>439</width>
-    <height>450</height>
+    <width>718</width>
+    <height>629</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -21,7 +21,7 @@
        <item>
         <widget class="QTabWidget" name="tabWidget">
          <property name="currentIndex">
-          <number>1</number>
+          <number>3</number>
          </property>
          <widget class="QWidget" name="tab">
           <attribute name="title">
@@ -322,8 +322,260 @@ QRadioButton::indicator {
          </widget>
          <widget class="QWidget" name="tab_3">
           <attribute name="title">
-           <string>老化</string>
+           <string>老化测试</string>
           </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_3">
+           <item>
+            <widget class="QWidget" name="widget_7" native="true">
+             <layout class="QHBoxLayout" name="horizontalLayout_3">
+              <item>
+               <widget class="QCheckBox" name="checkBox_aging_red">
+                <property name="styleSheet">
+                 <string notr="true">QCheckBox {
+    background-color: red;
+}
+</string>
+                </property>
+                <property name="text">
+                 <string>红</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="checkBox_aging_green">
+                <property name="styleSheet">
+                 <string notr="true">QCheckBox {
+    background-color: green;
+}
+</string>
+                </property>
+                <property name="text">
+                 <string>绿</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="checkBox_aging_blue">
+                <property name="styleSheet">
+                 <string notr="true">QCheckBox {
+    background-color: blue
+;
+}
+</string>
+                </property>
+                <property name="text">
+                 <string>蓝</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="checkBox_white">
+                <property name="styleSheet">
+                 <string notr="true">QCheckBox {
+    background-color: white;
+}
+</string>
+                </property>
+                <property name="text">
+                 <string>白</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="checkBox_yellow">
+                <property name="styleSheet">
+                 <string notr="true">QCheckBox {
+    background-color: yellow;
+}
+</string>
+                </property>
+                <property name="text">
+                 <string>黄</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="checkBox_purple">
+                <property name="styleSheet">
+                 <string notr="true">QCheckBox {
+    background-color: magenta;
+}
+</string>
+                </property>
+                <property name="text">
+                 <string>紫</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="checkBox_cyan">
+                <property name="styleSheet">
+                 <string notr="true">QCheckBox {
+    background-color: cyan;
+}
+</string>
+                </property>
+                <property name="text">
+                 <string>青</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="widget_9" native="true">
+             <layout class="QHBoxLayout" name="horizontalLayout_4">
+              <item>
+               <widget class="QWidget" name="widget_8" native="true">
+                <layout class="QHBoxLayout" name="horizontalLayout_5">
+                 <item>
+                  <widget class="QCheckBox" name="checkBox_HorizontalLine">
+                   <property name="text">
+                    <string>横线</string>
+                   </property>
+                   <property name="checked">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QCheckBox" name="checkBox_VerticalLine">
+                   <property name="text">
+                    <string>竖线</string>
+                   </property>
+                   <property name="checked">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QCheckBox" name="checkBox_DiagonalLeftLine">
+                   <property name="text">
+                    <string>左斜线</string>
+                   </property>
+                   <property name="checked">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QCheckBox" name="checkBox_DiagonalRightLine">
+                   <property name="text">
+                    <string>右斜线</string>
+                   </property>
+                   <property name="checked">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QWidget" name="widget_11" native="true">
+                <layout class="QHBoxLayout" name="horizontalLayout_6">
+                 <item>
+                  <widget class="QLabel" name="label">
+                   <property name="layoutDirection">
+                    <enum>Qt::LayoutDirection::RightToLeft</enum>
+                   </property>
+                   <property name="text">
+                    <string>间距</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QSpinBox" name="spinBox_LineSpacing">
+                   <property name="value">
+                    <number>30</number>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="widget_10" native="true">
+             <layout class="QGridLayout" name="gridLayout_5">
+              <item row="3" column="1">
+               <widget class="QSlider" name="horizontalSlider_aging_brightness">
+                <property name="maximum">
+                 <number>255</number>
+                </property>
+                <property name="value">
+                 <number>255</number>
+                </property>
+                <property name="orientation">
+                 <enum>Qt::Orientation::Horizontal</enum>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="2">
+               <widget class="QSpinBox" name="spinBox_speed_2"/>
+              </item>
+              <item row="3" column="0">
+               <widget class="QLabel" name="label_8">
+                <property name="text">
+                 <string>灰度</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="label_7">
+                <property name="text">
+                 <string>速度</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="2">
+               <widget class="QSpinBox" name="spinBox_brightness_2">
+                <property name="maximum">
+                 <number>255</number>
+                </property>
+                <property name="value">
+                 <number>255</number>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QSlider" name="horizontalSlider_aging_speed">
+                <property name="orientation">
+                 <enum>Qt::Orientation::Horizontal</enum>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
          </widget>
          <widget class="QWidget" name="tab_4">
           <attribute name="title">
@@ -544,8 +796,8 @@ QRadioButton::indicator {
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>439</width>
-     <height>21</height>
+     <width>718</width>
+     <height>25</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuLED_Display_Demo">

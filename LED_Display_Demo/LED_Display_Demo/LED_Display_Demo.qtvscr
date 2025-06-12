@@ -1,14 +1,18 @@
 <FlowDocument xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" FontFamily="Segoe UI" FontSize="12">
   <FlowDocument.Tag><![CDATA[{
-  "timestamp": "2025-06-10 16:26:54",
+  "timestamp": "2025-06-12 11:19:46",
   "files": {
     "D:\\Project\\Mygithub\\QT_Study\\LED_Display_Demo\\LED_Display_Demo\\LED_Display_Demo.vcxproj": {
-      "before": "7Vzpc+I4Fp/PW7Xf96OL6ulKdgpMCKHTgTBFgGSpJiQdSGd2yluUsQV429fIco7d2f99nyzJBzZXAklPD91VsdGtJ+kdv/fkv/3rhx9qPz9apnSPsGc49mnuoFDMScjWHN2wJ6c5n4zzx7mf63/9S+0aO/9GGpFaaKz6JhmoeIKId5o78w1Tz0nQig2/poS4J7LsaVNkqV7BMjTseM6YFDTHknV0j0zHRVi2vBGtJpeKxcMctC5JtQ5B1gV2fFfqqiNknuZ4h03HHhsTH6sEBuixwlA8K1fq2Jrp6+g0d4NMpHro98dKWdSAOomm6rxMTU4m08HQf7VrUyVjB1t1aKQmh79YPiQwemRVXjK4Fhr5k4VDC0psfGA1OaQxIzlMARaDPCXIfmE6I9VMEfrCN/T6f49bjVLxqFLJH39sFfOHxweN/PHZeTtfOvrYODg+rpSKH9v/C2kT1OH0unEc0lMt5LmqhurddmvYMjzXVJ+GLWQ5NTmZzyt9Qk8PDtbrn0n5S/8e9mZNFkm8xJ1h686Dx3ajWKMvbDfXD4qFYqFUOSjCsyYvLLqouUvDXqPFWGnaaECMiMp8r1uug4nEt9Bp7t3elyY/UNcqme4rl+G5abpugR+5ggvr5eUkOWv1YB/qBj0ip7n3qut41Xd7ia25//u7PUGffVbi9JQ9Y4eFJeTEEUy0IA5SeDAGjmN6iNTvD8qH0QERqZyiVz5xfdIyMPAOBz/VMTuZSk2ezeEVGoMukNCwjP8gr3nj2wPDQl1jhFX8dOupE1Qfw+5ENXlpOd5ec6piVSMI92GoPYfAA05WPFEUjDOawZOL6g3XNQ0tYDwzhzHI5vU6NjRuId1QCcqaZ3Y+r3yNDQtmxmiRcSyS+bRS5oZKnuQX7IWQN21/J+iUDX73+0DM8jV2QWc9tpJkJ6xyQhS0HwmyqV4AZ4aAPhDxnnjhF+y2+ZxHbOj+FIGWEbKe9AxvPYSp7ICTN8s2Ywyv4EMxwT9jA0aPhke8PbbZ3+2t3RiruB/yZDlGmDirZ2SNdSx6hKRIu1nAo+edy++GTmIiiQ1I1+NSpSpkSOFEuYDEwBKBfcL6Sy+gb3onJiUVNC86g5O8zc5Y86IzphVQxWnDs0trYFFXovPOxHYwYluai+ANj4JgH0R5Rj9iCF3D/gpaPUYWsolqbrh7rkrMdCL6fvmumj21dSENWNOio5fvqLkdbWM3pTp7g72UGsPinZSpNFFrCFRrUDap3vxiFp3BQoRmaTYdyzVMxBccOFZDZ9q6anKbFVhKoCEbyKsXqq0TpQ9W84OKkfJ5oFQKHwtFxfLutVKxVBpWyorBLN2VCyqfyZ2hU4t9nSpgwK1TvAncosoV/GqhKq88SOur5yLNUx4M+7CUp/Os/ri3iET7oP8voiAjfILOV24AINTzv2on+F41fdRUPSLRn4ZtGjYKXj2CDY304S+oO0EKmWIHxjXpoQcpD4acZXiecY/yQeZwqLmmD3aszwoj0JiwDXLII+jRxVI+AFCk/MNhGaxQ9jz+CM9yuXxU4c8P/HksxSfNx5uYqZhDND3PQ9bIRLgLegwMsuswcyUmvBrzioSNnMEEPdSxKdgRGDvCxEpnhHWC8xerch7UBfvKBn4+JzOqbHgqDLoPa26MDe1OxTYld7189OFDtVyufIDVB3QgqwyQY05OdLbajxoKFvsfqq3Dyk7q/Sdbq8np9HBEXdWe+GBc9glUUQFx8Iiuue7Bh5qcygorXY0oIHYO55rK5xjJZzKiCjAqsGsZjS/VRyAA0sEQjieHha8xcrGjIc9zcMSlvPrwrtNrXd31q7e9TvOq1a4OxQtkHJaqw3avcdZtD9u/DNq9FuAsjW7nogfP/uDqpnHRrkKxSrkKWWe3F9XPg2Hvahi+33VaF+1Bf9jtnNGsi9uOeG1e3bSD9x/35owMlmZOTrQ0UYGBQwkndloqPUYGZ4JVq6US9QwQvZDaAUfPzAmrAngA9BbgQf0SUEtjMMVI1ZHe6nYBc0oWCCv2fdfFQHjYDZj47plq2wjXmYTJzgurDqB5ckfhhSFpeBQbJR07QAtY9fn5YROg9J77pkmBIE/QJ5EWluQHp0th1XrwF3CYRCIrCuDFjASqUZUnWpaIl7aQi2wdAGAqh5ZKIdMYgWCpcMlSgJ/LxQWvA6JlrfJUtqxVoW0T/HTtGDYJqnlTZJqHpeA9zmbjE07w2nhGFqW4QhyX2+/2Pg9anZt9hRIi3km6bKKrdHZWh4L5v//Nd0hVvmz0Ouft/qDVvqbnvNf85wkB0IpjeoEkZUamZAN34skRrsjR0AJoJpZj50FkEQxwHq8i/AHsZwVgVPjP81x/BKgY4LAD5yuyecOVo49Ho0r5oFzWtPGBPuZlTc5Xeam/iyYEY2tgbWoQ4KI+FkPkZdgs15eIlFG0H5HmU2kPbOUe7AZ446d3Xm54pNo2lTrNq8tWY3DumNQLwqtm5YTVLhBwCIr/UUwrJhbF+Z2bH7aQZQMt1mkDJ8Ws6bLQoqGWMpM16AaNEYZjDqec9ZKREY6NoZMBv363x0yXfWVW6S+gRxD9saJh9RuQqQ7Fc3XKwYHXUN7Ku83OC6v2/VH/CXQpq873a02OkmKlnsevQbhHbLB2aehmdO445k45ecC+bwEIm9hUXM/mhMNgO6SNsYObU6R99bg6lE4PqySYNfVRMFWIcXRWqibHBla7QZ7jYw2lDIpIgn4v6gLI54zJMidWpBAFZluwbIEHcSbjJXhBysTk6zErSxNWxvdmzemUoe1suTe15YI1AEfJq1pygLMK7XoEXPvPatQJ2q9k0nHL9K1MOjDYvj37bcbGShphlLnsLLHNW2L6WpYSDdNYqwK1xdarERljrN7OGqMhGjtrLNtWC9XjuWYTs1nmZocNPNOqilkxO4Pnz2nwrCZMOXL6fEz0WUZOZPOA7RGaI1H0o84i65jJXAAcW3jPs4tbqmGvVgpQJYi2i5dNxRQmQwxph75HHCuIEp03wqmI75gxpSBwzHuJBZfhkUuSZiq8VYrlaEPAfHU09grT5SDmyLBpFYp5JIC+jk3HnAD3WFIELFDADQCRDc9rKVQbG7Ek5VvcZwBvwn0Ar4EDgSYtcSGwopUyPJkbAV5ijgT2K6aKsgTuTGA/hDtByuc15hvF+bGp3jv4lLr/IJk7D6XWiQi1lS+fJgaZ+iMZOusTX3+SZ0GodAJ3R8qJBZbyHWhWeFihOTnwsEJYcuhhlblPUoY9z32SrBYYRtTt85zBrNKtmPYKI+RF5dC1u0b7UAnUvvUqULUPajBktnmicBNRosCgF4WsSl8Mz4dQDbpChqNQj7VCN70PfvYn5UtTCSJElcs+vB6UC+Vy4fCoVPwgXNoc+N1ePzRw9Ly5+e4a/qNhGhDMqXzpr9i6tPd4XNlXOLYpfTKIpxwURWV4jeKXFV/DZAlt5jSX3Z7iWxttzgOkFOkbbRKO3obnDLLwuY322oPzX/qtT0q5cBxSNKThjFyR8o7EOU8gWpLZMAoaTxzIgUgwXAIqDi7oDQuGy6umlOx9Cogy6yrqmym8mxa2CykAcpP3CuKSv0UDijySTH6+hCopIHeGHlUG8iQkxLeuAqTm9FYKQFJPfktJH6ziTs6zADERe7WT81xLWiKY1lBfdnJ+J+eZxlaYUjkfSY+kXNmalE/x/leT8ameF8x9gXwH5ScCBbjMz8YJKDQBChsFHV4RJIj3ukMIdggB2iEELBY9mw4RDrFDCBYCHzvN4U+sOcSFyiw8EMvbmtaQAYZTvSHW9dsAA7EBwNwXaA0bdg6kdJnYQKY7SCC4WwDm/DN8AjtIwEn5IdZA2tcouoP+13Mx7KB/+ikUZQf9V+f6sbJ8KIuh/7jcSOIBsZytifWUGHsdoZ7qNkICkrNeINDTMMAK0QTiIlMsliD4jghF71P4SyyuAC7/0U9D6edYBCNs9msBLCIp1YtAN9I3sDLiNhb6S7Y1l9RKbmIm83bDtiaRodxuYhrxBUlu621NZAOrEUFrWWckDHIpaCMSmwV14gcXXVqO5tOPLdTkMCkMp0tt75e45dZes20bAEtdaOKa+hjueMKFNU/R4bKZovuW9URjooDVzbottx0JlNouminlzx6ZsyO8jkhjf36z1K+IxisJR4jtmM7ECW6xP2jBfVUpf94Pfr/e9fhfIQTlsqVLebhvfaL99NMB3IXnV+bvDtl1+RWuzecfdHp1HMrr9Pa4lG9D1NCSDygsWUup9H5Cqr3brkSfETsLj892HPip9RQhrlLCO70dD36q84xpryXO50X/xdlqSNDn8KPZ47ZhdvTSTfQGDCGDqf7BWMJVibKEb50jZG7h7fCEjCV9Ta6Q0X3m5BdwBuADG9UcUoxqqa4X6URCIW+KD+9ESpJvDGNK3lQETa9glETNR63FmvKNdRWtLTO2xNhWC3XyjT9atDMfcRzhphGvjjSzzq92am87CbjdN7YjxjMO7MyMFx/VTe691En9Q+281OiXKgRU037bfZca8yvtulS/q++5VXCg9b5sCt/toZ86Czl47Kuc4tPG4bdN2WcPedngq0I0vL/+fw==",
-      "after": "7Rtrc+LI8T6nKv9BobzB3AWEMWbtBXSFAfuoAH6A18mVqyghjfHc6nXSyDbJ5QflX6bnKQmEn3u+3O3uVi0w3dMz0+/umf1v45tvWt/fu452i8II+167sFOpFjTkWb6NvUW7EJPr8n7he+PPf2qdhv5PyCJaD12bsUOmZrhAJGoXDmPs2AUNqHjw64aQ4IOuR9YNcs2o4mIr9CP/mlQs39VtdIscP0Ch7kZzOk2vVau7BaCuaa0BQe5x6MeBNjTnyGkXxIJd37vGizg0CWww4siAngfVBp7lxDZqF86Rg8wI/XLfqMsZMCdDyhA4LT07TDdD/7ROHZNc+6FrAJGWrn5xOAxwfuRNfmRzPTSPFw9ujWF89o21dMVjznI4AgiDLDNsP3b8uemsMfo4xrbx7/1ep1bdazTK+we9anl3f6dT3j886pdrewednf39Rq160P+P4g2bI/h17vtkbLooCkwLGcN+b9bDUeCYy1kPuX5Lz8LFpL+j5Z0f2sYZ+TiZ3e5WQQ5ySGBcYs/27yKujVJGH7k2GzvVSrVSa+xU4bOlP4j6ELkR9p5BMYUtiJ6RUcSsRANlsTHV43ahuLWtxkvFdrtY1E7Otb/073FEou0M9OpnUiHc3IqlgrG1PZowckIDezgEu/TDZelKUWzp6isXNVXXRNbC4tzAD4kmyLQLW9sfu8KsT01yU7oaKevtBkFFGH4lAEpRQdPzdCh7wIxtlH7Z2pYCYgdO2WixII0+M0WarjLFqe87ESLG7U59NzFJOSrYfRKTICaKK0bIfcFVS1+FiAmd6RCEhl38LxR1z2Nvil00xPPQDJcXkblAxjXYA2rpj+IJet0bMzQtgsIJbHXsE/gAW04PSsS0a5suA2R0gsDBFnN1K+bPwGLewAPiLrKxSVDeOfPhYvJpiF04GedFjiFm4XQSs+dV5cno04piZ4S4Jnfl/n5VqdvUyf7hZS5P+RYSHzzPXWTdxPpk5aBK4N9mNs8qIuldUo5kg0tcmQKeMd8liWzijJohgaQGXFeKODjah7U146WYywODOCMDLyKm4xiNykGlOnOjW6tWrdVmNFNIgMLi4KS+HTsoMiw/RM1FjJt32KbZE3PTAvZES3vlcVLG95schscXjWYC7YJSAXCSR37sQRp5iCDlQiIKtQvdOCK+y6Jds+t0fTfADsoI8PGIuTmunhGubjSqClmNUERdvsb11fQs2OYPeHFT0KbonqS2/EGz/NixNc8nmuODy0ZaEqb/Rr8zA2hq8MHyZtdcMmSW+MLkkEZtZ1lRaqvzU/OwytfPJGb9e4I8mqUniixicBr5xbotI7B07JMbBBqqGLNuwBcRCmnWBhFoNVVIRfpKDGg5Vo1UovNsOompgymu70tpFc2H5MqCU3qKVeuMfg7vUob0hXJOKkpGSakwRyYt+pReZ/CknUH6AXrzCk+cyeqAlCQMkfBzEeakJGFundRxvWLX63VPQlYuNFh44AK5ooo09BUrkjCG1DWHplxuiL1PUDeHyEUehLRXLCXS5BWCcp0XSDxlY4bMdDgZSfQF0s4j+lkknSb8FnJOr/ewlHMTeNoLgJIOCh9akHIjfo4DzE2MVIwWAgIH3bF5yWs6ojsD5snqVQwJ0THyEHR2kH0EcT26WknGqLGVmlmcZqUpTL+pY97uab7bfmiRElRuD+2BR/7MTk8C1mwyyj9aH8Jb04lR14yIRn9iz8EeYl8jEmKLTOBfyCrZCLkJ/Tv4NUZ3WhkqJhdHEb5FZQaczazAiaHnEXNkyCdQ6AHLI4Lug1Ars2abVr7brUPHgn/uH8BnvV7fa4jP9+JzX0sfWuw3c1J5huR4UYTcuYPCIbQYYJNDmrWA6FMFcmcTiiJyCAeM0MCjjTE+W1j9OkDNYYqamnLE5kJl7IFn2gBMJuPIhE1PAmTha2xdmqFH2W3U996/b9brjfcgfegk5eEAOzZAEu3s31uICfsH07NBsgtjsvSslr4+rnY0NL1FDDnihMAUE7pTEbGtINh539LXQGrSyZwmgVTLqVKnWL4CSCbArqAjwXk8Mu+BAciGFkZ6WCGfhgjSTAtyVz9MbDoyZpeDce/kctK8GA+6J71+cya/AGC31pz1x53DYX/W/8e0P+5BT64zHByP4XMyPTnvHPebgNaoNwF0eHHcPJvOxicz/v3d9oY1gekbIAnTE4SpT1kiGyxr46kD+ovQdHsmMQ+hr6v4yDxbLkRNhYYOcFI2dIwR9K7x9CZEpo3s3nAInccsgpo4iYMgBJaCnEMSB4emB77K4J42H6amToE8uaQtnxnpsN4fFIysg8Onb4YrEpBIHcWOQxtxkeRPZkxhCpMY0ua6wf6F3lhmUKGyw0M+xjWFl1Ncw/i+NsM5CehJySJMRmAa7RPJJo62hwLk2XCTQN089DqnvcF56crBc0jKG32PhMtTH3ukAiPN6AY5zm6NfU+7tTSNjG9LA/IWF2lTOtKk6a6DM9TXwXlrSP9a0Eed8eCoP5n2+qfUisbdf34g0MxrFyEU7NaKmkeL3WLSTBWN6Arw3/W9MkQAEkJfs6huYYoN6FvD36IWxHPoB0LPe+p/Ql672Ng72Js36jv1umVd79jXRc0R3qhd/BbQpWg7oXWDCXicOISlv4VOW/r8TwoX1Nb698iKaYwAy7yF9JBGC64pm6BK1foedcndk1GvMz3yHXqdJKbmQdQ0GexXw4I0gY1wRSEv1eV7zoOoaatZ64PJLCQLwhGjc3SNQlBz0HK+Sg5ALcKbrszlbW3zTLZ0tZorVtA9xMUUqpp+DgHHp21qmzpBsDXqnsSy+TA1dRLPJ0tINFxDaF9LT4ZSWC9zeRD5EjfQGmHbSSxGXBtQZ8g84AX0MBYejWWrELUNriH9MPTD7g2yPkUiV1gfV1My/o5e9vA8gTtFjtXSUxtrnaPIj0MLiZ5Sst8kCP3/x1IIXrnHgAblyLeSM4lDhkeOeeuHBm1X0usF1k2Tg4qVIk03KvpKOl7SXd+aQUy00XVUuYGqkuffyTrKX/RQZIWYJVYG7KQI1g8eaADxgGCyLFUqFZpiCeeSRla76C3BbWJrwoRk+OxOB1QmM6qQ2XFpE2B1x7zBalFQFlllEPRI77bpT+qmSxXI5MQkhcJnilFBBzh8gVMczj0MYLzg5IwyPwyEapo2wg8IUGo8dRJYQW0zxpmDgHzYDAVPjiF3zi+Ek4SRFYHsgOw2fgXwrM5AujgVC6+mDpmK63PVhja99vlaGap690mhfmPZx7gJl2gbEZQqrpd/L64LQellRj+HMPelloiS908qEEWd+1sViG9cDa5UbNmSjjqAr3UdhsdLSbb+9nWd/bWw+4MWdhsrMF7+bASrUJFXhj2hQEsVRF9rpy+zdnp17/GBeknmxOzp5+8ym4d8+mvZx6IeK5ag7PzcZd8j9VJSPoEoVLWTPEq2+YNX3oChhaa8Is9Hd03sPQ0L+ozwCDaNy3eabCh5XZ3Ur8CgTXuD5y78wYTUqQSR7kqsp7AeXy31jichxTNcWoCrnkLFmhP55ATWprUraxr1fCum99MtXQ2peJL0nAcePPyMXlynqi61+ymC66bo6hq6+NBAja5s6IVe2bHrLimTV+4b6ZqZ/jHfRtJwoH1e6Ny9eF+Wo5UP7+F5rmiiz7F39bNrfkK0U1jQyp7v+Auf3THeWezOQSsfTdjvt7u8/BFr5VHP1spwG/bB+u67HbipFBeal7v8MvMJl5rlO5te7AG+Te/2tHJfU8d+RCpa7a8L0hxfDDX6ubXN7/RLVxn9Yl0vKoxEOvLF13PuvnvyBX+xoK6wtZWFBN1kIZ7AvEY9c48E2igogxKKb9LI9ZTdybHUUGKK8jVN5gxvbozZJwVPFfxbmGN2Z78LgzypUYP8MuwxKx5ZgvwqFpldaoObeZZNPh49WR83MdZUCI6xjNTrVJ73XBsuuemLZEXuwXeVyUvXzFvcDS+1U/95RT7RTj3DlK8n1fNW/iJO7IRd8NMeuPE/"
+      "before": "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",
+      "after": "7RtrcxpHMp+v6v7DHuUcIjlYCWEsG9gUAqRQB5IsUHyXUhW17A5o4n1ldlYSd7n77dfz3F1Y9HSUS2y7ysBMd89Mv7tn/N+Dr75qf3fre8Y1IjEOg05pr7ZbMlDghC4Olp1SQhfVg9J31p//1D4j4U/IoUYfLezEo1ObLBGNO6XDBHtuyQAqAfy6ojR6Z5qxc4V8O6752CFhHC5ozQl900XXyAsjREw/njM0s767u18C6obRHlLkH5MwiYyRPUdepyQX7IXBAi8TYlPYYCyAAbxo1hgGjpe4qFM6Rx6yY/TLbbOhMAAnR8qSMG0zP8w2w/60zzybLkLiW0CkbepfYh4GBD+KkO/ZXB/Nk+WdW+MQn3xjbVPzWLAcjgDCoKsc24+9cG57G4w+TrBr/fug363vvm42qwdv+7vV/YO9bvXg8GhQrb9+2907OGjWd98O/qN5w3Ekv87DkJ7YPooj20HWaNCf9XEcefZq1kd+2Dbz8xLp72h1ExLXek9/mMyu93dBDmpIQnzAgRvexEIblYx+ENps7e3Wdmv15t4ufLbNO0HvIjfGwSMoZqAl0fd0HHMrMUBZXMz0uFMqv9rR45Vyp1MuG6fnxl8Gtzim8U5u9vJnWqPC3MqVkvVqZzzh5KQG9jEBuwzJqnKpKbZN/VWImqlrKmtpcX4UEmpIMp3Sq50fetKsz2x6Vbkca+vtRVFNGn4tAkpxyTCLdCh/wJxtVH55taMExA+csdFySRl9DkWZrjbFaRh6MaLW9V5jPzVJNSrZfZrQKKGaKxYRvuCyba7PSITudARCwz7+F4p750kwxT4a4TmxyeoitpfIWoA9oLZ5L5yk17uyie1QRCaw1ZOQwgfYcnZQAWZd23QVIasbRR52uKtbM38+LfGGARD3kYttiorOWTwvkc8I9uFkghcFhpifZ0jcnteVJ6dPa4qdE+KG3LX7+1Wl7jIn+4eXuTrlS0h8+Dh3kXcTm8jaQVXAv81ckVXEyrtkHMkWl7iGAp6x2CXJbOI9M0MKSQ24rgxxcLR3a2vOS3GXBwbxng6DmNqeZzVrb2u7Mz++duq79fqMZQrppLQ4OGnoJh6KLSckqLVMcOsGuyx74m5azj3Q0p55nIzx/SaHEfHFYJlAp6RVAJzkUZgEkEYeIki5kIxCnVIviWno82jX6nm90I+wh3ICvD9ibo+r76lQNxZVpazGKGYu3xD6agcObPN7vLwqGVN0SzNbfmc4YeK5RhBSwwvBZSMjDdN/Y9+5AbQM+OB5s2+vODBPfAGZsKjtrWpabU1xahFWxfq5xGxwS1HAsvRUkWUMzgI/WbdVBFaOfXKFQEM1YzYN+CJGhGVtEIHWU4VMpK8lAFZg1UgnOo+mk5o6mOLmvrRWsXxIrSw5ZWZYtcnox/AuY0ifKeeUouSUlAlzbLOiT+t1Dk7ZGaQfoDfP8MS5rA5IKcIQCT8VYUFKERbWyRzXM3a9WfekZNVCw2UALlAoqkxDn7EiJQmkrgU01XIjHHyEupkgHwUQ0p6xlEyT1wiqdZ4g8YyNWSrTEWQU0SdIu4joJ5F0lvBLyDm73t1SLkzgWS8ASjoofFhBKoz4MQ6wMDHSMVoKCBx01xUlr+3J7gyYJ69XMSRExyhA0NlB7hHE9fhyLRljxlZp5WFatZY0/ZaJRbun9fXOXYtUoHK7aw8i8ud2ehrxZpNV/dF5R65tL0E9O6YG+4kDDweIf40pwQ6dwL+QVfIRekXCG/h1gm6MKlRMPo5jfI2qfHI2cyIvgZ5HIoAhn0AkAJbHFN1GxKjyZptRvdlvQMdCfB68hc9Go/G6KT/fyM8DI3toud/cSdUZ0uPFMfLnHiIjaDHAJkcsawHRZwrk7jYQTeQQDhijYcAaYwJbWv3mhMbhippBOeK4UBkH4Jm2TKbIOLZh05MIOXiBnQ82CRi7rcbrN29ajUbzDUgfOklFMMCOLTOpdg5uHcSF/b0duCDZpTVZBU7b3BzXOxrZwTKBHHFCAcWG7lRMXSeK9t60zY0pjXQ6Z0kg03Km1BmWr02kCLAr6EgIHo/tW2AAcqGFkR3WwGcEQZrpQO4aktSmY2v2YXjSP/0waV2cDHun/UFrpr7AxH69NRucdA9Hg9ngH9PBSR96ct3R8PgEPifT0/Pu8aAFYM1GC6YOL45b76ezk9OZ+P71zpY1gelbZlKmpwDTkLFENVg2xjMHDJfE9vs2tQ+hr6v5yD1b4YxGhYYOcFI1dKwx9K7x9Iog20VufzSCzmMeQCNOkigiwFKQM6FJdGgH4Kss4WmL5zTqFMjTD6zlM6Nd3vuDgpF3cAT69nlNAhKpo8TzWCMuVvzJjWlIaRIj1ly3+L/QG8sNalB+eMjHhKaIckpomNjX9nlBAnpSqghTEZhF+1SyqaPtowgFLtwkMDcPvc5pf3heufTwHJLy5iCgZHUW4oDWYKQVXyHP26/z71m3lqWR823ZiaLFZdqUjTRZupvTOeqb00VrKP9aMsfdk+HRYDLtD86YFZ30/vmOQjOvU4ZQsF8vGwErdstpM1U2omvAfz8MqhABKIG+ZlnfwpSb0LeGv2UjSubQD4Se9zT8iIJOufn67et5s7HXaDjOYs9dlA1PeqNO+RsAV6LtEucKU/A4CYGlv4FOW/b8DwoXzNYGt8hJWIwAy7yG9JBFC6Ep22a1qg0C5pJ7p+N+d3oUeuw6SaIWzWg0FezXw4Iyga3zmkJRqiv2XDSj0daz1juTWUgWpCNG52iBCKg5aLlYpWBCLyKartzlvdoRmWzlcj1XrKFbiIsZUI1+DgEnZG1qlzlBsDXmnuSyxXMadZLMJytINHxLal/bTIcyUE9zeRD5UjfQHmPXSy1GXhswZ8g94AX0MJYBi2XrM3obQkMGhISkd4Wcj7HMFTbHNUrO37HLHpEnCKcooNpmZmPtcxSHCXGQ7Cml+02D0P9/LIXgVXgMaFCOQyc9kzwkOfLs65BYrF3Jrhd4N00NalbKNN2qmWvpeMX0Q2cGMdFFi7h2BVWlyL/TdbS/6KPYIZgnVhbspAzWDx5oCPGAYrqq1Go1lmJJ55IF1rvor8BtYmfChWSF/E4HVCY3qoH5cVkTYH3HosHqsKk8sM4g2JG+3mE/mZuu1CCTk0gaRGDKUUkHOHyBMxwuPAxAPOHknLI4DIRqljbCDwhQejxzElhBbzPBuYOAfDiGnk+PoXYuLoTThJEXgfyA/DZ+beJRnYFscSoXXk8dchXXp6oNXXbt86Uy1PXug0L91rKPcxMu0bYCaFXcLP+eXBeC0quMfg5h7nMtERXvH1Qgyjr3tyoQX7gaXKvY8iUdcwBf6joMj5fSbP3l6zr3S2H3By3stlZgovzZOq1DRVEZ9oACLVMQfamdPs/a6dm9xzvqJZUT86efv8tsHvLpL2Ufj3q8WIKy81OXfffUS2n5BKLQ1U76KHmE3MFiAfXc2A7g/oCwWlPdkm/BgKsm6ACze6Jz1k0lD0GaOHYg1rl/ATuh4SGB9y00gFbSEXStoWF4P5ornu6KVtL94L6Ng4dBQccUnvNmYQXPU9am78RVJd5TF4spp+Xx4dWOePfBuStLzBRqCAJRR86CcitKwTbEloUtWBxaYRtCuwclI7Is5NpGioV1B0JeTHcAMgFJ1muoBzA+fZyVckuULblGUc2ZU/WOCCTBGhK8E9gPnYQ9OmibekgnCelFwjCA17zxk5sP+urB/xjDHWJ8uRBKHl+60OC+dBPfXzF9W7tEZmvmLgXENtIuEmveQzv2yftyPKN6eAtvruXNyBwHlz/79kfE2r8loxqEXrgM+cXxjcMvkozq0YT/frkb6R+xUR33XaMKV5zvnG+/3YPrZ3lL/WFf3FA/4Ka6euOy21qAd9mFrVEdGPrY90jFqP91SVsnFyODfb7aEQ81Kpc5/eKtTCaMVDrqGd9jHjT01X/LKJf0uwRjbSFJN11IZKXPUc/CI4E2SsqghPKb8ndm5lGkGssMpaaonkjlzvDixph/J/JQwb+EOeZ39rswyNM6M8jPwx7z4lF15a9ikfmltriZR9nk/dGTN+dTY82E4ASrvGWTyuPe4MPLBfbMXJO787Fs+nw598B6y/P7zP9IUu/uM29r1ZNY/WZZPHOUO+GvNtjFhvU/"
     },
     "D:\\Project\\Mygithub\\QT_Study\\LED_Display_Demo\\LED_Display_Demo\\LED_Display_Demo.vcxproj.filters": {
-      "before": "5Vddb5swFO3ztP0HxLvDd4BBUsUJdH2rNE17mVQRuCmuADMMbaZp/2s/b07SYFqQirq2UjcED76y773nHF9f8/v9yYl/us0z6QYqRmgxk7WJKktQxDQhxdVMbuoNcuTT+Yd3/kVFryGuJT69YDM5revyo6KwOIU8YpOcxBVldFNPYporCdxARkuolJytG5Iliq6qhszdSJJ/XkN+VtGm3A+5ISRZDZV0XsRZk8BMDmmVS9wI7LBC4o//pSDfGzhPoKjJhkA1/+m6huk6qossCy+QuXYThEPbRU64wljVnWmAjV++0lu4S2LvMtjWUOxgs3lDfKUzbKdcRBWDfSrzTZQx8JWO5TDLVw75/x9ozqCAKqohGSGQrQUrh79oscQuMpeBizAONBSoKjZUzTQDTRsrUFyWXuzF262X09hLvQQ2Hk0yj/CvAuYNyPeYMP8QlE8QJbyCRtSM4bqW4ajIcfGK14xqIscJMJrqVogDSw9wiMdKknopFyXlkqS5RwquRRF7W5Y8QYq3nv9n2lQxjODfDJe2YYcaWtoLC5mGPUULdTpF+sLQV7alL/QwHMu/KIluMaTltbeOai9i+e7bPkGNN4zGV+53l36zWWZLmpe8uYh+kxBWZtGPr6RI6O2E09ppO3dne5eSh+eK0ro8toDWIGLkESle0PXt8+Q+gr6G1TTHu54uwN0nMO3T163vPn3CZUugMIkoOwrvcP5tiBE4B7YJrJurb7z9XN7HO7hhHjSXPuij/xby0SAAV5BBxOA1QyYtxg7brwLw+eMN7SGBr6yAH5tskk7idd3fsY/qJ7y3CgrTsIYvEDK7uzSLgA257FA5UCiPIjv63OMaUSlDsDspNKTPrrjh9wtDuBtIgN+/D78h8z8=",
-      "after": "5VZda9swFN1zYf/B+F3xZ2J7dlIix+76MGgZZS+D4cg3tYpleZLcZoz99ylJ27j1IKGsD92M9aCLdHTPOVxdsZN375LTNauNWxCS8mZqOiPbNKAhvKTN9dTs1AqF5uns/UlyIfgNEGXo5Y2cmpVS7QfLkqQCVsgRo0RwyVdqRDizSriFmrcgLCaXHa1Ly7Vtz9QwhpGcK2BngnftdqoDOa0VCOO8IXVXwtTMuWCGDoLc7TD0l1w19HsH5yU0iq4oiNnPKPL8KLQjNB7jOfKXUYlwHkQozBcY2244ybD3K7EGGzdJbCGztYJmQ1vOOppYvenjkotCSNimMlsVtYTE6kV2qxJrl///weYMGhCFgvIIgwInW4T6R/MUR8hPswhhnDkos23s2Y7vZ45zrEGkbWMSk/U6ZpzEVVzCKuZlHVM9BMj4D/YdMuYfovIRilJX0BE140XR2AttFEZ4oWvG9lEYZhhN3HGOs7Gb4Rwfa0kVV9qUSltSsZg22ouGxGtZvsCKt57/Z94JAkfo7+dp4AW5g9JgPka+F0zQ3J5MkDv33EUwdudunh+r/74k+sVQtTfxslBxIdlmrF/gxhtmk1hPu8uw2aR1ylmrm8u+35RUtnXx4wttSn430rL22s793d6X5Pm9Yj1CPrSAx8D+DFbQ5hWh7/5O7oflu1SfONnTeipdNRSuX9kD4bZgD6I9Q94Ids/q5bCH+aSdVJzhzRulxwqW3fVX3Wi+tQJ0cclRNSJLNWT3rIUMCPbQH2j2QvsDBdRQSHiNIw9LcKmuaM/SnvAdHVLeP84GbLdAW55PD9WPpt3bcfYb"
+      "before": "5VjbbptAEO1zpb70C5DfMRiwDQU7MjakllIpalT1pVKEYWw2goXuLomrqt/cX+j6uiSgmlxsKa1lHljBOXtm5sys+P3+zRvnbJkm0i0QijI8aHXaaksCHGYRwotBq2Bz2WydDd+9dS5JdgMhk/jjmA5aMWP5B0WhYQxpQNspCklGszlrh1mqRHALSZYDUVI6K1ASKZqq6i0OI0nOlEF6TrIiX9/yBR8lDIg0xWFSRDBo+RlJJb4IdPOGxH/OF4y+FzCNADM0R0CGPy1LNyxTteRu1x3JxsyKZNfvW7LpT1xX1cye5+q/HKXy4moTa0hvyQCvZNNhgRyldLt/5DIgFNZbGc6DhIKjlFY2TznKZv//h5pzwEACBlGDBPU73sTkf3k0di3ZGHuW7LpeR/ZU1dXVjmF4nU7TBIV5bod2uFzaaRbasR3B3M6ixEb8IkDtmvQdSsw/JOUjBBF3UAPP6JbV1U1VNi13wj2jGrJpeq7c07q+63U1z/XdpimJ7ZgnJeYpiVMbYZ4LHNpLGj0hFa99/1dZQUJoEH/DH/f1vt+Rx/1RVzb0fk8eqb2erI10bdLvaiPN95vGX1iibIY4v7FnAbMDmq6u5ROy8YrVOMr96VIdNuNknKU5Hy5i3lxA5M3nfLZ9CnCwANLmkS1Nnm17L0flYWtR9qi7KbBfKNEgDJcB46MOfwbM/Xo0pqswwBtFR5ISFCxzCVrEDAOlPgSsIHAkrgjRPAl+fEU4yu6OxJEGCB8R+u5l9t6kuLeHKFF12zqIqwVdbro1Bb1FEgVdgZ5y4+xy/3z8grIsdVeHRbH5ijMfTSNQ/yLkosaZj2ZKDges5MvnwwtlIl71vnw0l4DeB00sCbb7zjwWy8qbWwO9BMUuTUJGga6fw7EDXIeqiUUr8yeCWbH4xs+115V6r51EDw6uNd7dUuyzV515BBIIKJyYVSitr9STyD0xtdB83y8n0XoiSqGx5KSTCHx5vtpOt3doToCftmk7boczVp2pB60p0PfmFEuiJ5XteQTKXc8ShAeb4EFlO8ymfbBOdimbBapGV3wYqvY8AVezAf7ZZvP1avgH",
+      "after": "5Vdbb5swFN7zpO03oLw7ECAJDJIqpNBFaqV2VbWXSROBk+AKbGabNtO0/z7n0kBCtNJLHrpF4YEj853Ldz4f+/zju3fuySJLlTtgHFMyaHXaWksBEtEYk/mgVYgZslonww/v3UtGbyESilxO+KCVCJF/UlUeJZCFvJ3hiFFOZ6Id0UyN4Q5SmgNTMz4tcBqruqYZLQmjKO5EQHbGaJGvXqUhwKkApkxIlBYxDFoBZZkijcDXXyjy594Q/KOASQxE4BkGNvxl24ZpW5qNul1vhMypHSMv6NvICk49T9Otnu8Zv1219uEyiBWkvxBAlmnzYYFdtfK6XXIZMg6rUIazMOXgqhXLepWrruP/P7I5AwIsFBA3IKjf8U8t+UejsWcjc+zbyPP8DvI1zTO0jmn6nU5TgqI8dyInWiycjEZO4sQwc2icOlg+DLhzgL7HiPmHUvkMYSwV1EAzhm13DUtDlu2dSs1oJrIs30M9vRt4flf3vcBrSkniJJKURFKSZA4mkgsSOQseP4OKtx7/NS1YBA3qbwbjvtEPOmjcH3WRafR7aKT1ekgfGfppv6uP9CBoWv9SElUxJPmtMw2FE/Js+SyewcYbzsZVd6dLfdiM0zHNcjlcynlzDrE/m8nZdhGScA6sLStbmTyb7b1alf2tRd2iPkyBraHiBhO4DIUcdeQLEKnXo3m6jkKyzuhIqYSFoB7D80QQ4DyAUBQMjuQrxjxPw59fMYnp/ZF8ZCEmR4S+f53YmzT35hBVdt2mD5J6Q1c33QMNvUEqG7oGPZHCeeD+xfhX4oJGZdg1TT7VwQrvL8GfH1DjU32M08eLVNHii+H3anRYhU/1slOoPQ+72ntN5KXiNrJ4PmwDQRRc0MxbXkHK3ophWsy/yXPk95yBnJ28nbSjqagrZO+EWBdJib7ttNJUOmSQQsjhGC4fL8GVuMEVYVUKX+B6yuXdq5btCmiV565TeSdaXw2HfwA="
+    },
+    "D:\\Project\\Mygithub\\QT_Study\\LED_Display_Demo\\LED_Display_Demo\\LED_Display_Demo.vcxproj.user": {
+      "before": "tZE9a8MwEIbTtdD/IETAyVDL/aCUYiVDCl06JG3obstnW0XWGekUUsgf7r+o7OItYzvee8f7PHDfF7NZvj52hh3AeY1W8ps04wyswkrbRvJA9fUjX6+uLvOtw09QxPaIxn9M95vgHFjiLLZYL3lL1D8J4VULXeHTTiuHHmtKFXaiggMY7MGJzpdBm0rcZtkdj+2MDf1xQ18vDkPPxLnwtSjBSL6jdyCKfp6zDdpK06iezBdxqnUTXDEky9N8sTUF1ei6ZSJl8gxlaE7Hh/vkFxmhO9pjUO3EHqExFufyXExno+I/CL6BgcLDXyqO0sPfVj8=",
+      "after": "tZHNSsNAFIXrVvAdhqGQdmEm/iAimXRRwY2LVov7ZHKTjMzkhpk7pUJf1XdxEulGXOrynns454PzeTab5auDNWwPzmvsJb9KM86gV1jrvpU8UHN5z1fFxXm+cfgOitgO0fi3k38dnIOeOIspvZe8IxoehPCqA1v61Grl0GNDqUIratiDwQGcsL4K2tTiOstueExnbMyPH/p4chgGJn4Tn8sKjORbegWiyOc5W2Nfa5rQk/kiXo1ugytHZXmcLzampAadXSZSJo9QhfZ4uLtNvitj6ZZ2GFR36i5y8VOZ2MTJMMH9A9oLGCg9/A1cPuKOWxVf"
     }
   }
 }]]></FlowDocument.Tag>
@@ -21,7 +25,7 @@
       <Span TextDecorations="Underline">Project Format Conversion</Span>
     </Paragraph>
     <Paragraph Margin="12,8" FontSize="18">
-      <Span>Report generated on 2025-06-10 16:26:54</Span>
+      <Span>Report generated on 2025-06-12 11:19:46</Span>
     </Paragraph>
   </Section>
   <Section>
@@ -56,6 +60,22 @@
                         [Diff before/current]
                     </Hyperlink>
       <Hyperlink NavigateUri="file://D:\Project\Mygithub\QT_Study\LED_Display_Demo\LED_Display_Demo\LED_Display_Demo.vcxproj.filters?diff&amp;after&amp;current">
+                        [Diff after/current]
+                    </Hyperlink>
+      <LineBreak />
+    </Paragraph>
+    <Paragraph Margin="24,12,0,0">
+      <Span FontFamily="Consolas" FontSize="14" Background="WhiteSmoke"><![CDATA[D:\Project\Mygithub\QT_Study\LED_Display_Demo\LED_Display_Demo\LED_Display_Demo.vcxproj.user]]></Span>
+      <LineBreak />
+      <Hyperlink NavigateUri="file://D:\Project\Mygithub\QT_Study\LED_Display_Demo\LED_Display_Demo\LED_Display_Demo.vcxproj.user?before">[Before]</Hyperlink>
+      <Hyperlink NavigateUri="file://D:\Project\Mygithub\QT_Study\LED_Display_Demo\LED_Display_Demo\LED_Display_Demo.vcxproj.user?after">[After]</Hyperlink>
+      <Hyperlink NavigateUri="file://D:\Project\Mygithub\QT_Study\LED_Display_Demo\LED_Display_Demo\LED_Display_Demo.vcxproj.user?diff&amp;before&amp;after">
+                        [Diff before/after]
+                    </Hyperlink>
+      <Hyperlink NavigateUri="file://D:\Project\Mygithub\QT_Study\LED_Display_Demo\LED_Display_Demo\LED_Display_Demo.vcxproj.user?diff&amp;before&amp;current">
+                        [Diff before/current]
+                    </Hyperlink>
+      <Hyperlink NavigateUri="file://D:\Project\Mygithub\QT_Study\LED_Display_Demo\LED_Display_Demo\LED_Display_Demo.vcxproj.user?diff&amp;after&amp;current">
                         [Diff after/current]
                     </Hyperlink>
       <LineBreak />
@@ -138,6 +158,114 @@
           <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
             <Paragraph FontFamily="Consolas" Margin="4, 0">
               <Span><![CDATA[      ]]></Span><Span Background="LightGreen"><![CDATA[<AdditionalDependencies>$(QTDIR)\lib\Qt6Widgetsd]]></Span><Span><![CDATA[.lib;]]></Span><Span Background="LightGreen"><![CDATA[$(QTDIR)\lib\Qt6Guid]]></Span><Span><![CDATA[.lib;]]></Span><Span Background="LightGreen"><![CDATA[$(QTDIR)\lib\Qt6Cored]]></Span><Span><![CDATA[.lib;]]></Span><Span Background="LightGreen"><![CDATA[$(QTDIR)\lib\Qt6EntryPointd]]></Span><Span><![CDATA[.lib;shell32.lib;%(AdditionalDependencies)</AdditionalDependencies>]]></Span>
+            </Paragraph>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell ColumnSpan="2" Background="WhiteSmoke" BorderBrush="Gray" BorderThickness="0.5" />
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span><![CDATA[      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">LedEffectManager.h;release\moc_predefs.h;]]></Span><Span Background="LightCoral"><![CDATA[D:\Software\QT\6.9.0\msvc2022_64\bin\moc]]></Span><Span><![CDATA[.exe;%(AdditionalInputs)</AdditionalInputs>]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span><![CDATA[      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">LedEffectManager.h;release\moc_predefs.h;]]></Span><Span Background="LightGreen"><![CDATA[$(QTDIR)\bin\moc]]></Span><Span><![CDATA[.exe;%(AdditionalInputs)</AdditionalInputs>]]></Span>
+            </Paragraph>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span><![CDATA[      <Command Condition="'$(Configuration)|$(Platform)]]></Span><Span Background="LightCoral"><![CDATA['=='Release|x64'">D:\Software\QT\6]]></Span><Span><![CDATA[.]]></Span><Span Background="LightCoral"><![CDATA[9.0\msvc2022_64\bin\moc.]]></Span><Span><![CDATA[exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DWIN64 -DNDEBUG -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include D:/Project/Mygithub/QT_Study/LED_Display_Demo/LED_Display_Demo/release/moc_predefs.h ]]></Span><Span Background="LightCoral"><![CDATA[-ID:/Software/QT/6.9.0/msvc2022_64/mkspecs/win32-msvc]]></Span><Span><![CDATA[ -ID:/Project/Mygithub/QT_Study/LED_Display_Demo/LED_Display_Demo ]]></Span><Span Background="LightCoral"><![CDATA[-ID:/Software/QT/6.9.0/msvc2022_64/include]]></Span><Span><![CDATA[ ]]></Span><Span Background="LightCoral"><![CDATA[-ID:/Software/QT/6.9.0/msvc2022_64/include/QtWidgets]]></Span><Span><![CDATA[ ]]></Span><Span Background="LightCoral"><![CDATA[-ID:/Software/QT/6.9.0/msvc2022_64/include/QtGui]]></Span><Span><![CDATA[ ]]></Span><Span Background="LightCoral"><![CDATA[-ID:/Software/QT/6.9.0/msvc2022_64/include/QtCore]]></Span><Span><![CDATA[ -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\ATLMFC\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\winrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\cppwinrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um" LedEffectManager.h -o release\moc_LedEffectManager.cpp</Command>]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span><![CDATA[      <Command Condition="'$(Configuration)|$(Platform)]]></Span><Span Background="LightGreen"><![CDATA['=='Release|x64'">$(QTDIR)\bin\moc]]></Span><Span><![CDATA[.]]></Span><Span><![CDATA[exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DWIN64 -DNDEBUG -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include D:/Project/Mygithub/QT_Study/LED_Display_Demo/LED_Display_Demo/release/moc_predefs.h ]]></Span><Span Background="LightGreen"><![CDATA[-I$(QTDIR)/mkspecs/win32-msvc]]></Span><Span><![CDATA[ -ID:/Project/Mygithub/QT_Study/LED_Display_Demo/LED_Display_Demo ]]></Span><Span Background="LightGreen"><![CDATA[-I$(QTDIR)/include]]></Span><Span><![CDATA[ ]]></Span><Span Background="LightGreen"><![CDATA[-I$(QTDIR)/include/QtWidgets]]></Span><Span><![CDATA[ ]]></Span><Span Background="LightGreen"><![CDATA[-I$(QTDIR)/include/QtGui]]></Span><Span><![CDATA[ ]]></Span><Span Background="LightGreen"><![CDATA[-I$(QTDIR)/include/QtCore]]></Span><Span><![CDATA[ -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\ATLMFC\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\winrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\cppwinrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um" LedEffectManager.h -o release\moc_LedEffectManager.cpp</Command>]]></Span>
+            </Paragraph>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell ColumnSpan="2" Background="WhiteSmoke" BorderBrush="Gray" BorderThickness="0.5" />
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span><![CDATA[      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">LedEffectManager.h;debug\moc_predefs.h;]]></Span><Span Background="LightCoral"><![CDATA[D:\Software\QT\6.9.0\msvc2022_64\bin\moc]]></Span><Span><![CDATA[.exe;%(AdditionalInputs)</AdditionalInputs>]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span><![CDATA[      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">LedEffectManager.h;debug\moc_predefs.h;]]></Span><Span Background="LightGreen"><![CDATA[$(QTDIR)\bin\moc]]></Span><Span><![CDATA[.exe;%(AdditionalInputs)</AdditionalInputs>]]></Span>
+            </Paragraph>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span><![CDATA[      <Command Condition="'$(Configuration)|$(Platform)]]></Span><Span Background="LightCoral"><![CDATA['=='Debug|x64'">D:\Software\QT\6]]></Span><Span><![CDATA[.]]></Span><Span Background="LightCoral"><![CDATA[9.0\msvc2022_64\bin\moc.]]></Span><Span><![CDATA[exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DWIN64 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include D:/Project/Mygithub/QT_Study/LED_Display_Demo/LED_Display_Demo/debug/moc_predefs.h ]]></Span><Span Background="LightCoral"><![CDATA[-ID:/Software/QT/6.9.0/msvc2022_64/mkspecs/win32-msvc]]></Span><Span><![CDATA[ -ID:/Project/Mygithub/QT_Study/LED_Display_Demo/LED_Display_Demo ]]></Span><Span Background="LightCoral"><![CDATA[-ID:/Software/QT/6.9.0/msvc2022_64/include]]></Span><Span><![CDATA[ ]]></Span><Span Background="LightCoral"><![CDATA[-ID:/Software/QT/6.9.0/msvc2022_64/include/QtWidgets]]></Span><Span><![CDATA[ ]]></Span><Span Background="LightCoral"><![CDATA[-ID:/Software/QT/6.9.0/msvc2022_64/include/QtGui]]></Span><Span><![CDATA[ ]]></Span><Span Background="LightCoral"><![CDATA[-ID:/Software/QT/6.9.0/msvc2022_64/include/QtCore]]></Span><Span><![CDATA[ -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\ATLMFC\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\winrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\cppwinrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um" LedEffectManager.h -o debug\moc_LedEffectManager.cpp</Command>]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span><![CDATA[      <Command Condition="'$(Configuration)|$(Platform)]]></Span><Span Background="LightGreen"><![CDATA['=='Debug|x64'">$(QTDIR)\bin\moc]]></Span><Span><![CDATA[.]]></Span><Span><![CDATA[exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DWIN64 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include D:/Project/Mygithub/QT_Study/LED_Display_Demo/LED_Display_Demo/debug/moc_predefs.h ]]></Span><Span Background="LightGreen"><![CDATA[-I$(QTDIR)/mkspecs/win32-msvc]]></Span><Span><![CDATA[ -ID:/Project/Mygithub/QT_Study/LED_Display_Demo/LED_Display_Demo ]]></Span><Span Background="LightGreen"><![CDATA[-I$(QTDIR)/include]]></Span><Span><![CDATA[ ]]></Span><Span Background="LightGreen"><![CDATA[-I$(QTDIR)/include/QtWidgets]]></Span><Span><![CDATA[ ]]></Span><Span Background="LightGreen"><![CDATA[-I$(QTDIR)/include/QtGui]]></Span><Span><![CDATA[ ]]></Span><Span Background="LightGreen"><![CDATA[-I$(QTDIR)/include/QtCore]]></Span><Span><![CDATA[ -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\ATLMFC\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\winrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\cppwinrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um" LedEffectManager.h -o debug\moc_LedEffectManager.cpp</Command>]]></Span>
+            </Paragraph>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell ColumnSpan="2" Background="WhiteSmoke" BorderBrush="Gray" BorderThickness="0.5" />
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span><![CDATA[      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">autoBrightnessFeature.h;release\moc_predefs.h;]]></Span><Span Background="LightCoral"><![CDATA[D:\Software\QT\6.9.0\msvc2022_64\bin\moc]]></Span><Span><![CDATA[.exe;%(AdditionalInputs)</AdditionalInputs>]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span><![CDATA[      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">autoBrightnessFeature.h;release\moc_predefs.h;]]></Span><Span Background="LightGreen"><![CDATA[$(QTDIR)\bin\moc]]></Span><Span><![CDATA[.exe;%(AdditionalInputs)</AdditionalInputs>]]></Span>
+            </Paragraph>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span><![CDATA[      <Command Condition="'$(Configuration)|$(Platform)]]></Span><Span Background="LightCoral"><![CDATA['=='Release|x64'">D:\Software\QT\6]]></Span><Span><![CDATA[.]]></Span><Span Background="LightCoral"><![CDATA[9.0\msvc2022_64\bin\moc.]]></Span><Span><![CDATA[exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DWIN64 -DNDEBUG -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include D:/Project/Mygithub/QT_Study/LED_Display_Demo/LED_Display_Demo/release/moc_predefs.h ]]></Span><Span Background="LightCoral"><![CDATA[-ID:/Software/QT/6.9.0/msvc2022_64/mkspecs/win32-msvc]]></Span><Span><![CDATA[ -ID:/Project/Mygithub/QT_Study/LED_Display_Demo/LED_Display_Demo ]]></Span><Span Background="LightCoral"><![CDATA[-ID:/Software/QT/6.9.0/msvc2022_64/include]]></Span><Span><![CDATA[ ]]></Span><Span Background="LightCoral"><![CDATA[-ID:/Software/QT/6.9.0/msvc2022_64/include/QtWidgets]]></Span><Span><![CDATA[ ]]></Span><Span Background="LightCoral"><![CDATA[-ID:/Software/QT/6.9.0/msvc2022_64/include/QtGui]]></Span><Span><![CDATA[ ]]></Span><Span Background="LightCoral"><![CDATA[-ID:/Software/QT/6.9.0/msvc2022_64/include/QtCore]]></Span><Span><![CDATA[ -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\ATLMFC\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\winrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\cppwinrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um" autoBrightnessFeature.h -o release\moc_autoBrightnessFeature.cpp</Command>]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span><![CDATA[      <Command Condition="'$(Configuration)|$(Platform)]]></Span><Span Background="LightGreen"><![CDATA['=='Release|x64'">$(QTDIR)\bin\moc]]></Span><Span><![CDATA[.]]></Span><Span><![CDATA[exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DWIN64 -DNDEBUG -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include D:/Project/Mygithub/QT_Study/LED_Display_Demo/LED_Display_Demo/release/moc_predefs.h ]]></Span><Span Background="LightGreen"><![CDATA[-I$(QTDIR)/mkspecs/win32-msvc]]></Span><Span><![CDATA[ -ID:/Project/Mygithub/QT_Study/LED_Display_Demo/LED_Display_Demo ]]></Span><Span Background="LightGreen"><![CDATA[-I$(QTDIR)/include]]></Span><Span><![CDATA[ ]]></Span><Span Background="LightGreen"><![CDATA[-I$(QTDIR)/include/QtWidgets]]></Span><Span><![CDATA[ ]]></Span><Span Background="LightGreen"><![CDATA[-I$(QTDIR)/include/QtGui]]></Span><Span><![CDATA[ ]]></Span><Span Background="LightGreen"><![CDATA[-I$(QTDIR)/include/QtCore]]></Span><Span><![CDATA[ -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\ATLMFC\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\winrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\cppwinrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um" autoBrightnessFeature.h -o release\moc_autoBrightnessFeature.cpp</Command>]]></Span>
+            </Paragraph>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell ColumnSpan="2" Background="WhiteSmoke" BorderBrush="Gray" BorderThickness="0.5" />
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span><![CDATA[      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">autoBrightnessFeature.h;debug\moc_predefs.h;]]></Span><Span Background="LightCoral"><![CDATA[D:\Software\QT\6.9.0\msvc2022_64\bin\moc]]></Span><Span><![CDATA[.exe;%(AdditionalInputs)</AdditionalInputs>]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span><![CDATA[      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">autoBrightnessFeature.h;debug\moc_predefs.h;]]></Span><Span Background="LightGreen"><![CDATA[$(QTDIR)\bin\moc]]></Span><Span><![CDATA[.exe;%(AdditionalInputs)</AdditionalInputs>]]></Span>
+            </Paragraph>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span><![CDATA[      <Command Condition="'$(Configuration)|$(Platform)]]></Span><Span Background="LightCoral"><![CDATA['=='Debug|x64'">D:\Software\QT\6]]></Span><Span><![CDATA[.]]></Span><Span Background="LightCoral"><![CDATA[9.0\msvc2022_64\bin\moc.]]></Span><Span><![CDATA[exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DWIN64 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include D:/Project/Mygithub/QT_Study/LED_Display_Demo/LED_Display_Demo/debug/moc_predefs.h ]]></Span><Span Background="LightCoral"><![CDATA[-ID:/Software/QT/6.9.0/msvc2022_64/mkspecs/win32-msvc]]></Span><Span><![CDATA[ -ID:/Project/Mygithub/QT_Study/LED_Display_Demo/LED_Display_Demo ]]></Span><Span Background="LightCoral"><![CDATA[-ID:/Software/QT/6.9.0/msvc2022_64/include]]></Span><Span><![CDATA[ ]]></Span><Span Background="LightCoral"><![CDATA[-ID:/Software/QT/6.9.0/msvc2022_64/include/QtWidgets]]></Span><Span><![CDATA[ ]]></Span><Span Background="LightCoral"><![CDATA[-ID:/Software/QT/6.9.0/msvc2022_64/include/QtGui]]></Span><Span><![CDATA[ ]]></Span><Span Background="LightCoral"><![CDATA[-ID:/Software/QT/6.9.0/msvc2022_64/include/QtCore]]></Span><Span><![CDATA[ -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\ATLMFC\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\winrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\cppwinrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um" autoBrightnessFeature.h -o debug\moc_autoBrightnessFeature.cpp</Command>]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span><![CDATA[      <Command Condition="'$(Configuration)|$(Platform)]]></Span><Span Background="LightGreen"><![CDATA['=='Debug|x64'">$(QTDIR)\bin\moc]]></Span><Span><![CDATA[.]]></Span><Span><![CDATA[exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DWIN64 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include D:/Project/Mygithub/QT_Study/LED_Display_Demo/LED_Display_Demo/debug/moc_predefs.h ]]></Span><Span Background="LightGreen"><![CDATA[-I$(QTDIR)/mkspecs/win32-msvc]]></Span><Span><![CDATA[ -ID:/Project/Mygithub/QT_Study/LED_Display_Demo/LED_Display_Demo ]]></Span><Span Background="LightGreen"><![CDATA[-I$(QTDIR)/include]]></Span><Span><![CDATA[ ]]></Span><Span Background="LightGreen"><![CDATA[-I$(QTDIR)/include/QtWidgets]]></Span><Span><![CDATA[ ]]></Span><Span Background="LightGreen"><![CDATA[-I$(QTDIR)/include/QtGui]]></Span><Span><![CDATA[ ]]></Span><Span Background="LightGreen"><![CDATA[-I$(QTDIR)/include/QtCore]]></Span><Span><![CDATA[ -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\ATLMFC\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\winrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\cppwinrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um" autoBrightnessFeature.h -o debug\moc_autoBrightnessFeature.cpp</Command>]]></Span>
             </Paragraph>
           </TableCell>
         </TableRow>
@@ -372,6 +500,66 @@
           <TableCell ColumnSpan="2" BorderThickness="0.5" BorderBrush="Gray">
             <Paragraph Margin="10,5" FontWeight="Bold">
               <Span><![CDATA[D:\Project\Mygithub\QT_Study\LED_Display_Demo\LED_Display_Demo\LED_Display_Demo.vcxproj]]></Span>
+            </Paragraph>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell ColumnSpan="2" Background="WhiteSmoke" BorderBrush="Gray" BorderThickness="0.5" />
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span><![CDATA[      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DWIN64 -DNDEBUG -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include]]></Span><Span Background="LightCoral"><![CDATA[ D:/Project/Mygithub/QT_Study/LED_Display_Demo/LED_Display_Demo/release/moc_predefs]]></Span><Span><![CDATA[.h -I$(QTDIR)/mkspecs/win32-msvc]]></Span><Span Background="LightCoral"><![CDATA[ -ID:/Project/Mygithub/QT_Study/LED_Display_Demo/LED_Display_Demo]]></Span><Span><![CDATA[ ]]></Span><Span><![CDATA[-I$(QTDIR)/include -I$(QTDIR)/include/QtWidgets -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\ATLMFC\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\winrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\cppwinrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um" LedEffectManager.h -o release\moc_LedEffectManager.cpp</Command>]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span><![CDATA[      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DWIN64 -DNDEBUG -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include]]></Span><Span Background="LightGreen"><![CDATA[ ./release/moc_predefs]]></Span><Span><![CDATA[.h -I$(QTDIR)/mkspecs/win32-msvc]]></Span><Span><![CDATA[ ]]></Span><Span Background="LightGreen"><![CDATA[-I. ]]></Span><Span><![CDATA[-I$(QTDIR)/include -I$(QTDIR)/include/QtWidgets -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\ATLMFC\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\winrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\cppwinrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um" LedEffectManager.h -o release\moc_LedEffectManager.cpp</Command>]]></Span>
+            </Paragraph>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell ColumnSpan="2" Background="WhiteSmoke" BorderBrush="Gray" BorderThickness="0.5" />
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span><![CDATA[      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DWIN64 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include]]></Span><Span Background="LightCoral"><![CDATA[ D:/Project/Mygithub/QT_Study/LED_Display_Demo/LED_Display_Demo/debug/moc_predefs]]></Span><Span><![CDATA[.h -I$(QTDIR)/mkspecs/win32-msvc]]></Span><Span Background="LightCoral"><![CDATA[ -ID:/Project/Mygithub/QT_Study/LED_Display_Demo/LED_Display_Demo]]></Span><Span><![CDATA[ ]]></Span><Span><![CDATA[-I$(QTDIR)/include -I$(QTDIR)/include/QtWidgets -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\ATLMFC\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\winrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\cppwinrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um" LedEffectManager.h -o debug\moc_LedEffectManager.cpp</Command>]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span><![CDATA[      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DWIN64 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include]]></Span><Span Background="LightGreen"><![CDATA[ ./debug/moc_predefs]]></Span><Span><![CDATA[.h -I$(QTDIR)/mkspecs/win32-msvc]]></Span><Span><![CDATA[ ]]></Span><Span Background="LightGreen"><![CDATA[-I. ]]></Span><Span><![CDATA[-I$(QTDIR)/include -I$(QTDIR)/include/QtWidgets -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\ATLMFC\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\winrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\cppwinrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um" LedEffectManager.h -o debug\moc_LedEffectManager.cpp</Command>]]></Span>
+            </Paragraph>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell ColumnSpan="2" Background="WhiteSmoke" BorderBrush="Gray" BorderThickness="0.5" />
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span><![CDATA[      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DWIN64 -DNDEBUG -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include]]></Span><Span Background="LightCoral"><![CDATA[ D:/Project/Mygithub/QT_Study/LED_Display_Demo/LED_Display_Demo/release/moc_predefs]]></Span><Span><![CDATA[.h -I$(QTDIR)/mkspecs/win32-msvc]]></Span><Span Background="LightCoral"><![CDATA[ -ID:/Project/Mygithub/QT_Study/LED_Display_Demo/LED_Display_Demo]]></Span><Span><![CDATA[ ]]></Span><Span><![CDATA[-I$(QTDIR)/include -I$(QTDIR)/include/QtWidgets -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\ATLMFC\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\winrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\cppwinrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um" autoBrightnessFeature.h -o release\moc_autoBrightnessFeature.cpp</Command>]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span><![CDATA[      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DWIN64 -DNDEBUG -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include]]></Span><Span Background="LightGreen"><![CDATA[ ./release/moc_predefs]]></Span><Span><![CDATA[.h -I$(QTDIR)/mkspecs/win32-msvc]]></Span><Span><![CDATA[ ]]></Span><Span Background="LightGreen"><![CDATA[-I. ]]></Span><Span><![CDATA[-I$(QTDIR)/include -I$(QTDIR)/include/QtWidgets -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\ATLMFC\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\winrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\cppwinrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um" autoBrightnessFeature.h -o release\moc_autoBrightnessFeature.cpp</Command>]]></Span>
+            </Paragraph>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell ColumnSpan="2" Background="WhiteSmoke" BorderBrush="Gray" BorderThickness="0.5" />
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span><![CDATA[      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DWIN64 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include]]></Span><Span Background="LightCoral"><![CDATA[ D:/Project/Mygithub/QT_Study/LED_Display_Demo/LED_Display_Demo/debug/moc_predefs]]></Span><Span><![CDATA[.h -I$(QTDIR)/mkspecs/win32-msvc]]></Span><Span Background="LightCoral"><![CDATA[ -ID:/Project/Mygithub/QT_Study/LED_Display_Demo/LED_Display_Demo]]></Span><Span><![CDATA[ ]]></Span><Span><![CDATA[-I$(QTDIR)/include -I$(QTDIR)/include/QtWidgets -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\ATLMFC\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\winrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\cppwinrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um" autoBrightnessFeature.h -o debug\moc_autoBrightnessFeature.cpp</Command>]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span><![CDATA[      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DWIN64 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include]]></Span><Span Background="LightGreen"><![CDATA[ ./debug/moc_predefs]]></Span><Span><![CDATA[.h -I$(QTDIR)/mkspecs/win32-msvc]]></Span><Span><![CDATA[ ]]></Span><Span Background="LightGreen"><![CDATA[-I. ]]></Span><Span><![CDATA[-I$(QTDIR)/include -I$(QTDIR)/include/QtWidgets -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\ATLMFC\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\winrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\cppwinrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um" autoBrightnessFeature.h -o debug\moc_autoBrightnessFeature.cpp</Command>]]></Span>
             </Paragraph>
           </TableCell>
         </TableRow>
@@ -835,25 +1023,232 @@
         <TableRow>
           <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
             <Paragraph FontFamily="Consolas" Margin="4, 0">
-              <Span><![CDATA[    ]]></Span><Span Background="LightCoral"><![CDATA[<CustomBuild]]></Span><Span><![CDATA[ Include="displayWindow.]]></Span><Span Background="LightCoral"><![CDATA[h">]]></Span>
+              <Span><![CDATA[    ]]></Span><Span Background="LightCoral"><![CDATA[<CustomBuild]]></Span><Span><![CDATA[ Include="LedEffectManager.]]></Span><Span Background="LightCoral"><![CDATA[h">]]></Span>
             </Paragraph>
           </TableCell>
           <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
             <Paragraph FontFamily="Consolas" Margin="4, 0">
-              <Span><![CDATA[    ]]></Span><Span Background="LightGreen"><![CDATA[<QtMoc]]></Span><Span><![CDATA[ Include="displayWindow.]]></Span><Span Background="LightGreen"><![CDATA[h" />]]></Span>
+              <Span><![CDATA[    ]]></Span><Span Background="LightGreen"><![CDATA[<QtMoc]]></Span><Span><![CDATA[ Include="LedEffectManager.]]></Span><Span Background="LightGreen"><![CDATA[h" />]]></Span>
             </Paragraph>
           </TableCell>
         </TableRow>
         <TableRow>
           <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
             <Paragraph FontFamily="Consolas" Margin="4, 0">
-              <Span><![CDATA[      ]]></Span><Span Background="LightCoral"><![CDATA[<AdditionalInputs]]></Span><Span><![CDATA[ ]]></Span><Span Background="LightCoral"><![CDATA[Condition="'$(Configuration)|$(Platform)'=='Release|x64'">displayWindow]]></Span><Span><![CDATA[.]]></Span><Span Background="LightCoral"><![CDATA[h;release\moc_predefs.h;$(QTDIR)\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>]]></Span>
+              <Span Background="LightCoral"><![CDATA[      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">LedEffectManager.h;release\moc_predefs.h;$(QTDIR)\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightCoral"><![CDATA[      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DWIN64 -DNDEBUG -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include ./release/moc_predefs.h -I$(QTDIR)/mkspecs/win32-msvc -I. -I$(QTDIR)/include -I$(QTDIR)/include/QtWidgets -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\ATLMFC\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\winrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\cppwinrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um" LedEffectManager.h -o release\moc_LedEffectManager.cpp</Command>]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightCoral"><![CDATA[      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MOC LedEffectManager.h</Message>]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightCoral"><![CDATA[      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\moc_LedEffectManager.cpp;%(Outputs)</Outputs>]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightCoral"><![CDATA[      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">LedEffectManager.h;debug\moc_predefs.h;$(QTDIR)\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightCoral"><![CDATA[      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DWIN64 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include ./debug/moc_predefs.h -I$(QTDIR)/mkspecs/win32-msvc -I. -I$(QTDIR)/include -I$(QTDIR)/include/QtWidgets -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\ATLMFC\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\winrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\cppwinrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um" LedEffectManager.h -o debug\moc_LedEffectManager.cpp</Command>]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightCoral"><![CDATA[      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MOC LedEffectManager.h</Message>]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightCoral"><![CDATA[      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\moc_LedEffectManager.cpp;%(Outputs)</Outputs>]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightCoral"><![CDATA[    </CustomBuild>]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell ColumnSpan="2" Background="WhiteSmoke" BorderBrush="Gray" BorderThickness="0.5" />
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span><![CDATA[    ]]></Span><Span Background="LightCoral"><![CDATA[<CustomBuild]]></Span><Span><![CDATA[ Include="autoBrightnessFeature.]]></Span><Span Background="LightCoral"><![CDATA[h">]]></Span>
             </Paragraph>
           </TableCell>
           <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
             <Paragraph FontFamily="Consolas" Margin="4, 0">
-              <Span><![CDATA[    ]]></Span><Span Background="LightGreen"><![CDATA[<QtMoc]]></Span><Span><![CDATA[ ]]></Span><Span Background="LightGreen"><![CDATA[Include="mainwindow]]></Span><Span><![CDATA[.]]></Span><Span Background="LightGreen"><![CDATA[h" />]]></Span>
+              <Span><![CDATA[    ]]></Span><Span Background="LightGreen"><![CDATA[<QtMoc]]></Span><Span><![CDATA[ Include="autoBrightnessFeature.]]></Span><Span Background="LightGreen"><![CDATA[h" />]]></Span>
             </Paragraph>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span><![CDATA[      ]]></Span><Span Background="LightCoral"><![CDATA[<AdditionalInputs]]></Span><Span><![CDATA[ ]]></Span><Span Background="LightCoral"><![CDATA[Condition="'$(Configuration)|$(Platform)'=='Release|x64'">autoBrightnessFeature]]></Span><Span><![CDATA[.]]></Span><Span Background="LightCoral"><![CDATA[h;release\moc_predefs.h;$(QTDIR)\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span><![CDATA[    ]]></Span><Span Background="LightGreen"><![CDATA[<QtMoc]]></Span><Span><![CDATA[ ]]></Span><Span Background="LightGreen"><![CDATA[Include="displayWindow]]></Span><Span><![CDATA[.]]></Span><Span Background="LightGreen"><![CDATA[h" />]]></Span>
+            </Paragraph>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span><![CDATA[      ]]></Span><Span Background="LightCoral"><![CDATA[<Command]]></Span><Span><![CDATA[ ]]></Span><Span Background="LightCoral"><![CDATA[Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc]]></Span><Span><![CDATA[.]]></Span><Span Background="LightCoral"><![CDATA[exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE]]></Span><Span><![CDATA[ ]]></Span><Span Background="LightCoral"><![CDATA[-DWIN64 -DNDEBUG -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include ./release/moc_predefs.h -I$(QTDIR)/mkspecs/win32-msvc -I. -I$(QTDIR)/include -I$(QTDIR)/include/QtWidgets -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\ATLMFC\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\winrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\cppwinrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um" autoBrightnessFeature.h -o release\moc_autoBrightnessFeature.cpp</Command>]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span><![CDATA[    ]]></Span><Span Background="LightGreen"><![CDATA[<QtMoc]]></Span><Span><![CDATA[ ]]></Span><Span Background="LightGreen"><![CDATA[Include="mainwindow]]></Span><Span><![CDATA[.]]></Span><Span Background="LightGreen"><![CDATA[h"]]></Span><Span><![CDATA[ ]]></Span><Span Background="LightGreen"><![CDATA[/>]]></Span>
+            </Paragraph>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightCoral"><![CDATA[      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MOC autoBrightnessFeature.h</Message>]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightCoral"><![CDATA[      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\moc_autoBrightnessFeature.cpp;%(Outputs)</Outputs>]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightCoral"><![CDATA[      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">autoBrightnessFeature.h;debug\moc_predefs.h;$(QTDIR)\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightCoral"><![CDATA[      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DWIN64 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include ./debug/moc_predefs.h -I$(QTDIR)/mkspecs/win32-msvc -I. -I$(QTDIR)/include -I$(QTDIR)/include/QtWidgets -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\ATLMFC\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\winrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\cppwinrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um" autoBrightnessFeature.h -o debug\moc_autoBrightnessFeature.cpp</Command>]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightCoral"><![CDATA[      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MOC autoBrightnessFeature.h</Message>]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightCoral"><![CDATA[      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\moc_autoBrightnessFeature.cpp;%(Outputs)</Outputs>]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightCoral"><![CDATA[    </CustomBuild>]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightCoral"><![CDATA[    <CustomBuild Include="displayWindow.h">]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightCoral"><![CDATA[      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">displayWindow.h;release\moc_predefs.h;$(QTDIR)\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
           </TableCell>
         </TableRow>
         <TableRow>
@@ -1037,7 +1432,137 @@
           </TableCell>
         </TableRow>
         <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightCoral"><![CDATA[    <ClInclude Include="ui_mainwindow.h" />]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+        </TableRow>
+        <TableRow>
           <TableCell ColumnSpan="2" Background="WhiteSmoke" BorderBrush="Gray" BorderThickness="0.5" />
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightCoral"><![CDATA[    <ClCompile Include="debug\moc_LedEffectManager.cpp">]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightCoral"><![CDATA[      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightCoral"><![CDATA[    </ClCompile>]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightCoral"><![CDATA[    <ClCompile Include="release\moc_LedEffectManager.cpp">]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightCoral"><![CDATA[      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightCoral"><![CDATA[    </ClCompile>]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightCoral"><![CDATA[    <ClCompile Include="debug\moc_autoBrightnessFeature.cpp">]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightCoral"><![CDATA[      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightCoral"><![CDATA[    </ClCompile>]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightCoral"><![CDATA[    <ClCompile Include="release\moc_autoBrightnessFeature.cpp">]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightCoral"><![CDATA[      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightCoral"><![CDATA[    </ClCompile>]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
         </TableRow>
         <TableRow>
           <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
@@ -1391,6 +1916,63 @@
         <TableRow>
           <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
             <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span><![CDATA[    ]]></Span><Span Background="LightCoral"><![CDATA[<CustomBuild]]></Span><Span><![CDATA[ Include="LedEffectManager.h">]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span><![CDATA[    ]]></Span><Span Background="LightGreen"><![CDATA[<QtMoc]]></Span><Span><![CDATA[ Include="LedEffectManager.h">]]></Span>
+            </Paragraph>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell ColumnSpan="2" Background="WhiteSmoke" BorderBrush="Gray" BorderThickness="0.5" />
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span><![CDATA[    ]]></Span><Span Background="LightCoral"><![CDATA[</CustomBuild>]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span><![CDATA[    ]]></Span><Span Background="LightGreen"><![CDATA[</QtMoc>]]></Span>
+            </Paragraph>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell ColumnSpan="2" Background="WhiteSmoke" BorderBrush="Gray" BorderThickness="0.5" />
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span><![CDATA[    ]]></Span><Span Background="LightCoral"><![CDATA[<CustomBuild]]></Span><Span><![CDATA[ Include="autoBrightnessFeature.h">]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span><![CDATA[    ]]></Span><Span Background="LightGreen"><![CDATA[<QtMoc]]></Span><Span><![CDATA[ Include="autoBrightnessFeature.h">]]></Span>
+            </Paragraph>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell ColumnSpan="2" Background="WhiteSmoke" BorderBrush="Gray" BorderThickness="0.5" />
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span><![CDATA[    ]]></Span><Span Background="LightCoral"><![CDATA[</CustomBuild>]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span><![CDATA[    ]]></Span><Span Background="LightGreen"><![CDATA[</QtMoc>]]></Span>
+            </Paragraph>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
               <Span><![CDATA[    ]]></Span><Span Background="LightCoral"><![CDATA[<CustomBuild]]></Span><Span><![CDATA[ Include="displayWindow.h">]]></Span>
             </Paragraph>
           </TableCell>
@@ -1443,7 +2025,157 @@
           </TableCell>
         </TableRow>
         <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightCoral"><![CDATA[    <ClInclude Include="ui_mainwindow.h">]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightCoral"><![CDATA[      <Filter>Header Files</Filter>]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightCoral"><![CDATA[    </ClInclude>]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+        </TableRow>
+        <TableRow>
           <TableCell ColumnSpan="2" Background="WhiteSmoke" BorderBrush="Gray" BorderThickness="0.5" />
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightCoral"><![CDATA[    <ClCompile Include="debug\moc_LedEffectManager.cpp">]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightCoral"><![CDATA[      <Filter>Generated Files</Filter>]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightCoral"><![CDATA[    </ClCompile>]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightCoral"><![CDATA[    <ClCompile Include="release\moc_LedEffectManager.cpp">]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightCoral"><![CDATA[      <Filter>Generated Files</Filter>]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightCoral"><![CDATA[    </ClCompile>]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightCoral"><![CDATA[    <ClCompile Include="debug\moc_autoBrightnessFeature.cpp">]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightCoral"><![CDATA[      <Filter>Generated Files</Filter>]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightCoral"><![CDATA[    </ClCompile>]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightCoral"><![CDATA[    <ClCompile Include="release\moc_autoBrightnessFeature.cpp">]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightCoral"><![CDATA[      <Filter>Generated Files</Filter>]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightCoral"><![CDATA[    </ClCompile>]]></Span>
+            </Paragraph>
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
         </TableRow>
         <TableRow>
           <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
@@ -2622,4 +3354,4 @@
     <Paragraph />
   </Section>
 </FlowDocument>
-<!--JJVJD803tIIpJP0OLGpSc1pzQOStNxGOnuSel61EG0U=-->
+<!--g+6XjOnFOWarunfraQmXdZQBH9B35KbtRCMbGWnAHI4=-->

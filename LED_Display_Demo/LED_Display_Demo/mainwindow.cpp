@@ -1,5 +1,6 @@
 ﻿#include "MainWindow.h"
 #include "ui_mainwindow.h"
+#include "AgingFeature.h"
 
 MainWindow::MainWindow(QWidget* parent)
 	: QMainWindow(parent), ui(new Ui::MainWindow)
@@ -15,6 +16,8 @@ MainWindow::MainWindow(QWidget* parent)
 		displayWindow->setEnableDoubleClickFullScreen(ui->checkBox_double_fullScreen->isChecked());
 		displayWindow->setTopMost(ui->checkBox_windowTopMost->isChecked());
 		displayWindow->setLockGeometry(ui->checkBox_lock->isChecked());
+		displayWindow->setUseCurrentColor(true);
+		displayWindow->setLineRendererEnabled(true);
 
 		ui->horizontalSlider_speed->setValue(50);     // 初始速度为50ms
 		ui->spinBox_speed->setValue(50);
@@ -23,12 +26,22 @@ MainWindow::MainWindow(QWidget* parent)
 		mainTimer = new QTimer(this);
 		mainTimer->setInterval(10);
 
+		agingFeature = new AgingFeature(displayWindow, this);
+		connect(ui->tabWidget, &QTabWidget::currentChanged, this, &MainWindow::onTabSwitched);
+
+		// 示例：启用 aging 模块
+		//connect(ui->checkBox_agingEnable, &QCheckBox::toggled, this, [=](bool enabled) {
+		//	agingFeature->setEnabled(enabled);
+		//	});
+
 		autoBrightnessFeature = new AutoBrightnessFeature(
 			ui->horizontalSlider_brightness,
 			ui->spinBox_brightness,
 			this
 		);
 		featureModules.push_back(autoBrightnessFeature);
+		featureModules.push_back(agingFeature);
+		//featureModules.push_back(lineRenderer);
 	}
 
 	connect(displayWindow, &DisplayWindow::visibilityChangedExternally,
@@ -36,7 +49,12 @@ MainWindow::MainWindow(QWidget* parent)
 
 	connect(mainTimer, &QTimer::timeout, this, &MainWindow::onMainTimerTick);
 
-
+    connect(ui->checkBox_HorizontalLine, &QCheckBox::toggled, this, [=](bool checked){
+        displayWindow->setLinePattern(checked,
+                                      ui->checkBox_VerticalLine->isChecked(),
+                                      ui->checkBox_DiagonalLeftLine->isChecked(),
+                                      ui->checkBox_DiagonalRightLine->isChecked());
+    });
 
 	connect(ledManager, &LedEffectManager::colorChanged, displayWindow, &DisplayWindow::setBackgroundColor);
 
@@ -62,6 +80,43 @@ MainWindow::MainWindow(QWidget* parent)
 MainWindow::~MainWindow() {
 	delete ui;
 }
+
+
+void MainWindow::onTabSwitched(int index) {
+	// 通用关闭所有 Feature 模块
+	for (auto* f : featureModules) {
+		f->setEnabled(false);
+	}
+
+	// 清除状态
+	displayWindow->setUseCurrentColor(false);
+	displayWindow->setLineRendererEnabled(false);
+	ledManager->stop();  // 渐变模块
+
+	// 根据当前 tab 激活功能
+	switch (index) {
+	case 0: // 颜色固定
+		displayWindow->setUseCurrentColor(false); // 使用 bgColor
+		updateDisplayColor();
+		break;
+
+	case 1: // 渐变（LedEffectManager）
+		ledManager->start();
+		break;
+
+	case 2: // 老化（AgingFeature）
+		if (agingFeature)
+			agingFeature->setEnabled(true);
+		break;
+
+	default:
+		break;
+	}
+
+	displayWindow->update();
+}
+
+
 void MainWindow::showEvent(QShowEvent* event) {
 	QMainWindow::showEvent(event);
 	if (displayWindow) {

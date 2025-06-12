@@ -1,6 +1,8 @@
 ﻿#ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include "AgingFeature.h"
+
 #include <QMainWindow>
 #include <QTimer>
 #include "DisplayWindow.h"
@@ -23,26 +25,30 @@ public:
     ~MainWindow();
 
 private:
+
     Ui::MainWindow* ui;
-    DisplayWindow* displayWindow = nullptr;
+
+    AutoBrightnessFeature* autoBrightnessFeature = nullptr;
+    AgingFeature* agingFeature = nullptr;
     LedEffectManager* ledManager = nullptr;
+    DisplayWindow* displayWindow = nullptr;
 
     QTimer* mainTimer = nullptr;
     QTimer* autoRunTimer = nullptr;
     std::vector<ILedFeature*> featureModules;
-    AutoBrightnessFeature* autoBrightnessFeature = nullptr;
+
     bool autoColorChangeEnabled = false;
     bool isRunning = false;
     QColor baseColor = Qt::red;
     int brightnessValue = 255;
     int currentBrightness = 0;
-
     void setupUiLogic();
     void setupColorButtons();
     void syncSpinBoxesWithDisplayWindow();
     void updateDisplayColor();
     void showEvent(QShowEvent* event);
 private slots:
+    void onTabSwitched(int index);  
     void toggleRunState();
     void onMainTimerTick();
     void onBrightnessChanged(int value);
