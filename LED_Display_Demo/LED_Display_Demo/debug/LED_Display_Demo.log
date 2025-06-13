@@ -1,6 +1,8 @@
 ﻿   Qt/MSBuild: 3.4.0.1
   Reading Qt configuration (D:/Software/QT/6.9.0/msvc2022_64/bin/qmake)
    Qt: 6.9.0
-  mainwindow.cpp
-D:\Project\Mygithub\QT_Study\LED_Display_Demo\LED_Display_Demo\mainwindow.cpp(289,29): warning C4996: 'QCheckBox::stateChanged': Use checkStateChanged() instead
+  displayWindow.cpp
+D:\Project\Mygithub\QT_Study\LED_Display_Demo\LED_Display_Demo\displayWindow.cpp(91,31): warning C4996: 'QMouseEvent::globalPos': Use globalPosition()
+D:\Project\Mygithub\QT_Study\LED_Display_Demo\LED_Display_Demo\displayWindow.cpp(98,21): warning C4996: 'QMouseEvent::globalPos': Use globalPosition()
+D:\Project\Mygithub\QT_Study\LED_Display_Demo\LED_Display_Demo\displayWindow.cpp(149,45): warning C4100: 'event': 未引用的参数
   LED_Display_Demo.vcxproj -> D:\Project\Mygithub\QT_Study\LED_Display_Demo\LED_Display_Demo\debug\LED_Display_Demo.exe

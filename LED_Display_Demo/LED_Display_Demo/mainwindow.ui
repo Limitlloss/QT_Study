@@ -518,7 +518,7 @@ QRadioButton::indicator {
                     <number>1000</number>
                    </property>
                    <property name="value">
-                    <number>1000</number>
+                    <number>30</number>
                    </property>
                   </widget>
                  </item>

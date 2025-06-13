@@ -134,6 +134,8 @@ void MainWindow::playNextStep() {
 		displayWindow->setUseCurrentColor(false);
 		displayWindow->setBackgroundColor(step.color);
 		displayWindow->setLinePattern(false, false, false, false);
+		displayWindow->setLineRendererEnabled(false);
+		displayWindow->enableAutoScan(false);  // ✅ 禁用滚动
 	}
 	else {
 		displayWindow->setUseCurrentColor(false);
@@ -143,12 +145,14 @@ void MainWindow::playNextStep() {
 			step.linePattern[1],
 			step.linePattern[2],
 			step.linePattern[3]);
-			displayWindow->setLineRendererEnabled(true);
+		displayWindow->setLineRendererEnabled(true);
+		displayWindow->enableAutoScan(true);   // ✅ 启用滚动
 	}
 
 	displayWindow->update();
 	playlistIndex++;
 }
+
 void MainWindow::onTabSwitched(int index) {
 	// 关闭所有 Feature
 	for (auto* f : featureModules)
@@ -230,12 +234,16 @@ void MainWindow::showEvent(QShowEvent* event) {
 }
 
 void MainWindow::setupUiLogic() {
+	connect(ui->spinBox_spin, QOverload<int>::of(&QSpinBox::valueChanged), this, [=](int val) {
+		displayWindow->setLineRendererSpacing(val);
+		});
+
 	connect(ui->spinBox_interval, QOverload<int>::of(&QSpinBox::valueChanged), this, [=](int val) {
 		ui->horizontalSlider_aging_speed->blockSignals(true);
 		ui->horizontalSlider_aging_speed->setValue(val);
 		ui->horizontalSlider_aging_speed->blockSignals(false);
 
-		playlistTimer->setInterval(val);  // ✅ 更新轮播间隔
+		playlistTimer->setInterval(val);  // 更新轮播间隔
 		});
 
 	connect(ui->horizontalSlider_aging_speed, &QSlider::valueChanged, this, [=](int val) {
@@ -243,7 +251,7 @@ void MainWindow::setupUiLogic() {
 		ui->spinBox_interval->setValue(val);
 		ui->spinBox_interval->blockSignals(false);
 
-		playlistTimer->setInterval(val);  // ✅ 关键：补上这一句
+		playlistTimer->setInterval(val);  // 关键：补上这一句
 		});
 
 	connect(ui->spinBox_interval, QOverload<int>::of(&QSpinBox::valueChanged), this, [=](int val) {

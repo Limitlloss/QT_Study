@@ -13,8 +13,9 @@ void LinePatternRenderer::setLineSpacing(int spacing) {
 }
 
 void LinePatternRenderer::renderLines(QPainter& painter, const QSize& size, int offset) {
-    painter.setPen(QPen(Qt::white, 1));
+    painter.setPen(QPen(Qt::white, 3));
 
+    painter.setRenderHint(QPainter::Antialiasing, false);
     if (showHorizontal) {
         for (int y = offset % lineSpacing; y < size.height(); y += lineSpacing) {
             painter.drawLine(0, y, size.width(), y);

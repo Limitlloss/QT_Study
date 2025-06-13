@@ -15,7 +15,7 @@ DisplayWindow::DisplayWindow(QWidget* parent) : QWidget(parent) {
     show();
 
     connect(&scanTimer, &QTimer::timeout, this, [this]() {
-        offset += 2;
+        offset += 1;
         if (offset > width()) offset = 0;
         update();
         });
@@ -68,7 +68,7 @@ void DisplayWindow::setLineColor(const QColor& color) {
 
 void DisplayWindow::enableAutoScan(bool enable) {
     if (enable) {
-        scanTimer.start(50);
+        scanTimer.start(20);
     }
     else {
         scanTimer.stop();
