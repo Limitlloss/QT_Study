@@ -9,6 +9,7 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    AgingFeature.cpp \
     LedEffectManager.cpp \
     LinePatternRenderer.cpp \
     ScanEffect.cpp \
@@ -18,10 +19,12 @@ SOURCES += \
     mainwindow.cpp
 
 HEADERS += \
+    AgingFeature.h \
     Effect.h \
     ILedFeature.h \
     LedEffectManager.h \
     LinePatternRenderer.h \
+    ProgramStep.h \
     ScanEffect.h \
     autoBrightnessFeature.h \
     displayWindow.h \
